@@ -1,0 +1,245 @@
+\documentclass[11pt]{article}
+%\usepackage{graphicx}
+%\usepackage{float}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{caption}
+%\usepackage[super]{natbib}
+%\usepackage[hidelinks]{hyperref} %hidelinks will remove ugly coloured links in the text
+%\usepackage{pdfpages}
+%\usepackage{xcolor,colortbl}%for changing cell colour
+\usepackage{multirow}
+%\usepackage[normalem]{ulem}
+%\useunder{\uline}{\ul}{}
+\usepackage{xspace}
+\usepackage{longtable}
+\usepackage{booktabs}
+%\usepackage{capt-of}
+\pagestyle{fancy}
+\setlength{\headheight}{15.2pt}
+\setlength{\headsep}{13 pt}
+\setlength{\parindent}{28 pt}
+\setlength{\parskip}{12 pt}
+\pagestyle{fancyplain}
+\usepackage[T1]{fontenc}
+%\usepackage{tikz-cd}
+\usepackage{csvsimple}
+\usepackage{color,amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
+\lhead{Spatial Patterns of Substitutions in Bacterial Genomes}
+\rhead{D.F. Lato and G.B. Golding 2020}
+\renewcommand\headrulewidth{0.5mm}
+\newcommand{\s}{\textit{Sinorhizobium}\xspace}
+\newcommand{\sm}{\textit{Sinorhizobium meliloti}\xspace}
+\newcommand{\smel}{\textit{S.\,meliloti}\xspace}
+\newcommand{\agrot}{\textit{Agrobacterium tumefaciens}\xspace}
+\newcommand{\agro}{\textit{A.\,tumefaciens}\xspace}
+\newcommand{\bur}{\textit{Burkholderia}\xspace}
+\newcommand{\vib}{\textit{Vibrio}\xspace}
+\newcommand{\sul}{\textit{Sulfolobus}\xspace}
+\newcommand{\ent}{\textit{Enterobacteria}\xspace}
+\newcommand{\strep}{\textit{Streptomyces}\xspace}
+\newcommand{\escoli}{\textit{Escherichia coli}\xspace}
+\newcommand{\salm}{\textit{Salmonella enterica}\xspace}
+\newcommand{\ecol}{\textit{E.\,coli}\xspace}
+\newcommand{\bas}{\textit{Bacillus subtilis}\xspace}
+\newcommand{\lis}{\textit{Listeria monocytogenes}\xspace}
+\newcommand{\bass}{\textit{B.\,subtilis}\xspace}
+\newcommand{\p}{progressiveMauve\xspace}
+\newcommand{\salb}{\textit{S.\,alblus}\xspace}
+\newcommand{\salbus}{\textit{S.\,albus}\xspace}
+\newcommand{\shyg}{\textit{S.\,hygroscopicus}\xspace}
+\newcommand{\sliv}{\textit{S.\,lividans}\xspace}
+\newcommand{\sros}{\textit{S.\,roseosporus}\xspace}
+\newcommand{\ssir}{\textit{S.\,sirex}\xspace}
+\newcommand{\sven}{\textit{S.\,venezuelae}\xspace}
+\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
+\newcommand{\tub}{\textit{Mycobacterium tuberculosis}\xspace}
+\newcommand{\hal}{\textit{Haloquadratum walsbyi}\xspace}
+\newcommand{\pa}{pSymA\xspace}
+\newcommand{\pb}{pSymB\xspace}
+\newcommand{\dn}{\textit{dN}\xspace}
+\newcommand{\ds}{\textit{dS}\xspace}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\beginsupplement}{%
+	\setcounter{table}{0}
+	\renewcommand{\thetable}{S\arabic{table}}%
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{S\arabic{figure}}%
+}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+\renewcommand{\thesubsubsection}{}
+\usepackage{setspace}
+%\usepackage{pgfplotstable}
+\usepackage{filecontents}
+
+\begin{document}
+	\beginsupplement
+	{\centering \Huge Supplementary Selection Information}
+	
+\subsection{Average \dn, \ds, $\omega$ Values Per Gene}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    ECOLI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{longtable}{lrrr}
+
+	\caption{\label{tab:dN_dS_ratios} Per gene \dn, \ds, and $\omega$ values calculated for \ecol.} \\
+	
+\hline \multicolumn{4}{c}{\textbf{\escoli}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endhead
+
+ \multicolumn{4}{r}{{Continued on next page}} \\ \hline
+\endfoot
+
+ \hline
+\endlastfoot
+
+\input{../Data/ecoli_supp_table2.csv}
+\end{longtable}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    BASS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{longtable}{lrrr}
+
+	\caption{\label{tab:dN_dS_ratios} Per gene \dn, \ds, and $\omega$ values calculated for \bass.}\\
+	
+\hline \multicolumn{4}{c}{\textbf{\bas}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endhead
+
+ \multicolumn{4}{r}{{Continued on next page}} \\ \hline
+\endfoot
+
+ \hline
+\endlastfoot
+
+\input{../Data/bass_supp_table2.csv}
+\end{longtable}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    STREP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{longtable}{lrrr}
+
+	\caption{\label{tab:dN_dS_ratios} Per gene \dn, \ds, and $\omega$ values calculated for \strep.}\\
+	
+\hline \multicolumn{4}{c}{\textbf{\strep}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endhead
+
+ \multicolumn{4}{r}{{Continued on next page}} \\ \hline
+\endfoot
+
+ \hline
+\endlastfoot
+
+\input{../Data/strep_supp_table2.csv}
+\end{longtable}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    SINOC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{longtable}{lrrr}
+
+	\caption{\label{tab:dN_dS_ratios} Per gene \dn, \ds, and $\omega$ values calculated for \smel Chromosome.}\\
+	
+\hline \multicolumn{4}{c}{\textbf{\sm Chromosome}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endhead
+
+ \multicolumn{4}{r}{{Continued on next page}} \\ \hline
+\endfoot
+
+ \hline
+\endlastfoot
+
+\input{../Data/sinoC_supp_table2.csv}
+\end{longtable}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    PA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{longtable}{lrrr}
+
+	\caption{\label{tab:dN_dS_ratios} Per gene \dn, \ds, and $\omega$ values calculated for \smel \pa.}\\
+	
+\hline \multicolumn{4}{c}{\textbf{\sm \pa}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endhead
+
+ \multicolumn{4}{r}{{Continued on next page}} \\ \hline
+\endfoot
+
+ \hline
+\endlastfoot
+
+\input{../Data/pSymA_supp_table2.csv}
+\end{longtable}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    PB
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{longtable}{lrrr}
+
+	\caption{\label{tab:dN_dS_ratios} Per gene \dn, \ds, and $\omega$ values calculated for \smel \pb.}\\
+	
+\hline \multicolumn{4}{c}{\textbf{\sm \pb}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endfirsthead
+
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \multicolumn{1}{c}{\textbf{Gene}} & \multicolumn{1}{r}{\textbf{\dn}} & \multicolumn{1}{r}{\textbf{\ds}}  & \multicolumn{1}{r}{\textbf{$\omega$}} \\ \hline 
+\endhead
+
+ \multicolumn{4}{r}{{Continued on next page}} \\ \hline
+\endfoot
+
+ \hline
+\endlastfoot
+
+\input{../Data/pSymB_supp_table2.csv}
+\end{longtable}
+\end{center}
+
+\end{document}
