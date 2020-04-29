@@ -1,0 +1,142 @@
+##########################################
+# Alignment
+##########################################
+#mauve alignment
+Mauve_snapshot/mauve_snapshot_2012-06-07/linux-x64/progressiveMauve --output=OUTPUT.xmfa *.gbk
+
+#separate Mauve LCBs
+cut_blocks.pl 
+
+#check all taxa in block
+/home/dlato/CODE/check_all_taxa_in_block.pl *.xmfa NUMBER_OF_TAXA
+mkdir GoodBlocks/
+mkdir BadBlocks/
+sh *_all_taxa_in_block
+
+#run mafft on each LCB (*.fasta)
+mafft --auto *.fasta
+
+#run on each gbk file
+get_gene_pos_name.py *.gbk
+##########################################
+# Phylogenetic Tree
+##########################################
+foreach y (Block*/)
+yes | cp in_* $y
+cd $y
+cp *.phyI infile
+perl -p -i.bak -e "s/:/ /g" infile
+seqboot < in_comms_seqboot
+foreach x (*.mafft)
+\rm infile
+cp outfile infile
+mv outfile `basename $x .mafft`_boot
+end
+dnadist < in_comms_dnadist
+foreach x (*.mafft)
+\rm infile
+cp outfile infile
+mv outfile `basename $x .mafft`_dist_mats
+end
+neighbor < in_comms_NJ
+foreach x (*.mafft)
+\rm infile
+mv outfile `basename $x .mafft`_nj_outfile
+mv outtree `basename $x .mafft`_nj_outtree
+end
+mv *_nj_outtree ../Consensus_Tree/
+cd ..
+end
+
+consense < in_comms_consense
+
+##########################################
+# Selection analysis
+##########################################
+#run on each *.mafft file
+(get_gene_alignments.py *.mafft INSERT_REF_TAXA_NUMBER INSERT_LONGEST_GENOME_LENGTH > *.mafft_out) >& *.err
+
+#run trimal on each alignment section(*.txt)
+trimal -in *.txt -out *.TRIMAL -strictplus -colnumbering > *.trimalcols
+
+#run on each alignment file (*.txt) and trimal output file (*.galign)
+parse_trimal_dN_dS_analysis.py *.txt *.galn REFERENCE_TAXA_NUMBER_IN_ALIGNMENT
+
+#getting the sections that will need to be rev comped
+touch rev_comp_commands
+foreach x (B*_sec_*.txt)
+if (`grep "Reverse" $x | wc -l` == TOTAL_TAXA_NUMBER) then
+echo $x >> rev_comp_commands
+endif
+end
+
+#rev comp the necessary stuff
+#run on each alignment segment that needs to be reverse complemented (*.txt)
+compliment.pl *.txt
+
+#run CODEML with basic model M0
+foreach x (*.phy)
+yes | cp $x inputfile
+yes | /usr/local/paml/current/bin/codeml codeml-M0.ctl
+mv 2NG.dN `basename $x phy`dN
+mv 2NG.dS `basename $x phy`dS
+mv 2NG.t `basename $x phy`t
+mv 4fold.nuc `basename $x phy`nuc
+mv lnf `basename $x phy`lnf
+mv mlc `basename $x phy`mlc
+mv rst `basename $x phy`rst
+mv rst1 `basename $x phy`rst1
+mv rub `basename $x phy`rub
+end
+
+#now get the datafile that has the dN, dS and omega info
+dN_dS_info.py > dN_dS_dataframe.txt
+#now get the datafile that has the dN, dS and omega info
+dN_dS_info_and_genome_pos.py REFERENCE_TAXA_ALIGNMENT_NUMBER > genome_pos_dataframe.txt
+
+#get the averages
+Rscript Avg_dN_dS.R dN_dS_dataframe.txt BACTERIA_NAME REPLICON_NAME genome_pos_dataframe.txt LONGEST_GENOME_LENGTH ORIGIN_LOCATION TERMINUS_LOCATION BACTERIA_SHORT_NAME BIN_WIDTH 
+
+#box_plot
+dN_dS_omega_combined_box_plots.R
+#linear regression
+dN_dS_linear_regression.R ALL_bac_data.csv
+
+##########################################
+# Substitutions analysis
+##########################################
+
+#run on each *.mafft file
+(get_gene_alignments_SUBS_ANALYSIS.py *.mafft INSERT_REF_TAXA_NUMBER INSERT_LONGEST_GENOME_LENGTH > *.mafft_out) >& *.err
+
+#run trimal on each alignment section(*.txt)
+trimal -in *.txt -out *.TRIMAL -strictplus -colnumbering > *.trimalcols
+
+#run on each alignment file (*.txt) and trimal output file (*.galign)
+parse_trimal_dN_dS_analysis.py *.txt *.galn REFERENCE_TAXA_NUMBER_IN_ALIGNMENT
+
+#run on each alignment file (*.txt) 
+genome_positions.pl *.txt treefile > `basename $y .txt`_call_ancestor_commands
+
+# run call ancestor 
+sh *call_ancestor_commands
+
+#run paml
+foreach x (*.fna)
+yes | cp $x inputfile
+\rm lnf mlc orig.treefile rst rst1 rub seqfile
+/usr/local/paml/paml4.9a/bin/baseml baseml.ctl
+cp rst `basename $x fna`pamlout
+end
+
+#run on paml output files
+parse_rst_file.py
+
+#combine paml and ancestral genomic position reconstruction
+combine_parsedpaml_ancestout.py *.parsedpamlout2 *_ancestor_out paml_branches_file > *.basechanges
+
+#run on each alignment file (*.txt)
+total_sites_in_aln.py *.txt
+
+#run logistic regression
+Rscript subs_analysis_NEGATIVE_pos.R chrom.basechanges BACTERIA_NAME REPLICON_NAME LONGEST_GENOME_LENGTH ORIGIN_LOCATION TERMINUS_LOCATION BIN_WIDTH SHORT_REPLICON_NAME BASE_PAIR_CUTOFF_FOR_NEAR_FAR_FROM_ORI
