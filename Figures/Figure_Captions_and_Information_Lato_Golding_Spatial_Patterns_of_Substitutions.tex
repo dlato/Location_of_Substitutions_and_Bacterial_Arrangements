@@ -1,0 +1,186 @@
+\documentclass[11pt]{article}
+%\usepackage{scrtime} % for \thistime (this package MUST be listed first!)
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[left=1cm, right=1cm, top=1.5cm, bottom=1.5cm]{geometry} %adjust margins
+%\usepackage[margin=0.65in]{geometry}
+\renewcommand{\seriesdefault}{\bfdefault} %makes all text bold
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage[super]{natbib}
+\usepackage[hidelinks]{hyperref} %hidelinks will remove ugly coloured links in the text
+%\usepackage{underscore}
+\usepackage{pdfpages}
+\usepackage{xcolor,colortbl}%for changing cell colour
+\usepackage{multirow}
+%\usepackage[normalem]{ulem}
+%\useunder{\uline}{\ul}{}
+\usepackage{xspace}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{capt-of}
+\pagestyle{fancy}
+\setlength{\headheight}{15.2pt}
+\setlength{\headsep}{13 pt}
+\setlength{\parindent}{28 pt}
+\setlength{\parskip}{12 pt}
+\pagestyle{fancyplain}
+\usepackage[T1]{fontenc}
+\usepackage{pdfpages}
+\usepackage{tikz-cd}
+\usepackage{indentfirst}
+\usepackage{color,amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
+\lhead{\sc Spatial Patterns of Substitutions in Bacterial Genomes: Figure Captions}
+%\rhead{\sc Daniella F Lato and G Brian Golding}
+\date{Author Affiliations: \\ \textbf{Daniella F Lato} \\ McMaster University \\ Department of Biology \\ 1280 Main St. West \\
+	Hamilton, ON \\
+	Canada \\
+	L8S 4K1 \\
+	Tel.: +905-525-9140\\
+	Email: latodf@mcmaster.ca}
+\renewcommand\headrulewidth{0.5mm}
+\newcommand{\strep}{\textit{Streptomyces}\xspace}
+\newcommand{\escoli}{\textit{Escherichia coli}\xspace}
+\newcommand{\ecol}{\textit{E.\,coli}\xspace}
+\newcommand{\bas}{\textit{Bacillus subtilis}\xspace}
+\newcommand{\bass}{\textit{B.\,subtilis}\xspace}
+\newcommand{\sm}{\textit{Sinorhizobium meliloti}\xspace}
+\newcommand{\smel}{\textit{S.\,meliloti}\xspace}
+\newcommand{\agrot}{\textit{Agrobacterium tumefaciens}\xspace}
+\newcommand{\agro}{\textit{A.\,tumefaciens}\xspace}
+\newcommand{\p}{\texttt{progressiveMauve}\xspace}
+\newcommand{\tub}{\textit{Mycobacterium tuberculosis}\xspace}
+\newcommand{\pseudo}{\textit{Pseudomonas aeruginosa}\xspace}
+\newcommand{\hal}{\textit{Haloquadratum walsbyi}\xspace}
+\newcommand{\salm}{\textit{Salmonella enterica}\xspace}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\vib}{\textit{Vibrio}\xspace}
+\newcommand{\bur}{\textit{Burkholderia}\xspace}
+\newcommand{\bor}{\textit{Bordetella}\xspace}
+\newcommand{\xan}{\textit{Xanthomonas}\xspace}
+\newcommand{\rhod}{\textit{Rhodobacteraceae}\xspace}
+\newcommand{\pa}{pSymA\xspace}
+\newcommand{\pb}{pSymB\xspace}
+\newcommand{\cc}{\cellcolor{black!16}}
+%%%%BIBLIOGRAPHY
+%\bibliography{C:/Users/Daniella/Documents/Sinorhizobium2015/Bib/Bibliography}
+
+%Supplementary File Table Numbers:
+\newcommand{\alnfig}{S1\xspace}
+\newcommand{\treetopresults}{S2\xspace}
+\newcommand{\oriloctab}{S4\xspace}
+\newcommand{\orishuffle}{S5\xspace}
+\newcommand{\codnoncoddat}{S5\xspace}
+\newcommand{\posclust}{S6\xspace}
+\newcommand{\dNdSall}{S7\xspace}
+\newcommand{\codnoncodprop}{S8\xspace}
+\newcommand{\highsubsbars}{S10\xspace}
+%Supplementary File Fig Numbers:
+\newcommand{\seqdata}{S1\xspace}
+\newcommand{\ecolitree}{S2\xspace}
+\newcommand{\basstree}{S3\xspace}
+\newcommand{\streptree}{S4\xspace}
+\newcommand{\sinoCtree}{S5\xspace}
+\newcommand{\sinoPAtree}{S6\xspace}
+\newcommand{\sinoPBtree}{S7\xspace}
+\newcommand{\highsubsex}{S13\xspace}
+
+\newcommand{\ecolbox}{S8\xspace}
+\newcommand{\bassbox}{S9\xspace}
+\newcommand{\strepbox}{S10\xspace}
+\newcommand{\sinoCbox}{S11\xspace}
+\newcommand{\PAbox}{S12\xspace}
+\newcommand{\PBbox}{S13\xspace}
+\newcommand{\dn}{\textit{dN}\xspace}
+\newcommand{\ds}{\textit{dS}\xspace}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\beginsupplement}{%
+	\setcounter{table}{0}
+	\renewcommand{\thetable}{S\arabic{table}}%
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{S\arabic{figure}}%
+}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+\renewcommand{\thesubsubsection}{}
+\usepackage{setspace}
+\usepackage{blindtext} %spacing btwn paragraphs
+%reduce spacing btween entries in bibliography
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+	\OLDthebibliography{#1}
+	\setlength{\parskip}{1pt}
+	\setlength{\itemsep}{1pt plus 0.3ex}
+}
+
+\usepackage{titlesec}%spacing btwn sections, below are the comands
+\titlespacing*{\section}
+{0pt}{0.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{0.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+\setlength{\parskip}{6pt} %adjusting space inbtwn paragraphs
+
+%200 word abstract plus a 1page PDF document with figs and stuff explaining the abstract in more detail
+
+
+\begin{document}
+{Authors: \sc Daniella F Lato and G Brian Golding}
+
+{Journal: \sc Journal of Molecular Evolution}
+
+{Corresponding Author Information: \\ G. Brian Golding \\
+	McMaster Univeristy \\
+	Department of Biology \\
+	1280 Main St. West \\
+	Hamilton, ON \\
+	Canada \\
+	L8S 4K1 \\
+	Tel.: +905-525-9140\\
+	Email: golding@mcmaster.ca}
+\bigskip
+
+\section*{Figure 1}
+\textbf{Graphics Program:}
+To create Figure 1, the TikZ package in \LaTeX.
+
+
+\textbf{Caption:} Schematic of the transformation used to scale the positions in the genome to the origin of replication and account for bidirectional replication. Circle (A) represents the original replicon genome without any transformation. Circle (B) represents the same replicon genome after the transformation. The origin of replication is denoted by ``\textit{oriC}'' and the terminus of replication is denoted by ``\textit{ter}''. The dashed line represents the two halves of the replicon separate by replication. The replicon genome in this example is 100 base pairs in length. Every 10 base pairs is denoted by a tick on the genome. The origin in (A) is at position 20 in the genome and is transformed in (B) to become position 1. The terminus is at position 60 in (A) and position 60 and 40 in (B). The terminus has two positions in (B) depending on which replicon half is being accounted for.
+If the replication half to the right of the origin is considered, the terminus will be at position 40.
+If the replication half to the left of the origin is considered, the terminus will be at position 60.
+Position 40 in (A) becomes position 20 in (B). Position 80 in (A) becomes position 40 in (B), because of the bidirectional nature of bacterial replication. ``bp'' denotes base pairs
+
+\section*{Figure 2}
+\textbf{Graphics Program:}
+To create Figure 2, the TikZ package in \LaTeX.
+
+
+\textbf{Caption:} Schematic of the ancestral reconstruction of both the nucleotide and genomic position. Each horizontal row of rectangles represents three hypothetical bacterial genomes (a, b, c). The genomic position is indicated at the top of the diagram. The phylogenetic tree showing the relationship between all three bacteria is pictured on the right of the diagram. The light grey rectangle denotes the genomic segment of interest. In bacteria (a) and (b), this segment is located at genomic positions 1-3. In bacteria (c), this segment is located at genomic positions 7-9. Within this genomic region of interest there is a substitution where the nucleotides changed from C $\rightarrow$ A, this is highlighted in red and underlined. This substitution is at position \underline{3} in bacteria (a) and (b), and in position \underline{9} in bacteria (c). This is depicted by the values (\underline{C}\textsubscript{3}) and (\underline{A}\textsubscript{9}). The ancestral reconstruction process in this analysis can be seen at the inner nodes of the phylogenetic tree by the values (\underline{C}\textsubscript{3}). The most parsimonious reconstruction of the sequence and associated genomic position is having the value (\underline{C}\textsubscript{3}) present at the ancestor of bacteria (a) and (b). The ancestral node of all three bacteria would have a reconstruction of the sequence and associated genomic position of (\underline{C}\textsubscript{3} / \underline{A}\textsubscript{9}). In this situation where there is a ``tie'' for two most parsimonious options, the option with the highest likelihood estimate would be chosen using maximum-likelihood methods (see \citep{Yang97} for more details). This would mean that in bacteria (c) there was a substitution from C $\rightarrow$ A which is also associated with a genomic position of 9.
+
+\section*{Figures 3a - 3c}
+\textbf{Graphics Program:}
+To create Figures 3a - 3c, the \texttt{R} programming language and \LaTeX were used.
+
+\textbf{Caption:} The bar graphs show the number of substitutions along the genomes of \ecol (a), \bass (b), and \strep (c). For \ecol and \bass, the distance from the origin of replication is on the x-axis beginning with the origin of replication denoted by position zero on the left, and the terminus indicated on the far right. For \strep the origin of replication is denoted by position zero. The genome located on the shorter chromosome arm (to the left of the origin) has been given negative values, while the genome on the longer chromosome arm (to the right of the origin) has been given positive values. The origin of replication in the \strep graph (c), has been visualized at position zero by a red vertical line. The y-axis of the graphs indicate the number of substitutions per 10,000 base pairs found at each position of the \ecol (a), \bass (b), and \strep (c) genomes. Each bar represents a section of the genome that spans 10Kbp. Outliers are represented in light grey bars.
+
+
+\section*{Figures 4a - 4c}
+\textbf{Graphics Program:}
+To create Figures 4a - 4c, the \texttt{R} programming language and \LaTeX were used.
+
+\textbf{Caption:} The bar graphs show the number of substitutions along the replicons of \smel: chromosome (a), \pa (b), and \pb (c). Distance from the origin of replication is on the x-axis beginning with the origin of replication denoted by position zero on the left, and the terminus indicated on the far right. The y-axis of the graph indicates the number of substitutions per 10,000 base pairs of the replicons of \smel: chromosome (a), \pa (b), and \pb (c). Each bar represents a section of the genome that spans 10Kbp. Outliers are represented by light grey bars.
+
+\section*{Figures 5a - 5c}
+\textbf{Graphics Program:}
+To create Figures 5a - 5c, the \texttt{R} programming language and \LaTeX were used.
+
+\textbf{Caption:}The graphs show the values of  \dn, \ds, and $\omega$ along the genomes of \ecol (a), \bass (b), and \strep (c). For \ecol and \bass, the distance from the origin of replication is on the x-axis beginning with the origin of replication denoted by position zero on the left, and the terminus indicated on the far right. For \strep the origin of replication is denoted by position zero. The genome located on the shorter chromosome arm (to the left of the origin) has been given negative values, while the genome on the longer chromosome arm (to the right of the origin) has been given positive values. The origin of replication in the \strep graph (c), has been visualized at position zero by a grey vertical line. The y-axis of the graph indicates the value of \dn, \ds, and $\omega$ found at each gene segment position of the \ecol (a), \bass (b), and \strep (c) genomes. Outliers are represented by light grey open circles. The average \dn, \ds, and $\omega$ values for each 10,000bp regions of the genome was calculated and represented by the dark brown points. A trend line represented in blue (using the \texttt{loess} method), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. For a complete list of outlier and zero value information, please see the Supplementary Material.
+
+
+\section*{Figures 6a - 6c}
+\textbf{Graphics Program:}
+To create Figures 6a - 6c, the \texttt{R} programming language and \LaTeX were used.
+
+\textbf{Caption:} The graphs show the values of \dn, \ds, and $\omega$ along the replicons of \smel, chromosome (a), \pa (b), and \pb (c). Distance from the origin of replication is on the x-axis beginning with the origin of replication denoted by position zero on the left, and the terminus indicated on the far right. The y-axis of the graph indicates the value of \dn, \ds, and $\omega$ found at each gene segment position of the chromosome (a), \pa (b), and \pb (c) of \smel. Outliers are represented by light grey open circles. The average \dn, \ds, and $\omega$ values for each 10,000bp regions (for the chromosome) and 50,000bp regions (for both \pa and \pb) of the replicons were calculated and represented by the dark brown points. A trend line represented in blue (using the \texttt{loess} method), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. For a complete list of outlier and zero value information, please see the Supplementary Material.
+
+
+	\end{document}

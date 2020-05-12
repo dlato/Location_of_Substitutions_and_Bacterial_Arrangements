@@ -1,0 +1,203 @@
+\documentclass[twocolumn]{article}
+\usepackage{scrtime} % for \thistime (this package MUST be listed first!)
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=bibtex, giveninits=true, doi=false, isbn=false, natbib=true, url=false, eprint=false, style=authoryear, sorting=nyt, maxcitenames=2, maxbibnames=10, minbibnames = 10, uniquename=false, uniquelist=false, dashed=false]{biblatex} % can change the maxbibnames to cut long author lists to specified length followed by et al., currently set to 99.
+%% bibliography for each chapter...
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{#1\isdot} % removes quotes around title
+\renewbibmacro*{volume+number+eid}{%
+	\printfield{volume}%
+	%  \setunit*{\adddot}% DELETED
+	\printfield{number}%
+	\setunit{\space}%
+	\printfield{eid}}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+%\renewcommand*{\newunitpunct}{\space} % remove period after date, but I like it. 
+\renewbibmacro{in:}{\ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}} % this remove the "In: Journal Name" from articles in the bibliography, which happens with the ynt 
+\renewbibmacro*{note+pages}{%
+	\printfield{note}%
+	\setunit{,\space}% could add punctuation here for after volume
+	\printfield{pages}%
+	\newunit}    
+\DefineBibliographyStrings{english}{% clears the pp from pages
+	page = {\ifbibliography{}{\adddot}},
+	pages = {\ifbibliography{}{\adddot}},
+} 
+\DeclareFieldFormat{journaltitle}{#1\isdot}
+\renewcommand*{\revsdnamepunct}{}%remove comma between last name and first name
+\DeclareNameAlias{sortname}{last-first}
+\renewcommand*{\nameyeardelim}{\addspace} % remove comma in text between name and date
+\addbibresource{C:/Users/synch/Documents/Bib/Sub_paper2.bib} % The filename of the bibliography
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+\renewrobustcmd*{\bibinitperiod}{}
+% you'll have to play with the citation styles to resemble the standard in your field, or just leave them as is here. 
+% or, if there is a bst file you like, just get rid of all this biblatex stuff and go back to bibtex. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[round]{natbib}
+%\setcitestyle{aysep={}} %removes the comma between the author and year in citations
+\usepackage[hidelinks]{hyperref} %hidelinks will remove ugly coloured links in the text
+%\usepackage{underscore}
+\usepackage{pdfpages}
+\usepackage{xcolor,colortbl}%for changing cell colour
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{xspace}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{capt-of}
+\pagestyle{fancy}
+\setlength{\headheight}{15.2pt}
+\setlength{\headsep}{13 pt}
+\setlength{\parindent}{28 pt}
+\setlength{\parskip}{12 pt}
+\pagestyle{fancyplain}
+\usepackage[T1]{fontenc}
+\usepackage{tikz-cd}
+\usepackage{color,amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
+\usepackage{xspace}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{calc, arrows}
+%\usepackage{caption}
+\usepackage{multicol}
+%\usepackage[round]{natbib}
+\usepackage{graphicx}
+% tables
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{xcolor,colortbl}%for changing cell colour
+\usepackage{makecell} % for long text in table cell
+% figs
+%\usepackage{subfig}% http://ctan.org/pkg/subfig
+\usepackage{subcaption}
+%\newsubfloat{figure}% Allow sub-figures
+\usepackage{caption}%lable fig caption as fig
+\lhead{Spatial Patterns of Substitutions in Bacterial Genomes}
+%\rhead{Daniella Lato \thepage\ }
+\rhead{Daniella F Lato and G Brian Golding}
+\title{\sc Spatial Patterns of Substitutions in Bacterial Genomes \textcolor{red}{I realized that this is almost the exact same title as my gene expression paper...is this bad? should I change it?}}
+\author{\sc Daniella F Lato\textsuperscript{1} and G Brian Golding\textsuperscript{1}* \\ \sc Paper Draft}
+%\date{\sc Committee Members: \\ \sc Dr. Brian Golding \\ \sc Dr. Marie Elliot \\ Transfer Exam Chair: \\ Dr. Ben Evans}
+\renewcommand\headrulewidth{0.5mm}
+\newcommand{\strep}{\textit{Streptomyces}\xspace}
+\newcommand{\escoli}{\textit{Escherichia coli}\xspace}
+\newcommand{\ecol}{\textit{E.\,coli}\xspace}
+\newcommand{\bas}{\textit{Bacillus subtilis}\xspace}
+\newcommand{\bass}{\textit{B.\,subtilis}\xspace}
+\newcommand{\sm}{\textit{Sinorhizobium meliloti}\xspace}
+\newcommand{\smel}{\textit{S.\,meliloti}\xspace}
+\newcommand{\agrot}{\textit{Agrobacterium tumefaciens}\xspace}
+\newcommand{\agro}{\textit{A.\,tumefaciens}\xspace}
+\newcommand{\p}{\texttt{progressiveMauve}\xspace}
+\newcommand{\tub}{\textit{Mycobacterium tuberculosis}\xspace}
+\newcommand{\pseudo}{\textit{Pseudomonas aeruginosa}\xspace}
+\newcommand{\hal}{\textit{Haloquadratum walsbyi}\xspace}
+\newcommand{\salm}{\textit{Salmonella enterica}\xspace}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\vib}{\textit{Vibrio}\xspace}
+\newcommand{\bur}{\textit{Burkholderia}\xspace}
+\newcommand{\bor}{\textit{Bordetella}\xspace}
+\newcommand{\xan}{\textit{Xanthomonas}\xspace}
+\newcommand{\rhod}{\textit{Rhodobacteraceae}\xspace}
+\newcommand{\pa}{pSymA\xspace}
+\newcommand{\pb}{pSymB\xspace}
+\newcommand{\cc}{\cellcolor{black!16}}
+%%%%BIBLIOGRAPHY
+%\bibliography{C:/Users/Daniella/Documents/Sinorhizobium2015/Bib/Bibliography}
+
+%Supplementary File Table Numbers:
+\newcommand{\alnfig}{S1\xspace}
+\newcommand{\treetopresults}{S2\xspace}
+\newcommand{\oriloctab}{S4\xspace}
+\newcommand{\orishuffle}{S5\xspace}
+\newcommand{\codnoncoddat}{S5\xspace}
+\newcommand{\posclust}{S6\xspace}
+\newcommand{\dNdSall}{S7\xspace}
+\newcommand{\codnoncodprop}{S8\xspace}
+\newcommand{\highsubsbars}{S10\xspace}
+%Supplementary File Fig Numbers:
+\newcommand{\seqdata}{S1\xspace}
+\newcommand{\ecolitree}{S2\xspace}
+\newcommand{\basstree}{S3\xspace}
+\newcommand{\streptree}{S4\xspace}
+\newcommand{\sinoCtree}{S5\xspace}
+\newcommand{\sinoPAtree}{S6\xspace}
+\newcommand{\sinoPBtree}{S7\xspace}
+\newcommand{\highsubsex}{S13\xspace}
+
+\newcommand{\ecolbox}{S8\xspace}
+\newcommand{\bassbox}{S9\xspace}
+\newcommand{\strepbox}{S10\xspace}
+\newcommand{\sinoCbox}{S11\xspace}
+\newcommand{\PAbox}{S12\xspace}
+\newcommand{\PBbox}{S13\xspace}
+\newcommand{\dn}{\textit{dN}\xspace}
+\newcommand{\ds}{\textit{dS}\xspace}
+\newcommand{\specialcell}[2][c]{%
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\beginsupplement}{%
+	\setcounter{table}{0}
+	\renewcommand{\thetable}{S\arabic{table}}%
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{S\arabic{figure}}%
+}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+\renewcommand{\thesubsubsection}{}
+\usepackage{setspace}
+
+\usepackage{multicol}   
+\usepackage{titlesec}
+
+\titlespacing\section{0pt}{12pt plus 2pt minus 2pt}{0pt plus 1pt minus 1pt}
+\titlespacing\subsection{0pt}{12pt plus 2pt minus 2pt}{0pt plus 1pt minus 1pt}
+\titlespacing\subsubsection{0pt}{12pt plus 2pt minus 2pt}{0pt plus 1pt minus 1pt}
+
+%below 3 lines will put ALL table captions at the top...not sure if this is what we want but it is good enough for now
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{atomictangerine}{rgb}{1.0, 0.6, 0.4}
+\colorlet{darkcol}{black!30!white}
+\colorlet{lightcol}{black!10!white}
+\definecolor{txtcol}{HTML}{F40000}
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{figure*}
+	\centering
+	\def\tabularxcolumn#1{m{#1}}
+	\begin{tabularx}{\linewidth}{@{}cXX@{}}
+		%
+		\begin{tabular}{cc}
+			\subfloat[]{\includegraphics[width=0.5\textwidth]{./Graphs/sinoC_weighted_subs_bidirectionality_colour_26Mar20.pdf}} 
+			& \subfloat[]{\includegraphics[width=0.5\textwidth]{./Graphs/pSymA_weighted_subs_bidirectionality_colour_26Mar20.pdf}} \\
+			\raisebox{\dimexpr-.5\height-1em}{\subfloat[]{\includegraphics[width=0.5\textwidth]{./Graphs/pSymB_weighted_subs_bidirectionality_colour_26Mar20.pdf}}} 
+			&
+			%		\subfloat[]{\includegraphics[width=0.55\textwidth]{C:/Users/Daniella/Documents/Sinorhizobium2015/Papers/Substitutions_paper/Substitutions_paper/Figs/pSymB_sub_exp_histogram_bidirectionality_colour_12Apr18.pdf}}& 
+			\begin{minipage}[]{0.8\columnwidth}%
+				%	\caption{The bar graphs show the number of substitutions along the replicons of \smel: chromosome (a), \pa (b), and \pb (c). Distance from the origin of replication is on the x-axis beginning with the origin of replication denoted by position zero on the left, and the terminus indicated on the far right. The y-axis of the graph indicates the total number of substitutions found at each position of the replicons of \smel: chromosome (a), \pa (b), and \pb (c). Each bar represents a section of the genome that spans 10,000 base pairs. Protein coding regions are represented in dark grey and non-protein coding regions are represented in light grey.}\label{sub_graphs2} %
+				\caption{The bar graphs show the number of substitutions along the replicons of \smel: chromosome (a), \pa (b), and \pb (c). Distance from the origin of replication is on the x-axis beginning with the origin of replication denoted by position zero on the left, and the terminus indicated on the far right. The y-axis of the graph indicates the number of substitutions per 10,000 base pairs of the replicons of \smel: chromosome (a), \pa (b), and \pb (c). Each bar represents a section of the genome that spans 10Kbp. Outliers are represented by light grey bars.}\label{sub_graphs2} %
+			\end{minipage}\tabularnewline
+		\end{tabular}
+	\end{tabularx}
+	
+\end{figure*}
+
+	\end{document}

@@ -1,0 +1,224 @@
+\documentclass{beamer}
+\definecolor{envy}{HTML}{1A936F}
+\definecolor{berry}{HTML}{C6878F}
+\definecolor{turq}{HTML}{077187}
+\definecolor{pgreen}{HTML}{CBE896}
+\definecolor{db}{HTML}{074F57}
+\colorlet{ldb}{db!55!white}
+\colorlet{lpgreen}{pgreen!55!white}
+
+\newcommand{\light}[1]{\textcolor{db!50!white}{#1}}
+% New colours!
+% \setbeamercolor{background canvas}{bg=GreyWhite}
+\setbeamercolor{title}{fg=black, bg=pgreen!55!white}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{block title}{fg=black,bg=pgreen!55!white}
+\setbeamercolor{block body}{fg=black!22!white}
+%\setbeamercolor{alerted text}{fg=Pinky}
+\setbeamercolor{itemize item}{fg=turq}
+\setbeamercolor{itemize subitem}{fg=db!85!white}
+\setbeamercolor{itemize subsubitem}{fg=db!85!white}
+%\setbeamercolor{framesource}{fg=Carrot}
+%\setbeamercolor{section in toc}{fg=PurpNav}
+\setbeamercolor{footnote}{fg=black}
+\setbeamercolor{footnote mark}{fg=black}
+\setbeamercolor{myfootlinetext}{fg=black}
+\setbeamertemplate{itemize subitem}{fg=turq}
+\setbeamertemplate{itemize subsubitem}{fg=turq}
+%\setbeamertemplate{itemize item}{\color{DarkPurple}$\blacksquare$}
+%\setbeamertemplate{itemize item}{\color{DarkPurple}}[circle]
+\setbeamertemplate{itemize item}[circle]
+
+\newcommand{\be}{\begin{enumerate}}
+	\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+	\newcommand{\ei}{\end{itemize}}
+\newcommand{\ccbb}{\cellcolor{turq!15!white}}
+\newcommand{\cc}{\cellcolor{pgreen!55!white}}
+\newcommand{\ccb}{\cellcolor{berry!35!white}}
+
+% source at bottom left of slide
+\newcommand{\sourceleft}[1]{\begin{textblock*}{4cm}(0.3cm,8.8cm)
+		\begin{beamercolorbox}[ht=0.5cm,left]{framesource}
+			\usebeamerfont{framesource}\usebeamercolor[fg]{framesource}
+			{#1}
+		\end{beamercolorbox}
+	\end{textblock*}}
+	
+% source at bottom right of slide
+\newcommand{\sourceright}[1]{\begin{textblock*}{}
+		\begin{beamercolorbox}[ht=0.5cm,left]{framesource}
+			\usebeamerfont{framesource}\usebeamercolor[berry]{framesource}
+			{#1}
+		\end{beamercolorbox}
+	\end{textblock*}}
+
+\newcommand{\cfcite}[1]{\footnote{\citeauthor{#1}, \citeyear{#1}}}
+
+\newcommand{\sourceextremeright}[1]{\begin{textblock*}{4cm}(10.6cm,8.8cm)
+		\begin{beamercolorbox}[ht=0.5cm,left]{framesource}
+			\usebeamerfont{framesource}\usebeamercolor[fg]{framesource}
+			{#1}
+		\end{beamercolorbox}
+	\end{textblock*}}
+
+\usetheme{boxes}
+\usepackage[absolute,overlay]{textpos}
+%\usecolortheme{beaver}
+\useinnertheme{circles}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{calc, arrows}
+\usepackage{longtable}
+\usepackage{graphicx}% http://ctan.org/pkg/graphicx
+\usepackage{booktabs}
+\usepackage{xspace}
+\usepackage{varwidth}
+\usepackage{array} %make columns all same width
+\newcolumntype{C}{>{\centering\arraybackslash}p{0.2\linewidth}}
+\usepackage{scrtime} % for \thistime (this package MUST be listed first!)
+\usepackage{amsmath} % essential for cases environment
+\usepackage{amsthm} % for theorems and proofs
+\usepackage{amsfonts} % mathbb
+\usepackage{graphics,graphicx}
+\usepackage{multirow} % fancy tables
+\usepackage{wasysym} % circle symbols (including half-filled circles)
+\usepackage{enumerate} % fancier enumeration (e.g., a,b,c, ...)
+%\usepackage{xcolor}
+\usepackage{color}
+\usepackage{xstring}
+\usepackage[linguistics]{forest}
+\usetikzlibrary{calc, arrows}
+\usepackage{xcolor,colortbl}
+\usepackage[export]{adjustbox}
+%\colorlet{grey}{black!10}
+%below adds slide number without putting total number of slides
+\setbeamertemplate{footline}{%
+	\raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[10pt]{\scriptsize}}}}
+
+\newenvironment{itmenv}{\only{\setbeamercolor{local structure}{fg=gray}}}{}
+\setbeamertemplate{enumerate items}[default]
+\setbeamercolor*{enumerate item}{fg=db}
+
+\setbeamercolor*{enumerate subitem}{fg=db}
+
+\newcommand\FrameText[1]{%
+	\begin{textblock*}{\paperwidth}(0pt,\textheight)
+		\raggedleft #1\hspace{4em}\vspace{20em}
+	\end{textblock*}}
+
+\mode<presentation>
+\title{\Huge Spatial Patterns of Molecular Trends in Bacterial Genomes}
+
+\author[Daniella Lato]{\\ Daniella Lato\\ Lab Meeting Presentation \\ September 18, 2018}
+\date[2017]{}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\newcommand{\itm}{\item<itm@1->}
+\newcommand{\btVFill}{\vskip0pt plus 1filll}
+\newcommand{\s}{\textit{Sinorhizobium}\ }
+\newcommand{\sm}{\textit{Sinorhizobium meliloti}\xspace}
+\newcommand{\salm}{\textit{Salmonella enterica}\xspace}
+\newcommand{\smel}{\textit{S.\,meliloti}\xspace}
+\newcommand{\smed}{\textit{S.\,medicae}}
+\newcommand{\sfred}{\textit{S.\,fredii}}
+\newcommand{\ssah}{\textit{S.\,saheli}}
+\newcommand{\ster}{\textit{S.\,terangae}}
+\newcommand{\ag}{\textit{Agrobacterium tumefaciens }}
+\newcommand{\p}{progressiveMauve\xspace}
+\newcommand{\agro}{\textit{A.\,tumefaciens }}
+\newcommand{\bur}{\textit{Burkholderia}\xspace}
+\newcommand{\vib}{\textit{Vibrio}\xspace}
+\newcommand{\bor}{\textit{Bordetella}\xspace}
+\newcommand{\xan}{\textit{Xanthomonas}\xspace}
+\newcommand{\sul}{\textit{Sulfolobus}\xspace}
+\newcommand{\ent}{\textit{Enterobacteria}\xspace}
+\newcommand{\bac}{\textit{Bacillus subtilis}\xspace}
+\newcommand{\ecoli}{\textit{Escherichia coli}\xspace}
+\newcommand{\lis}{\textit{Listeria monocytogenes}\xspace}
+\newcommand{\bass}{\textit{B.\,subtilis}\xspace}
+\newcommand{\bas}{\textit{Bacillus subtilis}\xspace}
+\newcommand{\tub}{\textit{Mycobacterium tuberculosis}\xspace}
+\newcommand{\strep}{\textit{Streptomyces}\xspace}
+\newcommand{\agrot}{\textit{Agrobacterium tumefaciens}\xspace}
+\newcommand{\ecol}{\textit{E.\,coli}\xspace}
+\newcommand{\salb}{\textit{S.\,alblus}\xspace}
+\newcommand{\salbus}{\textit{S.\,albus}\xspace}
+\newcommand{\shyg}{\textit{S.\,hygroscopicus}\xspace}
+\newcommand{\sliv}{\textit{S.\,lividans}\xspace}
+\newcommand{\sros}{\textit{S.\,roseosporus}\xspace}
+\newcommand{\ssir}{\textit{S.\,sirex}\xspace}
+\newcommand{\sven}{\textit{S.\,venezuelae}\xspace}
+\newcommand{\scoe}{\textit{S.\,coelicolor}\xspace}
+\newcommand{\hal}{\textit{Haloquadratum walsbyi}\xspace}
+\newcommand{\pa}{pSymA\xspace}
+\newcommand{\pb}{pSymB\xspace}
+\setbeamertemplate{navigation symbols}{}
+\newcommand*{\NodeSize}{0.5cm}%
+\newcommand*{\YShiftBetweenRows}{-1cm}% Subsequent rows are shited down so they don't overlap
+\tikzset{DNA Style/.style={minimum size=0.5cm, draw=gray, line width=1pt}}{}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newlength{\YShift}% 
+\newcounter{ColumnCounter}% Prefix for node labels
+
+
+% Initialize - These are probably not needed, but prefer to set them
+\setlength{\YShift}{0cm}% 
+\setcounter{ColumnCounter}{0}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\pagestyle{plain}
+	\centering
+	\tikzstyle{none}=[ultra thick, draw=none, ellipse, minimum width=1cm,
+	align=center]
+	\tikzstyle{ntwo}=[ultra thick, draw=none, ellipse, minimum width=2cm,
+	align=center]
+	\tikzstyle{nthree}=[ultra thick, draw=none, ellipse, minimum width=2cm,
+	align=center]
+%	\tikzstyle{nfour}=[ultra thick, draw=berry, ellipse, minimum width=2cm, align=center]
+		\tikzstyle{nfour}=[ultra thick, draw =berry, minimum width=1.5cm, minimum height=2cm, rounded corners]
+	\tikzstyle{nfive}=[ultra thick, draw=none, ellipse, minimum width=2cm,
+	align=center]
+	\tikzstyle{nsix}=[ultra thick, draw=none, ellipse, minimum width=2cm,
+	align=center]
+%	\tikzstyle{nseven}=[ultra thick, draw=envy, ellipse, minimum width=6cm, minimum height=3cm, align=center]
+	\tikzstyle{nseven}=[ultra thick, draw =envy, minimum width=5.5cm, minimum height=2cm, rounded corners]
+%	\tikzstyle{neight}=[ultra thick, draw=turq!55!white, ellipse, minimum width=4cm, minimum height=3cm, align=center]
+	\tikzstyle{neight}=[ultra thick, draw =turq!55!white, minimum width=3.5cm, minimum height=2cm, rounded corners]
+	
+	\begin{tikzpicture}[trim left=0pt]
+	\Huge
+	\node[none] (first reservoir) at (0.5,0) {\normalsize Taxa A: \\10};
+	\node[ntwo] (second reservoir) at (2.5,0) {\normalsize Taxa B: \\14};
+	\node[nthree] (third reservoir) at (4.5,0) {\normalsize Taxa C: \\12};
+	\node[nfour, align=center] (forth reservoir) at (6.5,0) {\normalsize Taxa D: \\25};
+	\node[nfive, align=center] (fifth reservoir) at (8.5,0) {\normalsize Taxa E: \\22};
+	\node[nsix, align=center] (sixth reservoir) at (10.5,0) {\normalsize Taxa F: \\20};
+	\node[nseven, align=center] (seventh reservoir) at (2.5,0) {};
+	\node[neight, align=center] (eighth reservoir) at (9.5,0) {};
+	\end{tikzpicture}
+	Clustering distance = 2bp
+	\bigskip
+	
+	
+	\color{envy}{\textbigcircle} new genomic position = 12 
+	
+	\color{berry}{\textbigcircle} new genomic position = 25 
+	
+	\color{turq}{\textbigcircle} new genomic position = 21 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
