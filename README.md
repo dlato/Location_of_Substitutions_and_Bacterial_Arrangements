@@ -1,4 +1,4 @@
-# Spatial Patterns of Substitutions in Bacterial Genomes: Supplementary Paper Information
+# The Location of Substitutions and Bacterial Genome Arrangements: Supplementary Paper Information
 
 This repository contains additional information (code, tables, graphs ... etc) for the paper titled: Spatial Patterns of Substitutions in Bacterial Genomes.
 
