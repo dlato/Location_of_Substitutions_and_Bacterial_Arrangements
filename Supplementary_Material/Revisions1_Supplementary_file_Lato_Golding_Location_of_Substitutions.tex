@@ -875,12 +875,7 @@ We were unable to determine a significant correlation between \dn and $\omega$ v
 The significant correlation between \ds and distance from the origin of replication is small.
 Even when the outliers (non-zero values of \dn and $\omega$) are included in the selection analysis, we still can find no evidence for an overall trend between distance from the origin of replication and \dn, \ds, and $\omega$ values.
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf}
-		\caption{\label{fig:sinoC_selection_no_outliers}The graph show the values of \dn, \ds, and $\omega$ along the chromosome of \smel. Distance from the origin of replication is on the x-axis beginning with the origin of replication denoted by position zero on the left, and the terminus indicated on the far right. The y-axis of the graph indicates the value of \dn, \ds, and $\omega$ found at each gene segment position of the chromosome. Outliers are included in this graph. The average \dn, \ds, and $\omega$ values for each 10,000bp regions of the replicon were calculated and represented by the dark brown points. A trend line represented in blue (using the \texttt{loess} method), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. For a complete list zero value information, please see Table \ref{tab:selection_outliers}.}
-	\end{center}
-\end{figure}
+
 
 \begin{table}[h]
 	\centering
@@ -933,6 +928,15 @@ Even when the outliers (non-zero values of \dn and $\omega$) are included in the
 	}%resizebox
 	\caption{\label{tab:sinoC_no_outliers_dN_dS_20genes} Linear regression for \dn, \ds, and $\omega$ calculated for the 20 genes closest and 20 genes farthest from the origin of replication in the \smel chromosome.  Outliers were included in the calculation. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf}
+		\caption{\label{fig:sinoC_selection_no_outliers}The graph show the values of \dn, \ds, and $\omega$ along the chromosome of \smel. Distance from the origin of replication is on the x-axis beginning with the origin of replication denoted by position zero on the left, and the terminus indicated on the far right. The y-axis of the graph indicates the value of \dn, \ds, and $\omega$ found at each gene segment position of the chromosome. Outliers are included in this graph. The average \dn, \ds, and $\omega$ values for each 10,000bp regions of the replicon were calculated and represented by the dark brown points. A trend line represented in blue (using the \texttt{loess} method), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. For a complete list zero value information, please see Table \ref{tab:selection_outliers}.}
+	\end{center}
+\end{figure}
+
+
 
 \newpage
 \clearpage
