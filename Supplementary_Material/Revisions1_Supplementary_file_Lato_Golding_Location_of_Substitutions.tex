@@ -626,6 +626,88 @@ It is segments like these that are resulting in the appearance of extremely high
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Weighted, Non-weighted, and 20Kbp Near and Far From the Origin Substitution Linear Regression Analysis}
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcccccc}
+			\toprule
+			& \multicolumn{6}{c}{Protein Coding Window Size}  \\
+			\cmidrule{2-7}
+			Bacteria and Replicon & 10Kbp & 25Kbp & 50Kbp & 100Kbp & 200Kbp & 400Kbp \\
+%			& Coefficient Estimate & $R^2$ & Coefficient Estimate & $R^2$ \\
+			\midrule
+			\ecol Chromosome & -2.35\e{-10}*** & & -2.32\e{-10}*\\
+			& (0.037)& & (0.091)\\
+			\midrule
+			\bass Chromosome & -7.96\e{-10}**\\
+			& (0.042)  \\
+			\midrule
+			\strep Chromosome &  2.38\e{-11}*\\
+			& (0.006) \\
+			\midrule
+			\smel Chromosome &  -9.26\e{-11}***\\
+			& (0.107)\\
+			\midrule
+			\smel \pa &  NS \\
+			& (0.013) \\
+			\midrule
+			\smel \pb &  NS \\
+			& (0.010) \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lin_reg_10kb_subs} WEIGHTED. Linear regression on 10kb sections of the genome with increasing distance from the origin of replication after accounting for bidirectional replication. Weighted columns have the total number of substitutions in each 10kb section of the genome divided by the total number of protein coding sites in the genome. Non-weighted columns are performing a linear regression on the total number of substitutions in each 10kb section of the genome. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. The $R^2$ value for each coefficient estimate is found below the value in brackets ().}
+\end{table}
+
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcccccc}
+			\toprule
+			& \multicolumn{6}{c}{Protein Coding Window Size}  \\
+			\cmidrule{2-7}
+			Bacteria and Replicon & 10Kbp & 25Kbp & 50Kbp & 100Kbp & 200Kbp & 400Kbp \\
+			%			& Coefficient Estimate & $R^2$ & Coefficient Estimate & $R^2$ \\
+			\midrule
+			\ecol Chromosome & -2.84\e{-4}***&  & & -1.50\e{-3}***\\
+			& (0.356)& & (0.458)\\
+			\midrule
+			\bass Chromosome & -1.73\e{-4}**& \\
+			& (0.046)  \\
+			\midrule
+			\strep Chromosome &  NS& \\
+			& (0.001) \\
+			\midrule
+			\smel Chromosome &  -2.21\e{-5}***& \\
+			& (0.151)\\
+			\midrule
+			\smel \pa & NS&  \\
+			& (0.035) \\
+			\midrule
+			\smel \pb &  NS \\
+			& (0.011) \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lin_reg_10kb_subs} NON-WEIGHTED. Linear regression on 10kb sections of the genome with increasing distance from the origin of replication after accounting for bidirectional replication. Weighted columns have the total number of substitutions in each 10kb section of the genome divided by the total number of protein coding sites in the genome. Non-weighted columns are performing a linear regression on the total number of substitutions in each 10kb section of the genome. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. The $R^2$ value for each coefficient estimate is found below the value in brackets ().}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{table}[h]
 	\centering
@@ -635,7 +717,7 @@ It is segments like these that are resulting in the appearance of extremely high
 			& \multicolumn{4}{c}{Protein Coding}  \\
 			\cmidrule{2-5}
 			Bacteria and Replicon &  \multicolumn{2}{c}{Weighted} & \multicolumn{2}{c}{Non-Weighted}\\
-			& Coefficient Estimate & $R^2$ & Coefficent Estimate & $R^2$ \\
+			& Coefficient Estimate & $R^2$ & Coefficient Estimate & $R^2$ \\
 			\midrule
 			\ecol Chromosome & -2.35\e{-10}*** & 0.037 & -2.84\e{-4}***& 0.356  \\
 			\bass Chromosome & -7.96\e{-10}**& 0.042 &  -1.73\e{-4}**& 0.046\\

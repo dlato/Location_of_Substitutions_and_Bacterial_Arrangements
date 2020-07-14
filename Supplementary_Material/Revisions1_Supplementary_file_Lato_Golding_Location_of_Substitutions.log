@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  6 JUL 2020 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  14 JUL 2020 08:57
 entering extended mode
 **./Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
 (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
@@ -1123,7 +1123,14 @@ File: l3backend-pdfmode.def 2020-02-21 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count437
 \l__pdf_internal_box=\box71
 )
-(Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.aux)
+(Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.aux
+
+LaTeX Warning: Label `tab:lin_reg_10kb_subs' multiply defined.
+
+
+LaTeX Warning: Label `tab:lin_reg_10kb_subs' multiply defined.
+
+)
 \openout1 = `Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutio
 ns.aux'.
 
@@ -1434,91 +1441,112 @@ g>]
 Underfull \vbox (badness 10000) detected at line 612
  []
 
-[15 <./figs/Streptomyces_high_substitutions_gene_example.png>] [16] [17]
+[15 <./figs/Streptomyces_high_substitutions_gene_example.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 741.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\omega' on input line 741.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 741.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 746.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\omega' on input line 746.
+(hyperref)                removing `math shift' on input line 823.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 746.
+(hyperref)                removing `\omega' on input line 823.
 
-<./figs/ALL_BAC_dN_dS_omega_violinplots.pdf, id=308, 505.89pt x 505.89pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 823.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 828.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\omega' on input line 828.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 828.
+
+<./figs/ALL_BAC_dN_dS_omega_violinplots.pdf, id=309, 505.89pt x 505.89pt>
 File: ./figs/ALL_BAC_dN_dS_omega_violinplots.pdf Graphic file (type pdf)
 <use ./figs/ALL_BAC_dN_dS_omega_violinplots.pdf>
 Package pdftex.def Info: ./figs/ALL_BAC_dN_dS_omega_violinplots.pdf  used on in
-put line 749.
+put line 831.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 816.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 898.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.66661pt
-(hyperref)                removed on input line 816.
+(hyperref)                removed on input line 898.
 
 [18] [19 <./figs/ALL_BAC_dN_dS_omega_violinplots.pdf>]
-<./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf, id=352, 505.89pt x 505.89pt>
+<./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf, id=358, 505.89pt x 505.89pt>
 File: ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf Graphic file (type pdf)
 <use ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf>
 Package pdftex.def Info: ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf  used on
- input line 832.
+ input line 914.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
  [20]
+Overfull \vbox (409.37451pt too high) has occurred while \output is active []
+
+
+[21 <./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[21 <./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf>] [22]
+[22] [23]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
 (biblatex)                Using 'family-given' now.
 
-[23
+[24
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 893.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 893.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 975.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 975.
  (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 893.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 893.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 975.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 975.
 Package rerunfilecheck Info: File `Revisions1_Supplementary_file_Lato_Golding_L
 ocation_of_Substitutions.out' has not changed.
-(rerunfilecheck)             Checksum: 02DBFB1DB6A3BABB5687D7FE49C87E3E;1222.
+(rerunfilecheck)             Checksum: 5B546B8ED9A07B01F6631C07430FD70A;1222.
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'Revisions1_Supplementary_file_Lato_Go
 lding_Location_of_Substitutions.run.xml'.
 \openout1 = `Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutio
 ns.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 893.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 975.
  ) 
 Here is how much of TeX's memory you used:
- 28591 strings out of 481511
- 554562 string characters out of 2911892
- 1027054 words of memory out of 3000000
+ 28594 strings out of 481511
+ 554601 string characters out of 2911892
+ 1027093 words of memory out of 3000000
  43246 multiletter control sequences out of 15000+200000
  552124 words of font info for 80 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1548,9 +1576,9 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/synch/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb>
 Output written on Revisions1_Supplementary_file_Lato_Golding_Location_of_Substi
-tutions.pdf (23 pages, 5069748 bytes).
+tutions.pdf (24 pages, 5073823 bytes).
 PDF statistics:
- 923 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
+ 930 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
  227 words of extra memory for PDF output out of 10000 (max. 10000000)
 
