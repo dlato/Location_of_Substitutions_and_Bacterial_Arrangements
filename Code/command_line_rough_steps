@@ -21,34 +21,24 @@ get_gene_pos_name.py *.gbk
 ##########################################
 # Phylogenetic Tree
 ##########################################
-foreach y (Block*/)
-yes | cp in_* $y
-cd $y
-cp *.phyI infile
-perl -p -i.bak -e "s/:/ /g" infile
-seqboot < in_comms_seqboot
-foreach x (*.mafft)
-\rm infile
-cp outfile infile
-mv outfile `basename $x .mafft`_boot
-end
-dnadist < in_comms_dnadist
-foreach x (*.mafft)
-\rm infile
-cp outfile infile
-mv outfile `basename $x .mafft`_dist_mats
-end
-neighbor < in_comms_NJ
-foreach x (*.mafft)
-\rm infile
-mv outfile `basename $x .mafft`_nj_outfile
-mv outtree `basename $x .mafft`_nj_outtree
-end
-mv *_nj_outtree ../Consensus_Tree/
-cd ..
-end
+#tree with outgroup for topology and rooting
+(/usr/local/bin/raxmlHPC-PTHREADS-SSE3 -T 20 -f a -x 12345 -o CP020567 -s chrom_all_blocks.phyI  -n raxml_out_outgroup -N 100 -p 12345 -m GTRGAMMA) >& raxml.err
 
-consense < in_comms_consense
+#remove outgroup for topology (rooted)
+Rscript ~/CODE/remove_outgroup.R RAxML_bestTree.raxml_out_outgroup  OUTGROUP_TAXA_ID
+
+#run RAxML BS + ML analysis on ingroup (no outgroup)
+(/usr/local/bin/raxmlHPC -f a -x 12345 -p 12345 -# 1000 -m GTRGAMMA -s chrom_all_blocks.phyI -n ingroup ) >& raxml_ingroup.err
+
+#optimize tree
+(/usr/local/bin/raxmlHPC -f T -t outgroup_tree_topology -p 12345 -m GTRGAMMA -s chrom_all_blocks.phyI -n optimize ) >& raxml_optimize.err
+
+#use ingroup bootstraps to create bs values
+raxmlHPC -f b -t RAxML_bestTree.optimize -z RAxML_bootstrap.ingroup -m GTRGAMMA -n ref_bs_values
+
+#SH test on each block
+raxmlHPC -f H -t RAxML_bestTree.optimize -z RAxML_bestTree* -s Block100.mafft -m GTRGAMMA -n Block100
+
 
 ##########################################
 # Selection analysis
