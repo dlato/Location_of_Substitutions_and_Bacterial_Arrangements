@@ -2,14 +2,14 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: Revisions1_Supplement
 The style file: biblatex.bst
 Database file #1: Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions-blx.bib
 Database file #2: C:/Users/synch/Documents/Bib/Sub_paper2.bib
-I was expecting a `,' or a `}'---line 765 of file C:/Users/synch/Documents/Bib/Sub_paper2.bib
+I was expecting a `,' or a `}'---line 1896 of file C:/Users/synch/Documents/Bib/Sub_paper2.bib
  : 
- : @article{Gouy:10,
+ : @article{Khat:89,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 952 of file C:/Users/synch/Documents/Bib/Sub_paper2.bib
+I was expecting a `,' or a `}'---line 2091 of file C:/Users/synch/Documents/Bib/Sub_paper2.bib
  : 
- : @article{Hill:88,
+ : @article{Merr:12,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Biblatex version: 3.13
