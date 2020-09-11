@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  29 AUG 2020 18:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  11 SEP 2020 12:39
 entering extended mode
 **./Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
 (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
@@ -1362,18 +1362,19 @@ Overfull \vbox (51.13777pt too high) has occurred while \output is active []
 
 [9 <./figs/Ecoli_chrom_ref_tree_figtree_raw_29Aug20.pdf> <./figs/bass_chrom_ref
 _tree_figtree_raw_29Aug20.pdf>]
-<./figs/Strep_chrom_figtree_29Aug20.pdf, id=174, 1293.83376pt x 677.53125pt>
-File: ./figs/Strep_chrom_figtree_29Aug20.pdf Graphic file (type pdf)
-<use ./figs/Strep_chrom_figtree_29Aug20.pdf>
-Package pdftex.def Info: ./figs/Strep_chrom_figtree_29Aug20.pdf  used on input 
-line 364.
-(pdftex.def)             Requested size: 354.12144pt x 185.43774pt.
-<./figs/SinoC_chrom_ref_tree_29Aug20.pdf, id=175, 1293.83376pt x 747.79375pt>
-File: ./figs/SinoC_chrom_ref_tree_29Aug20.pdf Graphic file (type pdf)
-<use ./figs/SinoC_chrom_ref_tree_29Aug20.pdf>
-Package pdftex.def Info: ./figs/SinoC_chrom_ref_tree_29Aug20.pdf  used on input
- line 369.
-(pdftex.def)             Requested size: 354.12144pt x 204.66832pt.
+<./figs/Strep_chrom_figtree_raw_11Sep20.pdf, id=174, 1293.83376pt x 758.835pt>
+File: ./figs/Strep_chrom_figtree_raw_11Sep20.pdf Graphic file (type pdf)
+<use ./figs/Strep_chrom_figtree_raw_11Sep20.pdf>
+Package pdftex.def Info: ./figs/Strep_chrom_figtree_raw_11Sep20.pdf  used on in
+put line 364.
+(pdftex.def)             Requested size: 354.12144pt x 207.69028pt.
+<./figs/SinoC_chrom_figtree_raw_11Sep20.pdf, id=175, 1293.83376pt x 877.2775pt>
+
+File: ./figs/SinoC_chrom_figtree_raw_11Sep20.pdf Graphic file (type pdf)
+<use ./figs/SinoC_chrom_figtree_raw_11Sep20.pdf>
+Package pdftex.def Info: ./figs/SinoC_chrom_figtree_raw_11Sep20.pdf  used on in
+put line 369.
+(pdftex.def)             Requested size: 354.12144pt x 240.10754pt.
 <./figs/pSymA_chrom_figtree_raw_29Aug20.pdf, id=176, 1293.83376pt x 722.7pt>
 File: ./figs/pSymA_chrom_figtree_raw_29Aug20.pdf Graphic file (type pdf)
 <use ./figs/pSymA_chrom_figtree_raw_29Aug20.pdf>
@@ -1387,9 +1388,9 @@ File: ./figs/pSymB_chrom_figtree_raw_29Aug20.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figs/pSymB_chrom_figtree_raw_29Aug20.pdf  used on in
 put line 382.
 (pdftex.def)             Requested size: 354.12144pt x 185.43774pt.
- [10 <./figs/Strep_chrom_figtree_29Aug20.pdf> <./figs/SinoC_chrom_ref_tree_29Au
-g20.pdf>] [11 <./figs/pSymA_chrom_figtree_raw_29Aug20.pdf> <./figs/pSymB_chrom_
-figtree_raw_29Aug20.pdf>]
+ [10 <./figs/Strep_chrom_figtree_raw_11Sep20.pdf> <./figs/SinoC_chrom_figtree_r
+aw_11Sep20.pdf>] [11 <./figs/pSymA_chrom_figtree_raw_29Aug20.pdf> <./figs/pSymB
+_chrom_figtree_raw_29Aug20.pdf>]
 Overfull \hbox (22.81396pt too wide) in paragraph at lines 416--428
  [] 
  []
@@ -1539,7 +1540,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 967.
  ) 
 Here is how much of TeX's memory you used:
  28598 strings out of 481511
- 554177 string characters out of 2911892
+ 554219 string characters out of 2911892
  1028773 words of memory out of 3000000
  43251 multiletter control sequences out of 15000+200000
  552124 words of font info for 80 fonts, out of 3000000 for 9000
@@ -1570,7 +1571,7 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/synch/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb>
 Output written on Revisions1_Supplementary_file_Lato_Golding_Location_of_Substi
-tutions.pdf (24 pages, 5074139 bytes).
+tutions.pdf (24 pages, 5074153 bytes).
 PDF statistics:
  935 PDF objects out of 1000 (max. 8388607)
  80 named destinations out of 1000 (max. 500000)
