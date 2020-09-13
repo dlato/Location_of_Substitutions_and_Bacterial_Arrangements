@@ -779,6 +779,16 @@ It is therefore more useful to consider the global (genome wide) pattern of subs
 
 \subsection{Non-linear Analysis of Number of Substitutions and Distance From the Origin of Replication}
 
+Using a simple smoothed conditional means method (\texttt{geom\_smooth()} function in \texttt{R}), a non-linear trend analysis was performed on all bacterial replicons.
+The previous mentioned weighted data (see the previous subsection), was used in this analysis.
+The weighted data represents the total number of substitutions divided by the total number of protein-coding sites in 10Kbp segments of the genomes.
+Outliers were removed.
+The results from this non-linear analysis can be seen in Figures \ref{fig:ecoli_nonpar} - \ref{fig:pSymB_nonpar}.
+The visual results from this analysis mirror the findings from the main paper, the total number of substitutions varies with distance from the origin of replication, but the direction of this trend is unclear and inconsistent between bacterial replicons.
+ 
+
+
+
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=\textwidth]{./figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf}
