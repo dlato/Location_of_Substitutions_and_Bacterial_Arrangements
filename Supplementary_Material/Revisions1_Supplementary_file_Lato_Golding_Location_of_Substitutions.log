@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  14 SEP 2020 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  14 SEP 2020 17:46
 entering extended mode
 **./Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
 (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
@@ -1513,7 +1513,10 @@ ed on input line 840.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18] [19]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 876.
@@ -1538,12 +1541,18 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 881.
 
-<./figs/ALL_BAC_dN_dS_omega_violinplots.pdf, id=336, 505.89pt x 505.89pt>
+<./figs/ALL_BAC_dN_dS_omega_violinplots.pdf, id=330, 505.89pt x 505.89pt>
 File: ./figs/ALL_BAC_dN_dS_omega_violinplots.pdf Graphic file (type pdf)
 <use ./figs/ALL_BAC_dN_dS_omega_violinplots.pdf>
 Package pdftex.def Info: ./figs/ALL_BAC_dN_dS_omega_violinplots.pdf  used on in
 put line 884.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 951.
@@ -1553,23 +1562,31 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.66661pt
 (hyperref)                removed on input line 951.
 
-[20]
-<./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf, id=361, 505.89pt x 505.89pt>
+[19]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf, id=359, 505.89pt x 505.89pt>
 File: ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf Graphic file (type pdf)
 <use ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf>
 Package pdftex.def Info: ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf  used on
  input line 1021.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] [22 <./figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf>] [23 <./figs/bass
-_10KB_weighted_subs_nonpar_12Sep20.pdf>] [24 <./figs/strep_10KB_weighted_subs_n
-onpar_14Sep20.pdf>] [25 <./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf>]
-[26 <./figs/pSymA_10KB_weighted_subs_nonpar_12Sep20.pdf>] [27 <./figs/pSymB_10K
-B_weighted_subs_nonpar_12Sep20.pdf>] [28 <./figs/ALL_BAC_dN_dS_omega_violinplot
-s.pdf>] [29 <./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf>]
+[20] [21] [22 <./figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf>] [23 <./figs
+/bass_10KB_weighted_subs_nonpar_12Sep20.pdf>] [24 <./figs/strep_10KB_weighted_s
+ubs_nonpar_14Sep20.pdf>] [25 <./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pd
+f>] [26 <./figs/pSymA_10KB_weighted_subs_nonpar_12Sep20.pdf>] [27 <./figs/pSymB
+_10KB_weighted_subs_nonpar_12Sep20.pdf>] [28 <./figs/ALL_BAC_dN_dS_omega_violin
+plots.pdf>] [29 <./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf>]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
@@ -1597,7 +1614,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1032.
 Here is how much of TeX's memory you used:
  28654 strings out of 481511
  556512 string characters out of 2911892
- 1030837 words of memory out of 3000000
+ 1033837 words of memory out of 3000000
  43288 multiletter control sequences out of 15000+200000
  552124 words of font info for 80 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1627,7 +1644,7 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/synch/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb>
 Output written on Revisions1_Supplementary_file_Lato_Golding_Location_of_Substi
-tutions.pdf (30 pages, 5139238 bytes).
+tutions.pdf (30 pages, 5139254 bytes).
 PDF statistics:
  1050 PDF objects out of 1200 (max. 8388607)
  93 named destinations out of 1000 (max. 500000)
