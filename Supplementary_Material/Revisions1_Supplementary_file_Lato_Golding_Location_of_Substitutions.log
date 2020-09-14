@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  14 SEP 2020 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  14 SEP 2020 16:25
 entering extended mode
 **./Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
 (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
@@ -1452,7 +1452,7 @@ File: ./figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: ./figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf  us
-ed on input line 794.
+ed on input line 804.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 
@@ -1464,7 +1464,7 @@ File: ./figs/bass_10KB_weighted_subs_nonpar_12Sep20.pdf Graphic file (type pdf)
 
 <use ./figs/bass_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: ./figs/bass_10KB_weighted_subs_nonpar_12Sep20.pdf  use
-d on input line 801.
+d on input line 811.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1475,7 +1475,7 @@ File: ./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: ./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf  us
-ed on input line 808.
+ed on input line 818.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1486,7 +1486,7 @@ File: ./figs/pSymA_10KB_weighted_subs_nonpar_12Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/pSymA_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: ./figs/pSymA_10KB_weighted_subs_nonpar_12Sep20.pdf  us
-ed on input line 815.
+ed on input line 825.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1497,7 +1497,7 @@ File: ./figs/pSymB_10KB_weighted_subs_nonpar_12Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/pSymB_10KB_weighted_subs_nonpar_12Sep20.pdf>
 Package pdftex.def Info: ./figs/pSymB_10KB_weighted_subs_nonpar_12Sep20.pdf  us
-ed on input line 822.
+ed on input line 832.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1505,49 +1505,49 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [18] [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 858.
+(hyperref)                removing `math shift' on input line 868.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\omega' on input line 858.
+(hyperref)                removing `\omega' on input line 868.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 858.
+(hyperref)                removing `math shift' on input line 868.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 863.
+(hyperref)                removing `math shift' on input line 873.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\omega' on input line 863.
+(hyperref)                removing `\omega' on input line 873.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 863.
+(hyperref)                removing `math shift' on input line 873.
 
 <./figs/ALL_BAC_dN_dS_omega_violinplots.pdf, id=335, 505.89pt x 505.89pt>
 File: ./figs/ALL_BAC_dN_dS_omega_violinplots.pdf Graphic file (type pdf)
 <use ./figs/ALL_BAC_dN_dS_omega_violinplots.pdf>
 Package pdftex.def Info: ./figs/ALL_BAC_dN_dS_omega_violinplots.pdf  used on in
-put line 866.
+put line 876.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 933.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 943.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.66661pt
-(hyperref)                removed on input line 933.
+(hyperref)                removed on input line 943.
 
 [20]
 <./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf, id=360, 505.89pt x 505.89pt>
 File: ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf Graphic file (type pdf)
 <use ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf>
 Package pdftex.def Info: ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf  used on
- input line 1003.
+ input line 1013.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 
@@ -1567,11 +1567,11 @@ Package biblatex Warning: Name format 'last-first' deprecated.
 [29
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1014.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1014.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1024.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1024.
  (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1014.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1014.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1024.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1024.
 
 Package rerunfilecheck Info: File `Revisions1_Supplementary_file_Lato_Golding_L
 ocation_of_Substitutions.out' has not changed.
@@ -1581,7 +1581,7 @@ lding_Location_of_Substitutions.run.xml'.
 \openout1 = `Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutio
 ns.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1014.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1024.
  ) 
 Here is how much of TeX's memory you used:
  28645 strings out of 481511
@@ -1616,7 +1616,7 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/synch/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb>
 Output written on Revisions1_Supplementary_file_Lato_Golding_Location_of_Substi
-tutions.pdf (29 pages, 5124820 bytes).
+tutions.pdf (29 pages, 5124829 bytes).
 PDF statistics:
  1033 PDF objects out of 1200 (max. 8388607)
  91 named destinations out of 1000 (max. 500000)
