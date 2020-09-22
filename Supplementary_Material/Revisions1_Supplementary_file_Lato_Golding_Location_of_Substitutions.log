@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  22 SEP 2020 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  22 SEP 2020 15:25
 entering extended mode
 **./Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
 (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
@@ -1469,29 +1469,21 @@ d on input line 812.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/strep_10KB_weighted_subs_nonpar_14Sep20.pdf, id=318, 505.89pt x 505.89p
-t>
-File: ./figs/strep_10KB_weighted_subs_nonpar_14Sep20.pdf Graphic file (type pdf
-)
-<use ./figs/strep_10KB_weighted_subs_nonpar_14Sep20.pdf>
-Package pdftex.def Info: ./figs/strep_10KB_weighted_subs_nonpar_14Sep20.pdf  us
-ed on input line 819.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf, id=319, 505.89pt x 505.89p
+<./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf, id=318, 505.89pt x 505.89p
 t>
-File: ./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf Graphic file (type pdf
+File: ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
-<use ./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf>
-Package pdftex.def Info: ./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pdf  us
+<use ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf>
+Package pdftex.def Info: ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf  us
 ed on input line 827.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf, id=320, 505.89pt x 505.89p
+<./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf, id=319, 505.89pt x 505.89p
 t>
 File: ./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
@@ -1502,7 +1494,7 @@ ed on input line 834.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf, id=321, 505.89pt x 505.89p
+<./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf, id=320, 505.89pt x 505.89p
 t>
 File: ./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
@@ -1541,7 +1533,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 882.
 
-<./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf, id=330, 505.89pt x 505.89p
+<./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf, id=329, 505.89pt x 505.89p
 t>
 File: ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf Graphic file (type pdf
 )
@@ -1574,7 +1566,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf, id=359, 505.89pt x 505.89pt>
+<./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf, id=358, 505.89pt x 505.89pt>
 File: ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf Graphic file (type pdf)
 <use ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf>
 Package pdftex.def Info: ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf  used on
@@ -1584,11 +1576,11 @@ Package pdftex.def Info: ./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf  used on
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20] [21] [22 <./figs/ecoli_10KB_weighted_subs_nonpar_12Sep20.pdf>] [23 <./figs
-/bass_10KB_weighted_subs_nonpar_22Sep20.pdf>] [24 <./figs/strep_10KB_weighted_s
-ubs_nonpar_14Sep20.pdf>] [25 <./figs/sinoC_10KB_weighted_subs_nonpar_12Sep20.pd
-f>] [26 <./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf>] [27 <./figs/pSymB
-_10KB_weighted_subs_nonpar_22Sep20.pdf>] [28 <./figs/ALL_BAC_dN_dS_omega_violin
-plots_22Sep20.pdf>] [29 <./figs/sinoC_dN_dS_omega_dist_NO_OUTLIERS.pdf>]
+/bass_10KB_weighted_subs_nonpar_22Sep20.pdf>] [24] [25 <./figs/sinoC_10KB_weigh
+ted_subs_nonpar_22Sep20.pdf>] [26 <./figs/pSymA_10KB_weighted_subs_nonpar_22Sep
+20.pdf>] [27 <./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf>] [28 <./figs/
+ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf>] [29 <./figs/sinoC_dN_dS_omega_dis
+t_NO_OUTLIERS.pdf>]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
@@ -1614,10 +1606,10 @@ ns.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1033.
  ) 
 Here is how much of TeX's memory you used:
- 28654 strings out of 481511
- 556560 string characters out of 2911892
+ 28648 strings out of 481511
+ 556224 string characters out of 2911892
  1032837 words of memory out of 3000000
- 43288 multiletter control sequences out of 15000+200000
+ 43283 multiletter control sequences out of 15000+200000
  552124 words of font info for 80 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,12n,84p,1434b,1805s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1646,9 +1638,9 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/synch/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb>
 Output written on Revisions1_Supplementary_file_Lato_Golding_Location_of_Substi
-tutions.pdf (30 pages, 4851459 bytes).
+tutions.pdf (30 pages, 4838884 bytes).
 PDF statistics:
- 1050 PDF objects out of 1200 (max. 8388607)
+ 1038 PDF objects out of 1200 (max. 8388607)
  93 named destinations out of 1000 (max. 500000)
- 265 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
