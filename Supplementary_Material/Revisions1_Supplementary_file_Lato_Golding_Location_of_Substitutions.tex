@@ -260,10 +260,10 @@ Further supplemental information and code are available on \texttt{GitHub} at \u
 Computational time constraints and the nature of the data were limiting factors for the number of strains that were chosen for each bacterial species.
 \p is a multiple sequence alignment program which is useful for accounting for local and large scale genomic rearrangements. 
 Some of the bacterial strains are very similar and therefore there was no issue finding a sufficient number of locally co-linear blocks (LCBs) without having the genomes broken into an overwhelming number of blocks.
-\ecol, \bas, and \smel were among the bacteria where this was the case.
-However, the \strep strains were slightly too distantly related so when we tried to use a comparable number of strains to the other bacteria (six genomes), \p split the genomes into 521 LCBs (Supplementary Figure \ref{fig:strep6mauvealn}).
-These blocks were therefore very small in length and resulted in many blocks that were comparing sequences with poor homology.
-Consequently, we had to reduce the number of genomes used for the \strep analysis and after many iterations of genome combinations, we settled on three \strep genomes with a total of 6 LCBs (Supplementary Figure \ref{fig:strep3mauvealn}).
+We had to strike a balance between having as many genomes in the analysis as possible, and comparing correct homologous sequences.
+The more distantly related the taxa are, the resulting \p alignment contained shorter LCBs and many blocks that compared sequences of poor homology.
+This can be seen in an example of six \strep genomes resulting in the genome being split into into 521 LCBs (Supplementary Figure \ref{fig:strep6mauvealn}).
+Consequently, we had to reduce the number of genomes used for this analysis and after many iterations of genome combinations, we settled on the genomes listed in Table \ref{tab:seqdata}.
 This allowed for the correct comparison of homologous sequences, while also accounting for recombination.
 
 
@@ -284,13 +284,6 @@ This provides the most accurate data and the most reasonable analysis duration.
 	\end{center}
 \end{figure}
 
-	\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/3_strep_strains_mauve_aln_pic}
-		\caption{\label{fig:strep3mauvealn} Visualization of the \p alignment of the 3 \strep genomes chosen for this analysis (from top to bottom): \scoe AL645882, \sliv NZ\_CM001889, and \sliv NZ\_GG657756. Each coloured block represents a different locally co-linear block (LCB). Coloured lines connect LCBs that are similar btween taxa. The black lines underneath each LCB represent the whole genome sequence of each of the \strep taxa. Each LCB can be treated as a rearrangement, there have therefore been 6 rearrangements between these \strep genomes.}
-	\end{center}
-\end{figure}
-	
 	\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.51\textwidth]{./figs/mauve_time_plot}
