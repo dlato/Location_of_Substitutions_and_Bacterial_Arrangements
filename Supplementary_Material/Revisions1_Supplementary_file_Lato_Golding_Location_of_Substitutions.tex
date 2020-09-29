@@ -538,12 +538,12 @@ The results from this analysis indicate that genomic positions up to 1,000,000bp
 \subsection{High Substitutions Gene Example}
 Throughout this analysis there are a few genes/gene segments in all the bacterial replicons that have relatively high numbers of substitutions when compared to other genes or gene segments.
 These high numbers of substitutions are indeed real changes seen in homologous genes.
-To illustrate this, we have chosen a segment of alignment from \strep.
+To illustrate this, we have chosen a segment of alignment from \bass.
 Information about the genes involved in this segment can be found in Table \ref{tab:high_subs_gene_info}.
-A protein alignment for these genes can be found on \texttt{GitHub} (\url{https://github.com/dlato/Spatial_Patterns_of_Substitutions}) under the file name ``\texttt{Streptomyces\_high\_substitutions\_gene\_example.txt}''.
+A protein alignment for these genes can be found on \texttt{GitHub} (\url{https://github.com/dlato/Spatial_Patterns_of_Substitutions}) under the file name ``\texttt{Bacillus\_high\_substitutions\_gene\_example.txt}''.
 
-Both \sliv strains have 100\% sequence identity at the DNA level, while the \scoe species has 87.2\% sequence identity with the \sliv strains for this particular alignment.
-Dispite this high sequence identity and almost identical protein alignment (Figures \ref{fig:nucaln} and \ref{fig:protaln}), there are a total of 31 substitutions (across all nodes of the phylogenetic tree, Figure \ref{fig:streptree}) within this short stretch of sequence.
+
+Dispite this high sequence identity and almost identical protein alignment (Figures \ref{fig:nucaln} and \ref{fig:protaln}), there are a total of 205 substitutions (across all nodes of the phylogenetic tree, Figure \ref{fig:basstree}) within this short stretch of sequence.
 It is segments like these that are resulting in the appearance of extremely high numbers of substitutions in sections of all the bacterial repliconic genomes.
 
 \begin{table}[h]
@@ -553,29 +553,33 @@ It is segments like these that are resulting in the appearance of extremely high
 			\toprule
 			Species & NCBI Acession Number  & Gene Id \\
 			\midrule
-			\scoe A3 & AL645882 & SCO6334 \\
-			\sliv 1362 & NZ\_CM001889  & SLI\_RS32020  \\
-			\sliv TK24 & NZ\_GG657756 & SSPG\_RS06405 \\
+			\bass 168 * & NC\_000964 & BSU17380\\
+			\bass BS38 & NZ\_CP017314 & BSBS38\_RS09695\\
+			\bass BSn5 & NC\_014976 & BSN5\_RS21150\\
+			\bass PY79 & NC\_022898 & U712\_RS08990\\
+			\bass QB928 & NC\_018520 & B657\_RS09460\\
+			\bass RONN1 & NC\_017195 & I33\_RS09040\\
+			\bass W23 & NC\_014479 & BSUW23\_RS09220\\
 			\bottomrule
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:high_subs_gene_info} Information about the example gene segment with high number of substitutions.}
+	\caption{\label{tab:high_subs_gene_info} Information about the example gene segment from \bass alignment with high number of substitutions.}
 	%block5_0368_0011_0000
 \end{table}
 
 	\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/Streptomyces_high_substitutions_gene_example_nucleotide_alnment.png}
-		\caption{\label{fig:nucaln} Visualization of the nucleotide alignment of \strep genes with high numbers of substitutions. Alignment visualization was performed with \texttt{SeaView} \citep{Gouy:10}}
+		\includegraphics[width=0.9\textwidth]{./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf}
+		\caption{\label{fig:nucaln} Visualization of a portion of the nucleotide alignment of \bass genes with high numbers of substitutions. Alignment visualization was performed with \texttt{SeaView} \citep{Gouy:10}}
 	\end{center}
 \end{figure}
 
 
 	\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/Streptomyces_high_substitutions_gene_example.png}
-		\caption{\label{fig:protaln} Visualization of the protein alignment of \strep genes with high numbers of substitutions. Alignment visualization was performed with \texttt{SeaView} \citep{Gouy:10}}
+		\includegraphics[width=0.9\textwidth]{./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf}
+		\caption{\label{fig:protaln} Visualization of a portion of the protein alignment of \bass genes with high numbers of substitutions. Alignment visualization was performed with \texttt{SeaView} \citep{Gouy:10}}
 	\end{center}
 \end{figure}
 

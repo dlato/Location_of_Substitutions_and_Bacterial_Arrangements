@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  29 SEP 2020 11:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  29 SEP 2020 14:07
 entering extended mode
 **./Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
 (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
@@ -1410,26 +1410,33 @@ Package pdftex.def Info: ./figs/genomic_position_clustering_example_fig.pdf  us
 ed on input line 488.
 (pdftex.def)             Requested size: 364.19383pt x 142.03665pt.
  [13 <./figs/genomic_position_clustering_example_fig.pdf>] [14]
-<./figs/Streptomyces_high_substitutions_gene_example_nucleotide_alnment.png, id
-=269, 1034.6655pt x 429.40425pt>
-File: ./figs/Streptomyces_high_substitutions_gene_example_nucleotide_alnment.pn
-g Graphic file (type png)
-<use ./figs/Streptomyces_high_substitutions_gene_example_nucleotide_alnment.png
->
-Package pdftex.def Info: ./figs/Streptomyces_high_substitutions_gene_example_nu
-cleotide_alnment.png  used on input line 569.
-(pdftex.def)             Requested size: 505.89pt x 209.95126pt.
-<./figs/Streptomyces_high_substitutions_gene_example.png, id=272, 897.3525pt x 
-214.55156pt>
-File: ./figs/Streptomyces_high_substitutions_gene_example.png Graphic file (typ
-e png)
-<use ./figs/Streptomyces_high_substitutions_gene_example.png>
-Package pdftex.def Info: ./figs/Streptomyces_high_substitutions_gene_example.pn
-g  used on input line 577.
-(pdftex.def)             Requested size: 505.89pt x 120.9534pt.
- [15 <./figs/Streptomyces_high_substitutions_gene_example_nucleotide_alnment.pn
-g>]
-Underfull \vbox (badness 10000) detected at line 607
+<./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf, id=2
+69, 597.23125pt x 845.1575pt>
+File: ./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf 
+Graphic file (type pdf)
+<use ./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf>
+Package pdftex.def Info: ./figs/Bacillus_high_substitutions_gene_example_nucleo
+tide_alignment.pdf  used on input line 573.
+(pdftex.def)             Requested size: 455.2979pt x 644.31238pt.
+ [15]
+Overfull \vbox (6.94739pt too high) has occurred while \output is active []
+
+
+[16 <./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf>]
+<./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf, id=286,
+ 597.23125pt x 845.1575pt>
+File: ./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf Gra
+phic file (type pdf)
+<use ./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf>
+Package pdftex.def Info: ./figs/Bacillus_high_substitutions_gene_example_protei
+n_alignment.pdf  used on input line 581.
+(pdftex.def)             Requested size: 455.2979pt x 644.31238pt.
+
+Overfull \vbox (6.94739pt too high) has occurred while \output is active []
+
+
+[17 <./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf>]
+Underfull \vbox (badness 10000) detected at line 611
  []
 
 
@@ -1441,109 +1448,110 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[16 <./figs/Streptomyces_high_substitutions_gene_example.png>] [17]
-<./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf, id=305, 505.89pt x 505.89p
+[18]
+<./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf, id=314, 505.89pt x 505.89p
 t>
 File: ./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf>
 Package pdftex.def Info: ./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf  us
-ed on input line 771.
+ed on input line 775.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf, id=306, 505.89pt x 505.89pt
+<./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf, id=315, 505.89pt x 505.89pt
 >
 File: ./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf)
 
 <use ./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf>
 Package pdftex.def Info: ./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf  use
-d on input line 778.
+d on input line 782.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/strep_10KB_weighted_subs_nonpar_23Sep20.pdf, id=307, 505.89pt x 505.89p
+<./figs/strep_10KB_weighted_subs_nonpar_23Sep20.pdf, id=316, 505.89pt x 505.89p
 t>
 File: ./figs/strep_10KB_weighted_subs_nonpar_23Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/strep_10KB_weighted_subs_nonpar_23Sep20.pdf>
 Package pdftex.def Info: ./figs/strep_10KB_weighted_subs_nonpar_23Sep20.pdf  us
-ed on input line 785.
+ed on input line 789.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf, id=308, 505.89pt x 505.89p
+<./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf, id=317, 505.89pt x 505.89p
 t>
 File: ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf>
 Package pdftex.def Info: ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf  us
-ed on input line 793.
+ed on input line 797.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf, id=309, 505.89pt x 505.89p
+<./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf, id=318, 505.89pt x 505.89p
 t>
 File: ./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf>
 Package pdftex.def Info: ./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf  us
-ed on input line 800.
+ed on input line 804.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf, id=310, 505.89pt x 505.89p
+<./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf, id=319, 505.89pt x 505.89p
 t>
 File: ./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf>
 Package pdftex.def Info: ./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf  us
-ed on input line 807.
+ed on input line 811.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[19]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18]
+[20]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 843.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\omega' on input line 843.
+(hyperref)                removing `math shift' on input line 847.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 843.
+(hyperref)                removing `\omega' on input line 847.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 848.
+(hyperref)                removing `math shift' on input line 847.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\omega' on input line 848.
+(hyperref)                removing `math shift' on input line 852.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 848.
+(hyperref)                removing `\omega' on input line 852.
 
-<./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf, id=318, 505.89pt x 505.89p
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 852.
+
+<./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf, id=333, 505.89pt x 505.89p
 t>
 File: ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf>
 Package pdftex.def Info: ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf  us
-ed on input line 851.
+ed on input line 855.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1551,25 +1559,25 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19] [20] [21 <./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf>] [22 <./figs
-/bass_10KB_weighted_subs_nonpar_22Sep20.pdf>] [23 <./figs/strep_10KB_weighted_s
-ubs_nonpar_23Sep20.pdf>] [24 <./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pd
-f>] [25 <./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf>] [26 <./figs/pSymB
-_10KB_weighted_subs_nonpar_22Sep20.pdf>] [27 <./figs/ALL_BAC_dN_dS_omega_violin
+[21] [22] [23 <./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf>] [24 <./figs
+/bass_10KB_weighted_subs_nonpar_22Sep20.pdf>] [25 <./figs/strep_10KB_weighted_s
+ubs_nonpar_23Sep20.pdf>] [26 <./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pd
+f>] [27 <./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf>] [28 <./figs/pSymB
+_10KB_weighted_subs_nonpar_22Sep20.pdf>] [29 <./figs/ALL_BAC_dN_dS_omega_violin
 plots_22Sep20.pdf>]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
 (biblatex)                Using 'family-given' now.
 
-[28
+[30
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 922.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 922.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 926.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 926.
  (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 922.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 922.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 926.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 926.
 Package rerunfilecheck Info: File `Revisions1_Supplementary_file_Lato_Golding_L
 ocation_of_Substitutions.out' has not changed.
 (rerunfilecheck)             Checksum: 24208746CF83F634632D5828F19C137F;1255.
@@ -1578,12 +1586,12 @@ lding_Location_of_Substitutions.run.xml'.
 \openout1 = `Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutio
 ns.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 922.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 926.
  ) 
 Here is how much of TeX's memory you used:
- 28623 strings out of 481511
- 555559 string characters out of 2911892
- 1030875 words of memory out of 3000000
+ 28625 strings out of 481511
+ 555693 string characters out of 2911892
+ 1031917 words of memory out of 3000000
  43268 multiletter control sequences out of 15000+200000
  552124 words of font info for 80 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1613,9 +1621,9 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/synch/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb>
 Output written on Revisions1_Supplementary_file_Lato_Golding_Location_of_Substi
-tutions.pdf (28 pages, 4448368 bytes).
+tutions.pdf (30 pages, 4296941 bytes).
 PDF statistics:
- 985 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
+ 997 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
  247 words of extra memory for PDF output out of 10000 (max. 10000000)
 
