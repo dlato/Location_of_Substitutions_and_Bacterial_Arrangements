@@ -263,7 +263,7 @@ Computational time constraints and the nature of the data were limiting factors 
 Some of the bacterial strains are very similar and therefore there was no issue finding a sufficient number of locally co-linear blocks (LCBs) without having the genomes broken into an overwhelming number of blocks.
 We had to strike a balance between having as many genomes in the analysis as possible, and comparing correct homologous sequences.
 The more distantly related the taxa are, the resulting \p alignment contained shorter LCBs and many blocks that compared sequences of poor homology.
-This can be seen in an example of six \strep genomes resulting in the genome being split into into 521 LCBs (Supplementary Figure \ref{fig:strep6mauvealn}).
+This can be seen in an example of six \strep genomes resulting in the genome being split into 521 LCBs (Supplementary Figure \ref{fig:strep6mauvealn}).
 Consequently, we had to reduce the number of genomes used for this analysis and after many iterations of genome combinations, we settled on the genomes listed in Table \ref{tab:seqdata}.
 This allowed for the correct comparison of homologous sequences, while also accounting for recombination.
 
@@ -275,7 +275,9 @@ We ran multiple instances of \p with varying numbers of \ecol genomes (Supplemen
 These data points were connected using a locally estimated scatterplot smoothing method and confidence intervals (Supplementary Figure \ref{fig:mauvetimeplot}).
 From this data, we can see that increasing the number of genomes exponentially increases the run time of \p.
 It becomes impractical to align more than 27 genomes with \p, as anything over that would take more than 24h to run.
-This information combined with \p's inability to pair of homologous sequences in LCBs of distantly related taxa, has limited the total number of genomes we can use per taxa to a maximum of 7.
+The total computational time additionally depends on the divergence of the sequences.
+26 divergent \strep genomes took just under a month to complete the \p alignment.
+This information combined with \p's inability to pair homologous sequences in LCBs of distantly related taxa, has limited the total number of genomes we can use per taxa to a maximum of 7.
 This provides the most accurate data and the most reasonable analysis duration.
 
 	\begin{figure}[H]
@@ -336,19 +338,18 @@ Please see the main paper for more detailed methods.
 	}%resize box
 	\caption{\label{tab:poor_aln_genes} \ecol strain, NCBI accession number, and Gene Id for the genes in the poor alignment example (Figure \ref{fig:ecoli_poor_aln}).}
 \end{table}
-
 	
-	\subsection{Phylogenetic Trees}
+\subsection{Phylogenetic Trees}
 	\begin{figure}[H]
 		\begin{center}
 			\includegraphics[width=0.7\textwidth]{./figs/Ecoli_chrom_ref_tree_figtree_raw_29Aug20.pdf}
-			\caption{\label{fig:ecolitree} Phylogenetic tree of \ecol genomes. \salm was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 100.}
+			\caption{\label{fig:ecolitree} Phylogenetic tree of \ecol genomes. \efer ATCC 35469T was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 1000.}
 		\end{center}
 	\vspace*{\floatsep}% http://tex.stackexchange.com/q/26521/5764
 	
 		\begin{center}
-			\includegraphics[width=0.7\textwidth]{./figs/bass_chrom_ref_tree_figtree_raw_29Aug20.pdf}
-			\caption{\label{fig:basstree} Phylogenetic tree of \bass genomes. \lis was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 100.}
+			\includegraphics[width=0.6\textwidth]{./figs/bass_chrom_ref_tree_figtree_raw_29Aug20.pdf}
+			\caption{\label{fig:basstree} Phylogenetic tree of \bass genomes. \bcer FDAARGOS\_797 was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 1000.}
 		\end{center}
 			
 		\end{figure}
@@ -356,25 +357,25 @@ Please see the main paper for more detailed methods.
 		\begin{figure}[H]
 		\begin{center}
 			\includegraphics[width=0.7\textwidth]{./figs/Strep_chrom_figtree_raw_11Sep20.pdf}
-			\caption{\label{fig:streptree} Phylogenetic tree of \strep genomes. \tub was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 100.}
+			\caption{\label{fig:streptree} Phylogenetic tree of \strep genomes. \saur DM1 was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 1000.}
 		\end{center}
 			\vspace*{\floatsep}% http://tex.stackexchange.com/q/26521/5764
 		\begin{center}
 			\includegraphics[width=0.7\textwidth]{./figs/SinoC_chrom_figtree_raw_11Sep20.pdf}
-			\caption{\label{fig:sinoCtree} Phylogenetic tree using only the chromosomes of \smel. \agro circular chromosome was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 100.}
+			\caption{\label{fig:sinoCtree} Phylogenetic tree using only the chromosomes of \smel. \rleg trifolii WSM1689 chromosome was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 1000.}
 		\end{center}
 	\end{figure}
 		
 		\begin{figure}
 		\begin{center}
 			\includegraphics[width=0.7\textwidth]{./figs/pSymA_chrom_figtree_raw_29Aug20.pdf}
-			\caption{\label{fig:sinoPAtree} Phylogenetic tree using only pSymA of \smel. \agro circular plasmid was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 100.}
+			\caption{\label{fig:sinoPAtree} Phylogenetic tree using only pSymA of \smel. \rleg trifolii WSM1689 plasmid pRLG202 was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 1000.}
 		\end{center}
 		\vspace*{\floatsep}% http://tex.stackexchange.com/q/26521/5764
 			\begin{center}
 				
 				\includegraphics[width=0.7\textwidth]{./figs/pSymB_chrom_figtree_raw_29Aug20.pdf}
-				\caption{\label{fig:sinoPBtree} Phylogenetic tree using only pSymB of \smel. \agro circular chromid was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 100.}
+				\caption{\label{fig:sinoPBtree} Phylogenetic tree using only pSymB of \smel. \rleg trifolii WSM1689 plasmid pRLG201 was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 1000.}
 			\end{center}
 		\end{figure}
 	
@@ -554,7 +555,7 @@ It is segments like these that are resulting in the appearance of extremely high
 			\toprule
 			Species & NCBI Acession Number  & Gene Id \\
 			\midrule
-			\bass 168 * & NC\_000964 & BSU17380\\
+			\bass 168 & NC\_000964 & BSU17380\\
 			\bass BS38 & NZ\_CP017314 & BSBS38\_RS09695\\
 			\bass BSn5 & NC\_014976 & BSN5\_RS21150\\
 			\bass PY79 & NC\_022898 & U712\_RS08990\\
@@ -752,9 +753,9 @@ We were unable to determine a consistent spatial substitution trend when conside
 Some bacterial replicons had a positive correlation coefficient, indicating that the number of substitutions increases with increasing distance from the origin of replication (Table \ref{tab:20kb_near_far_ori}).
 Other replicons had a negative correlation coefficient, suggesting that the number of substitutions decreases with increasing distance from the origin of replication (Table \ref{tab:20kb_near_far_ori}).
 Additionally, it was unclear if the number of substitutions per site locally were higher near the origin of replication or near the terminus.
-Some bacteria had higher number of substitutions per site near the origin (\ecol, \smel chromosome and \pb), while other replicons has the opposite trend (\bass, \strep and \smel \pa) (Table \ref{tab:20kb_near_far_ori}).
+Some bacteria had higher number of substitutions per site near the origin (\strep, \smel chromosome and \pb), while other replicons has the opposite trend (\ecol, \bass, and \smel \pa) (Table \ref{tab:20kb_near_far_ori}).
 These results suggest that on a small local scale, there are varying patterns of substitutions with respect to distance from the origin of replication.
-This varies between bacteria, and in some cases even within the same bacteria (\ecol).
+This varies between bacteria, and in some cases even within the same bacteria (\smel \pb).
 This variation locally does not allow us to make any overarching statements about the local distribution of substitutions in bacterial genomes.
 It is therefore more useful to consider the global (genome wide) pattern of substitutions when making overarching statements about genomic substitution arrangements.
 
@@ -816,9 +817,9 @@ The visual results from this analysis mirror the findings from the main paper, t
 
 \subsection{Total Number of Sites Linear Regression}
 
-We performed a linear regression on the total number of protein coding sites and distance from the origin of replication.
+We performed a linear regression on the total number of protein coding sites and distance from the origin of replication (Table \ref{tab:lr_gene_num}).
 We found that the total number protein coding sites decreases with distance from the origin of replication in majority of the bacterial replicons in this analysis.
-We were unable to detect a significant relationship between the number of protein coding sites and distance from the origin of replication in \pb of \smel.
+We were unable to detect a significant relationship between the number of protein coding sites and distance from the origin of replication in \bass,  the chromosome, and \pb of \smel.
 
 
 \begin{table}[h]
@@ -885,7 +886,7 @@ These divergent regions are what is driving the high \ds values in our analysis.
 \subsection{Average \dn, \ds, and $\omega$ per Gene Values}
 The average \dn, \ds, and $\omega$ values per gene were calculated.
 For genes that were split into multiple parts (due to the presence of gaps or poor homology in the alignment), the \dn, \ds, and $\omega$ values for each gene part were averaged to obtain a single average value per gene.
-A complete list of these values can be found on \texttt{GitHub} (\url{www.github.com/dlato/Location_of_Substitutions_and_Bacterial_Arrangements}) under the file name ``\texttt{Supplementary\_table\_per\_gene\_dN\_dS\_omega.pdf}''.
+\sloppy A complete list of these values can be found on \texttt{GitHub} (\url{www.github.com/dlato/Location_of_Substitutions_and_Bacterial_Arrangements}) under the file name ``\texttt{Supplementary\_table\_per\_gene\_dN\_dS\_omega.pdf}''.
 
 	\subsection{Distribution of \dn, \ds, and $\omega$}
 	\begin{figure}
