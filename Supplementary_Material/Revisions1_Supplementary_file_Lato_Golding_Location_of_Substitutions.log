@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  29 SEP 2020 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  30 SEP 2020 10:27
 entering extended mode
 **./Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
 (Revisions1_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
@@ -1423,7 +1423,7 @@ Overfull \vbox (6.94739pt too high) has occurred while \output is active []
 
 
 [16 <./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf>]
-<./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf, id=290,
+<./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf, id=291,
  597.23125pt x 845.1575pt>
 File: ./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf Gra
 phic file (type pdf)
@@ -1449,7 +1449,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [18]
-<./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf, id=318, 505.89pt x 505.89p
+<./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf, id=319, 505.89pt x 505.89p
 t>
 File: ./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf Graphic file (type pdf
 )
@@ -1461,7 +1461,7 @@ ed on input line 776.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf, id=319, 505.89pt x 505.89pt
+<./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf, id=320, 505.89pt x 505.89pt
 >
 File: ./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf)
 
@@ -1472,7 +1472,7 @@ d on input line 783.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/strep_10KB_weighted_subs_nonpar_23Sep20.pdf, id=320, 505.89pt x 505.89p
+<./figs/strep_10KB_weighted_subs_nonpar_23Sep20.pdf, id=321, 505.89pt x 505.89p
 t>
 File: ./figs/strep_10KB_weighted_subs_nonpar_23Sep20.pdf Graphic file (type pdf
 )
@@ -1483,7 +1483,7 @@ ed on input line 790.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf, id=321, 505.89pt x 505.89p
+<./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf, id=322, 505.89pt x 505.89p
 t>
 File: ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
@@ -1494,7 +1494,7 @@ ed on input line 798.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf, id=322, 505.89pt x 505.89p
+<./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf, id=323, 505.89pt x 505.89p
 t>
 File: ./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
@@ -1505,7 +1505,7 @@ ed on input line 805.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf, id=323, 505.89pt x 505.89p
+<./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf, id=324, 505.89pt x 505.89p
 t>
 File: ./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
@@ -1527,7 +1527,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=333, 614.295pt x 794.97pt>
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=334, 614.295pt x 794.97pt>
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf  used on in
@@ -1550,7 +1550,7 @@ pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
 
 pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=336, page=1, 614.295pt x 794.97
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=337, page=1, 614.295pt x 794.97
 pt>
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 1>
@@ -1582,7 +1582,7 @@ d on input line 882.
 
 pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=356, page=2, 614.295pt x 794.97
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=357, page=2, 614.295pt x 794.97
 pt>
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 2>
@@ -1603,7 +1603,7 @@ d on input line 882.
 
 pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=361, page=3, 614.295pt x 794.97
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=362, page=3, 614.295pt x 794.97
 pt>
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 3>
@@ -1634,6 +1634,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 885.
 
 
+Overfull \hbox (98.26802pt too wide) in paragraph at lines 886--889
+\T1/cmtt/m/n/10 Location _ of _ Substitutions _ and _ Bacterial _ Arrangements$
+[]\T1/cmr/m/n/10 ) un-der the file name ``\T1/cmtt/m/n/10 Supplementary_table_p
+er_gene_dN_dS_omega.pdf\T1/cmr/m/n/10 ''. 
+ []
+
+
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 890.
 
@@ -1645,7 +1652,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 890.
 
-<./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf, id=367, 505.89pt x 505.89p
+<./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf, id=368, 505.89pt x 505.89p
 t>
 File: ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf Graphic file (type pdf
 )
@@ -1689,10 +1696,10 @@ ns.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 964.
  ) 
 Here is how much of TeX's memory you used:
- 28650 strings out of 481511
- 556695 string characters out of 2911892
- 1038021 words of memory out of 3000000
- 43285 multiletter control sequences out of 15000+200000
+ 28645 strings out of 481511
+ 556510 string characters out of 2911892
+ 1037987 words of memory out of 3000000
+ 43281 multiletter control sequences out of 15000+200000
  552124 words of font info for 80 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,84p,1434b,1805s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1721,9 +1728,9 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/synch/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb>
 Output written on Revisions1_Supplementary_file_Lato_Golding_Location_of_Substi
-tutions.pdf (34 pages, 4364007 bytes).
+tutions.pdf (34 pages, 4364135 bytes).
 PDF statistics:
  1039 PDF objects out of 1200 (max. 8388607)
- 92 named destinations out of 1000 (max. 500000)
+ 91 named destinations out of 1000 (max. 500000)
  285 words of extra memory for PDF output out of 10000 (max. 10000000)
 
