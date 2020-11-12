@@ -888,8 +888,58 @@ The average \dn, \ds, and $\omega$ values per gene were calculated.
 For genes that were split into multiple parts (due to the presence of gaps or poor homology in the alignment), the \dn, \ds, and $\omega$ values for each gene part were averaged to obtain a single average value per gene.
 \sloppy A complete list of these values can be found on \texttt{GitHub} (\url{www.github.com/dlato/Location_of_Substitutions_and_Bacterial_Arrangements}) under the file name ``\texttt{Supplementary\_table\_per\_gene\_dN\_dS\_omega.pdf}''.
 
-	\subsection{Distribution of \dn, \ds, and $\omega$}
-	\begin{figure}
+\subsection{Window Analysis for \dn, \ds, and $\omega$}
+Multiple linear regressions were performed to determine if there was any correlation between the average \dn, \ds, and $\omega$ values and distance from the origin of replication.
+A linear regression to determine how the average \dn, \ds, and $\omega$ values in various sections of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) changes with genomic position was performed % (Table \ref{tab:lin_reg_windows_selection}).
+%All additional linear regression results (Table \ref{tab:lin_reg_windows_selection}) mirror the results from the linear regression on all \dn, \ds, and $\omega$ values and changes in genomic position (see the Main Paper results section for more information).
+The results from these supplemental tests are consistent with the results from the linear regression found in the Main Paper, most bacterial replicons do not have a significant correlation between \dn, \ds, and $\omega$ values and distance from the origin of replication.
+Linear regressions that were significant, were inconsistent in sign.
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcccccc}
+			\toprule
+			& \multicolumn{6}{c}{Protein Coding Window Size}  \\
+			\cmidrule{2-7}
+			Bacteria and Replicon & 10Kbp & 25Kbp & 50Kbp & 100Kbp & 200Kbp & 400Kbp \\
+			\midrule
+			\multicolumn{7}{c}{\textbf{\dn}} \\
+			%			& Coefficient Estimate & $R^2$ & Coefficient Estimate & $R^2$ \\
+			\midrule
+			\ecol Chromosome & -1.66\e{-4}*** & -4.12\e{-4}*** & -8.64\e{-4}*** & -1.71\e{-3}*** & -3.42\e{-3}** & -6.71\e{-3}*\\
+			& (0.398)& (0.476) & (0.563) & (0.509) & (0.534) & (0.592)\\
+			\midrule
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\bass Chromosome & NS & NS & NS & NS & NS & NS\\
+			& (0.004) & (0.004) & (0.001) & (0.001) & (0.145) & (0.027)\\
+			\midrule
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\strep Chromosome &  NS & NS & NS & NS & NS & NS\\
+			& (0.002)& (0.007) & (0.014) & (0.025) & (0.073) & (0.074)\\
+			\midrule
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\smel Chromosome &  -8.97\e{-6}*** & -3.72\e{-5}** & -7.76\e{-5}* & -1.64\e{-4}* & NS & NS\\
+			& (0.040) & (0.098) & (0.126) &(0.188) & (0.082) & (0.427)\\
+			\midrule
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\smel \pa &  NS & NS & NS & NS & NS & NS\\
+			& (0.027) & (0.001) & (0.006) & (0.193) & (0.050) & (1.59\e{-31})\\
+			\midrule
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\smel \pb &  NS & NS & NS & NS & NS & NS\\
+			& (0.035) & (0.053) & (0.010) & (0.002) & (0.495) & (0.491)\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lin_reg_windows_selection} Linear regression on various sections of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) with increasing distance from the origin of replication after accounting for bidirectional replication. The linear regression was performed on the average \dn, \ds, and $\omega$ values in each section of the genome. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. The $R^2$ value for each coefficient estimate is found below the value in brackets ().}
+\end{table}
+
+
+
+	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\textwidth]{./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf}
 		\caption{\label{fig:box_plots} Distribution of all \dn, \ds, and $\omega$ values on a log base 10 scale for each replicon. Individual points are shown as a strip chart (which has been jittered in the x-direction in \texttt{R} \citep{Wickham2019}), and the density of these selection values is shown in the overlaid violin plot. All points are included in this graphic including outliers. For more information on how outliers were calculated, please see the main paper. Any \dn, \ds, or $\omega$ values that had a value of zero is pushed to the bottom of the x-axis. Since these values will not appear on a log base 10 scale, they are not included in the violin portions of this graphic. For a complete list of zero values in each of the selection categories please refer to Table \ref{tab:selection_outliers}. In these graphs there is a horizontal line of values at 0.0001 for most of the selection coefficients in most of the bacterial replicons. This is due to rounding practices when \texttt{codeml} \citep{Yang97} calculates \dn, \ds, and $\omega$ values.}
@@ -917,7 +967,6 @@ For genes that were split into multiple parts (due to the presence of gaps or po
 	}%resizebox
 	\caption{\label{tab:selection_outliers} Percent of data that was calculated to be an outlier or had a selection variable (\dn, \ds, and $\omega$) value of zero.}
 \end{table}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
