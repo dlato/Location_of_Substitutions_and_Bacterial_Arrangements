@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  12 NOV 2020 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  13 NOV 2020 19:38
 entering extended mode
 **./Revisions2_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
 (Revisions2_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
@@ -1651,7 +1651,7 @@ File: ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf>
 Package pdftex.def Info: ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf  us
-ed on input line 944.
+ed on input line 1000.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1666,21 +1666,21 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 /bass_10KB_weighted_subs_nonpar_22Sep20.pdf>] [27 <./figs/strep_10KB_weighted_s
 ubs_nonpar_10Nov20.pdf>] [28 <./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pd
 f>] [29 <./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf>] [30 <./figs/pSymB
-_10KB_weighted_subs_nonpar_22Sep20.pdf>] [31] [32 <./figs/ALL_BAC_dN_dS_omega_v
-iolinplots_22Sep20.pdf>] [33]
+_10KB_weighted_subs_nonpar_22Sep20.pdf>] [31] [32] [33 <./figs/ALL_BAC_dN_dS_om
+ega_violinplots_22Sep20.pdf>] [34]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
 (biblatex)                Using 'family-given' now.
 
-[34
+[35
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1014.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1014.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1070.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1070.
  (Revisions2_Supplementary_file_Lato_Golding_Location_of_Substitutions.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1014.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1014.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1070.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1070.
 
 Package rerunfilecheck Info: File `Revisions2_Supplementary_file_Lato_Golding_L
 ocation_of_Substitutions.out' has not changed.
@@ -1690,12 +1690,12 @@ lding_Location_of_Substitutions.run.xml'.
 \openout1 = `Revisions2_Supplementary_file_Lato_Golding_Location_of_Substitutio
 ns.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1014.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1070.
  ) 
 Here is how much of TeX's memory you used:
- 28649 strings out of 481511
- 556583 string characters out of 2911892
- 1047619 words of memory out of 3000000
+ 28650 strings out of 481511
+ 556590 string characters out of 2911892
+ 1059619 words of memory out of 3000000
  43283 multiletter control sequences out of 15000+200000
  552825 words of font info for 81 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1726,9 +1726,9 @@ grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/synch/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/synch/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb>
 Output written on Revisions2_Supplementary_file_Lato_Golding_Location_of_Substi
-tutions.pdf (34 pages, 4367112 bytes).
+tutions.pdf (35 pages, 4368783 bytes).
 PDF statistics:
- 1043 PDF objects out of 1200 (max. 8388607)
- 92 named destinations out of 1000 (max. 500000)
+ 1048 PDF objects out of 1200 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
  285 words of extra memory for PDF output out of 10000 (max. 10000000)
 
