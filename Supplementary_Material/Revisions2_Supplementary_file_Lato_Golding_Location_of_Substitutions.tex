@@ -744,6 +744,17 @@ The weighted values of the total number of substitutions per various region of t
 These summed values were then divided by the total number of protein coding sites in each region to obtain the weighted value.
 A linear regression on these weighted total number of substitutions in each section of the genome was performed to see how the number of substitutions changes with distance from the origin of replication (Table \ref{tab:lin_reg_windows_subs_weighted}).
 
+The non-significant (NS) linear regression results from Tables \ref{tab:lin_reg_windows_subs_nonweighted} and \ref{tab:lin_reg_windows_subs_weighted} are likely due to a decrease in the number of data points due to the nature of the methods for this supplemental analysis.
+In the windowed analysis (Tables \ref{tab:lin_reg_windows_subs_nonweighted} and \ref{tab:lin_reg_windows_subs_weighted}) the total number of substitutions per various window size (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) were summed.
+This reduces the total number of data points used in the linear regressions, resulting in non-significant (NS) coefficient estimates.
+For example, the replicon of \pa in \smel only has a total length of 1.63Mbp and roughly 16.3 million data points  including all ancestral and extant substitutions/genomic positions.
+When the total number of substitutions is summed over each region of the genome, these data points are collapsed to summarize what is happening in each local window.
+Lets take the 400Kbp window for example, when the total number of substitutions is summed over each 400Kbp region of the genome, the number of data points is drastically reduced to about 40.
+It is therefore unlikely that 40 data points provide enough information to detect a significant trend between the number of substitutions and distance from the origin of replication.
+This same logic can be applied to the other bacteria and window sizes.
+We therefore conclude that the lack of detection of a significant trend (NS) in Tables  \ref{tab:lin_reg_windows_subs_nonweighted} and \ref{tab:lin_reg_windows_subs_weighted} is due to the decreased number of data points.
+
+
 We took a closer look at 20Kbp regions of the replicons close and far from the origin of replication.
 We performed a logistic regression on the presence or absence of a substitution with distance from the origin of replication.
 Data points from the 20Kbp regions closest to the origin of replication and data points from the 20Kbp regions closest to the terminus of replication were used for this portion of the analysis.
