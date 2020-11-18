@@ -760,6 +760,8 @@ This variation locally does not allow us to make any overarching statements abou
 It is therefore more useful to consider the global (genome wide) pattern of substitutions when making overarching statements about genomic substitution arrangements.
 
 
+
+
 \subsection{Non-linear Analysis of Number of Substitutions and Distance From the Origin of Replication}
 
 Using a simple smoothed conditional means method (\texttt{geom\_smooth()} function in \texttt{R}), a non-linear trend analysis was performed on all bacterial replicons.
@@ -843,6 +845,120 @@ We were unable to detect a significant relationship between the number of protei
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Robust ``Leave One Out'' Analysis on Substitution Data}
+Due to the computational and data availability limitations in the quantity of genomes chosen for each bacteria, we have performed an additional test to determine the robustness of our results.
+We have systematically removed/left out each taxa from the original substitutions analysis (as described in the Main Paper) and termed this a ``\textbf{L}eave \textbf{O}ne \textbf{O}ut'' (\textbf{LOO}) analysis.
+The original whole genome alignments specified by \p and re-aligned with \texttt{MAFFT} following our various alignment quality criteria (see Methods) was used for this LOO analysis.
+The sequences from each taxa were systematically removed/left out from these alignment blocks.
+The original phylogenetic trees and corresponding branch lengths (Figures \ref{fig:ecolitree} - \ref{fig:sinoPBtree}) were altered so that the same taxa that was remove from the alignment blocks was also removed from the phylogenetic tree, while maintaining correct branch lengths. 
+These LOO alignment blocks and trees were then subject to the same methods for the substitution analysis (see Methods in Main Paper) where the ancestral nucleotide and genomic position was determined for each protein-coding site in the alignment blocks.
+A logistic regression was performed to determine the relationship between the number of substitutions and distance from the origin of replication (see Methods).
+A summary of these logistic regression results with each taxa removed can be found in Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}.
+
+The results from the chromosomes of \ecol and \smel (Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}) indicate that removing any of the taxa from these analysis, results in the same overall conclusion, that the number of substitutions decreases with increasing distance from the origin of replication.
+For the remaining replicons (\bass, \strep, \pa and \pb of \smel), majority of the LOO results mirror what was found in the main paper when all taxa were present in the analysis (Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}).
+However, there are some specific taxa that cause a reversal in the sign of the coefficient estimate.
+In the case of \strep and \pa in \smel, the taxa which causes a reversal in sign when removed (\sliv 1362 CM001889 and \smel BL225C NC\_017324 respectively) alter the location of the ``outgroup'' on the phylogenetic trees (Figures \ref{fig:streptree} and \ref{fig:sinoPAtree} respectively).
+When \sliv 1362 CM001889 is removed, the new outgroup for the phylogenetic tree (Figure \ref{fig:streptree}) becomes \sliv TK24.
+When \pa from \smel BL225C is removed, the clade containing \smel 2011 and 1021 is now in the outgroup position.
+This shift in the outgroup is the likely cause for the coefficient estimate changing sign when these particular taxa (\sliv 1362 CM001889 and \smel BL225C NC\_017324) are removed from the analysis.
+
+
+\textcolor{orange}{do I need to talk about the NS estimates? How should I explain those? The second reviewer was all bent out of shape when my subst windowed analysis had NS estimates.}
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Taxa Removed & Coefficient Estimate \\
+			\midrule
+			\multicolumn{2}{c}{\ecol} \\
+			None & -2.66\e{-8}*** \\
+			U00096 & -3.12\e{-8}***\\
+			CP0032890 & -3.07\e{-8}*** \\
+			CU9281640 & -2.95\e{-8}*** \\
+			CP0018550 & -1.50\e{-8}*** \\
+			BA0000070 & -2.63\e{-8}*** \\
+			CU9281630 & -2.49\e{-8}***\\
+			
+			\midrule
+			\multicolumn{2}{c}{\bass} \\
+			None & 2.76\e{-8}***\\
+			NC\_000964 & 2.96\e{-8}***\\
+			NC\_018520 & 3.57\e{-8}***\\
+			NC\_017195 & 1.00\e{-7}***\\
+			NC\_022898 & 5.17\e{-8}*** \\
+			NC\_014976 & \textcolor{red}{-4.02\e{-8}***} \\
+			CP01731 & 5.43\e{-8}*** \\
+			NC\_014479 & \textcolor{red}{NS}\\
+			
+			\midrule
+			\multicolumn{2}{c}{\strep} \\
+			None & 7.21\e{-8}***\\
+			CP050522 & 8.37\e{-8}*** \\
+			GG657756 & 3.62\e{-8}*** \\
+			CP042324 & 7.72\e{-8}*** \\
+			AL645882 & 7.65\e{-8}*** \\
+			CM001889 & \textcolor{red}{-2.46\e{-7}***}\\
+			
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:leave_one_out1} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. }
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+		\begin{tabular}{lc}
+			\toprule
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Taxa Removed & Coefficient Estimate \\
+			\midrule
+			\multicolumn{2}{c}{\smel Chromosome} \\
+			None & -6.57\e{-7}***\\
+			NC\_015590& -3.18\e{-7}***\\
+			NC\_003047 & -6.01\e{-7}*** \\
+			CP004140 & -6.00\e{-7}*** \\
+			CP009144 & -6.67\e{-7}*** \\
+			NC\_017322 & -7.19\e{-7}***\\
+			NC\_017325 & -5.01\e{-7}***\\
+			\midrule
+			\multicolumn{2}{c}{\smel \pa} \\
+			None & 2.74\e{-7}***\\
+			NC\_017327 & 6.98\e{-7}***\\
+			CP009145 & 1.78\e{-7}***\\
+			NC\_003037 & 2.09\e{-7}***\\
+			CP004138 & 2.08\e{-7}***\\
+			NC\_015591 & \textcolor{red}{NS} \\
+			NC\_017324 & \textcolor{red}{-1.52\e{-6}***} \\
+			\midrule
+			\multicolumn{2}{c}{\smel \pb} \\
+			None & 1.10\e{-7}***\\
+			NC\_015596 & 6.78\e{-7}***\\
+			NC\_017326 & 1.67\e{-7}***\\
+			NC\_017323 & \textcolor{red}{NS}\\
+			CP009146 & \textcolor{red}{-2.57\e{-7}***}\\
+			CP004139 & 1.04\e{-7}***\\
+			NC\_003078 & 1.04\e{-7}*** \\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:leave_one_out2} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
 
 
 %\newpage
