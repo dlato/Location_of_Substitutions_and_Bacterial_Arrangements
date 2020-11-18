@@ -28,6 +28,7 @@
 \usepackage{color,amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
 \lhead{The Location of Substitutions and Bacterial Genome Arrangements}
 \rhead{D.F. Lato and G.B. Golding \the\year}
+\renewcommand\refname{Additional References} %change name of bib
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAPHY
@@ -272,9 +273,10 @@ The computational time required to run \p was an additional constraint that need
 \p can align multiple whole genomes an identify regions that have been rearranged within the taxa provided.
 This process happens in relatively quick computational time, however, like most other programs, the addition of more data increased the amount of time required to complete the process.
 We ran multiple instances of \p with varying numbers of \ecol genomes (Supplementary Figure \ref{fig:mauvetimeplot}).
-These data points were connected using a locally estimated scatter plot smoothing method and confidence intervals (Supplementary Figure \ref{fig:mauvetimeplot}).
-From this data, we can see that increasing the number of genomes exponentially increases the run time of \p.
+These data points were connected using a locally estimated scatter plot smoothing method and confidence intervals.
+From this data, we determined that increasing the number of genomes exponentially increases the run time of \p.
 It becomes impractical to align more than 27 genomes with \p, as anything over that would take more than 24h to run.
+The estimation computational run time to complete the alignment of 100 genomes would take over a month.
 The total computational time additionally depends on the divergence of the sequences.
 26 divergent \strep genomes took just under a month to complete the \p alignment.
 This information combined with \p's inability to pair homologous sequences in LCBs of distantly related taxa, has limited the total number of genomes we can use per taxa to a maximum of 7.
@@ -423,7 +425,7 @@ We were unable to detect a significant relationship between the number of protei
 
 \subsection{Robust ``Leave One Out'' Analysis on Substitution Data}
 Due to the computational and data availability limitations in the quantity of genomes chosen for each bacteria, we have performed an additional test to determine the robustness of our results.
-We have systematically removed/left out each taxa from the original substitutions analysis (as described in the Main Paper) and termed this a ``\textbf{L}eave \textbf{O}ne \textbf{O}ut'' (\textbf{LOO}) analysis.
+We have systematically removed/left out each taxa from the original substitutions analysis (as described in the Main Paper) this is a ``\textbf{L}eave \textbf{O}ne \textbf{O}ut'' (\textbf{LOO}) analysis.
 The goal of this analysis is to see if the overall results, that the number of substitutions significantly varies with distance from the origin of replication but the sign of this correlation is inconsistent, changes when any one taxa is removed.
 We want to ensure that our particular data sets are not influencing our conclusions.
 The original whole genome alignments specified by \p and re-aligned with \texttt{MAFFT} following our various alignment quality criteria (see Methods) was used for this LOO analysis.
@@ -439,7 +441,7 @@ However, there are some specific taxa that cause a reversal in the sign of the c
 In the case of \strep and \pa in \smel, the taxa which causes a reversal in sign when removed (\sliv 1362 CM001889 and \smel BL225C NC\_017324 respectively) alter the location of the ``outgroup'' on the phylogenetic trees (Figures \ref{fig:streptree} and \ref{fig:sinoPAtree} respectively).
 When \sliv 1362 CM001889 is removed, the new outgroup for the phylogenetic tree (Figure \ref{fig:streptree}) becomes \sliv TK24.
 When \pa from \smel BL225C is removed, the clade containing \smel 2011 and 1021 is now in the outgroup position.
-This shift in the outgroup is the likely cause for the coefficient estimate changing sign when these particular taxa (\sliv 1362 CM001889 and \smel BL225C NC\_017324) are removed from the analysis.
+This shift in the outgroup is the cause for the coefficient estimate changing sign when these particular taxa (\sliv 1362 CM001889 and \smel BL225C NC\_017324) are removed from the analysis.
 For \bass and \pb of \smel, the taxa which caused a reversal in sign when removed (\bass BSn5 NC\_014976 and \smel RMO17 CP009146) are located more in the inner parts of the phylogentic trees (Figures \ref{fig:basstree} and \ref{fig:sinoPBtree}).
 These particular taxa heavily influence the ancestral genomic positions present throughout the phylogenetic tree.
 When these particular taxa are removed, this changes the ancestral genomic positions and alters ancestrally where the substitutions are located.
@@ -447,8 +449,6 @@ This then influences the distribution of substitutions along the replicons enoug
 
 Since most of the results from the LOO analysis are the same as what was found in the main paper for each respective replicon, we maintain that our findings are robust even with the systematic removal of each taxa.
 The number of substitutions significantly varies with distance from the origin of replication, but the sign of this correlation is inconsistent.
-
-\textcolor{orange}{do I need to talk about the NS estimates? How should I explain those? The second reviewer was all bent out of shape when my subst windowed analysis had NS estimates.}
 
 
 %\newpage
@@ -495,12 +495,12 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 	\end{center}
 \end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.51\textwidth]{./figs/mauve_time_plot}
-		\caption{\label{fig:mauvetimeplot} This graph shows the time to complete a \p alignment with varying numbers of \ecol genomes. The total number of genomes or taxa is along the x-axis and the total time in hours is along the right axis. Each black point represents data from one \p alignment. All data points are connected by calculating locally estimated scatter plot smoothing (black line) with confidence intervals (grey band).}
-	\end{center}
-\end{figure}
+%\begin{figure}[H]
+%	\begin{center}
+%		\includegraphics[width=0.51\textwidth]{./figs/mauve_time_plot}
+%		\caption{\label{fig:mauvetimeplot} This graph shows the time to complete a \p alignment with varying numbers of \ecol genomes. The total number of genomes or taxa is along the x-axis and the total time in hours is along the right axis. Each black point represents data from one \p alignment. All data points are connected by calculating locally estimated scatter plot smoothing (black line) with confidence intervals (grey band).}
+%	\end{center}
+%\end{figure}
 
 
 \subsection{\p Alignment}
@@ -882,7 +882,7 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 		\end{tabular}
 		
 	}%resizebox
-	\caption{\label{tab:20kb_near_far_ori} Logistic regression on 20kb closest and farthest from the origin of replication after accounting for bidirectional replication and outliers. Number of substitutions was calculated by taking the total number of substitutions in each of the 20Kbp regions and dividing by the total number of sites in those regions. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. The $R^2$ values for each estimate are in brackets.}
+	\caption{\label{tab:20kb_near_far_ori} Logistic regression on 20kb closest and farthest from the origin of replication after accounting for bidirectional replication and outliers. Number of substitutions was calculated by taking the total number of substitutions in each of the 20Kbp regions and dividing by the total number of sites in those regions. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
 
 
@@ -931,95 +931,93 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 \end{figure}
 
 
-\begin{table}[h]
-	\centering
-	\resizebox{0.7\textwidth}{!}{%
-		\begin{tabular}{lc}
-			\toprule
-			%			\cmidrule{8-10}
-			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-			%			\cmidrule{2-3}
-			%			\cmidrule{4-7}
-			Taxa Removed & Coefficient Estimate \\
-			\midrule
-			\multicolumn{2}{c}{\ecol} \\
-			None & -2.66\e{-8}*** \\
-			U00096 & -3.12\e{-8}***\\
-			CP0032890 & -3.07\e{-8}*** \\
-			CU9281640 & -2.95\e{-8}*** \\
-			CP0018550 & -1.50\e{-8}*** \\
-			BA0000070 & -2.63\e{-8}*** \\
-			CU9281630 & -2.49\e{-8}***\\
-			
-			\midrule
-			\multicolumn{2}{c}{\bass} \\
-			None & 2.76\e{-8}***\\
-			NC\_000964 & 2.96\e{-8}***\\
-			NC\_018520 & 3.57\e{-8}***\\
-			NC\_017195 & 1.00\e{-7}***\\
-			NC\_022898 & 5.17\e{-8}*** \\
-			NC\_014976 & -4.02\e{-8}*** \\
-			CP01731 & 5.43\e{-8}*** \\
-			NC\_014479 & NS\\
-			
-			\midrule
-			\multicolumn{2}{c}{\strep} \\
-			None & 7.21\e{-8}***\\
-			CP050522 & 8.37\e{-8}*** \\
-			GG657756 & 3.62\e{-8}*** \\
-			CP042324 & 7.72\e{-8}*** \\
-			AL645882 & 7.65\e{-8}*** \\
-			CM001889 & -2.46\e{-7}***\\
-			
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:leave_one_out1} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. }
-\end{table}
 
-\begin{table}[h]
-	\centering
-	\resizebox{0.7\textwidth}{!}{%
+\begin{table}[H]
+
+	\begin{minipage}{.5\linewidth}
+	
+		\centering
+				\begin{tabular}{lc}
+					\toprule
+					%			\cmidrule{8-10}
+					%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+					%			\cmidrule{2-3}
+					%			\cmidrule{4-7}
+					Taxa Removed & Coefficient Estimate \\
+					\midrule
+					\multicolumn{2}{c}{\ecol} \\
+					None & -2.66\e{-8}*** \\
+					U00096 & -3.12\e{-8}***\\
+					CP0032890 & -3.07\e{-8}*** \\
+					CU9281640 & -2.95\e{-8}*** \\
+					CP0018550 & -1.50\e{-8}*** \\
+					BA0000070 & -2.63\e{-8}*** \\
+					CU9281630 & -2.49\e{-8}***\\
+					
+					\midrule
+					\multicolumn{2}{c}{\bass} \\
+					None & 2.76\e{-8}***\\
+					NC\_000964 & 2.96\e{-8}***\\
+					NC\_018520 & 3.57\e{-8}***\\
+					NC\_017195 & 1.00\e{-7}***\\
+					NC\_022898 & 5.17\e{-8}*** \\
+					NC\_014976 & -4.02\e{-8}*** \\
+					CP01731 & 5.43\e{-8}*** \\
+					NC\_014479 & NS\\
+					
+					\midrule
+					\multicolumn{2}{c}{\strep} \\
+					None & 7.21\e{-8}***\\
+					CP050522 & 8.37\e{-8}*** \\
+					GG657756 & 3.62\e{-8}*** \\
+					CP042324 & 7.72\e{-8}*** \\
+					AL645882 & 7.65\e{-8}*** \\
+					CM001889 & -2.46\e{-7}***\\
+					
+					\bottomrule
+				\end{tabular}
+			
+	\end{minipage}%
+	\begin{minipage}{.5\linewidth}
+		\centering
 		\begin{tabular}{lc}
-			\toprule
-			%			\cmidrule{8-10}
-			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-			%			\cmidrule{2-3}
-			%			\cmidrule{4-7}
-			Taxa Removed & Coefficient Estimate \\
-			\midrule
-			\multicolumn{2}{c}{\smel Chromosome} \\
-			None & -6.57\e{-7}***\\
-			NC\_015590& -3.18\e{-7}***\\
-			NC\_003047 & -6.01\e{-7}*** \\
-			CP004140 & -6.00\e{-7}*** \\
-			CP009144 & -6.67\e{-7}*** \\
-			NC\_017322 & -7.19\e{-7}***\\
-			NC\_017325 & -5.01\e{-7}***\\
-			\midrule
-			\multicolumn{2}{c}{\smel \pa} \\
-			None & 2.74\e{-7}***\\
-			NC\_017327 & 6.98\e{-7}***\\
-			CP009145 & 1.78\e{-7}***\\
-			NC\_003037 & 2.09\e{-7}***\\
-			CP004138 & 2.08\e{-7}***\\
-			NC\_015591 & NS \\
-			NC\_017324 & -1.52\e{-6}*** \\
-			\midrule
-			\multicolumn{2}{c}{\smel \pb} \\
-			None & 1.10\e{-7}***\\
-			NC\_015596 & 6.78\e{-7}***\\
-			NC\_017326 & 1.67\e{-7}***\\
-			NC\_017323 & NS\\
-			CP009146 & -2.57\e{-7}***\\
-			CP004139 & 1.04\e{-7}***\\
-			NC\_003078 & 1.04\e{-7}*** \\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:leave_one_out2} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+		\toprule
+		%			\cmidrule{8-10}
+		%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+		%			\cmidrule{2-3}
+		%			\cmidrule{4-7}
+		Taxa Removed & Coefficient Estimate \\
+		\midrule
+		\multicolumn{2}{c}{\smel Chromosome} \\
+		None & -6.57\e{-7}***\\
+		NC\_015590& -3.18\e{-7}***\\
+		NC\_003047 & -6.01\e{-7}*** \\
+		CP004140 & -6.00\e{-7}*** \\
+		CP009144 & -6.67\e{-7}*** \\
+		NC\_017322 & -7.19\e{-7}***\\
+		NC\_017325 & -5.01\e{-7}***\\
+		\midrule
+		\multicolumn{2}{c}{\smel \pa} \\
+		None & 2.74\e{-7}***\\
+		NC\_017327 & 6.98\e{-7}***\\
+		CP009145 & 1.78\e{-7}***\\
+		NC\_003037 & 2.09\e{-7}***\\
+		CP004138 & 2.08\e{-7}***\\
+		NC\_015591 & NS \\
+		NC\_017324 & -1.52\e{-6}*** \\
+		\midrule
+		\multicolumn{2}{c}{\smel \pb} \\
+		None & 1.10\e{-7}***\\
+		NC\_015596 & 6.78\e{-7}***\\
+		NC\_017326 & 1.67\e{-7}***\\
+		NC\_017323 & NS\\
+		CP009146 & -2.57\e{-7}***\\
+		CP004139 & 1.04\e{-7}***\\
+		NC\_003078 & 1.04\e{-7}*** \\
+		\bottomrule
+	\end{tabular}
+	\end{minipage} 
+	\caption{\label{tab:leave_one_out1test} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. }
 \end{table}
 
 
@@ -1210,5 +1208,5 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 \newpage
 \clearpage
 
-\printbibliography[heading=bibintoc]
+\printbibliography[title={Additional References},heading=bibintoc]
 \end{document}
