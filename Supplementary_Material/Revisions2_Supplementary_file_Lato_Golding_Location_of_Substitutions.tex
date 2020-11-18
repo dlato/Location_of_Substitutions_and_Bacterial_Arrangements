@@ -849,6 +849,8 @@ We were unable to detect a significant relationship between the number of protei
 \subsection{Robust ``Leave One Out'' Analysis on Substitution Data}
 Due to the computational and data availability limitations in the quantity of genomes chosen for each bacteria, we have performed an additional test to determine the robustness of our results.
 We have systematically removed/left out each taxa from the original substitutions analysis (as described in the Main Paper) and termed this a ``\textbf{L}eave \textbf{O}ne \textbf{O}ut'' (\textbf{LOO}) analysis.
+The goal of this analysis is to see if the overall results, that the number of substitutions significantly varies with distance from the origin of replication but the sign of this correlation is inconsistent, changes when any one taxa is removed.
+We want to ensure that our particular data sets are not influencing our conclusions.
 The original whole genome alignments specified by \p and re-aligned with \texttt{MAFFT} following our various alignment quality criteria (see Methods) was used for this LOO analysis.
 The sequences from each taxa were systematically removed/left out from these alignment blocks.
 The original phylogenetic trees and corresponding branch lengths (Figures \ref{fig:ecolitree} - \ref{fig:sinoPBtree}) were altered so that the same taxa that was remove from the alignment blocks was also removed from the phylogenetic tree, while maintaining correct branch lengths. 
