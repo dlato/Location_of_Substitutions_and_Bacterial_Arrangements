@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  18 NOV 2020 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  19 NOV 2020 11:56
 entering extended mode
 **./Revisions2_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
 (Revisions2_Supplementary_file_Lato_Golding_Location_of_Substitutions.tex
@@ -1298,159 +1298,99 @@ Overfull \hbox (65.66428pt too wide) in paragraph at lines 258--258
 [1{C:/Users/synch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] [2]
+<./figs/6_strep_strains_mauve_aln_pic.jpg, id=100, 765.86125pt x 729.72626pt>
+File: ./figs/6_strep_strains_mauve_aln_pic.jpg Graphic file (type jpg)
+<use ./figs/6_strep_strains_mauve_aln_pic.jpg>
+Package pdftex.def Info: ./figs/6_strep_strains_mauve_aln_pic.jpg  used on inpu
+t line 287.
+(pdftex.def)             Requested size: 505.89pt x 482.02168pt.
 
-LaTeX Warning: Reference `fig:mauvetimeplot' on page 3 undefined on input line 
-275.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Overfull \hbox (9.73409pt too wide) in paragraph at lines 287--291
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 293.
+<./figs/Bacillus_alignment_mauve.jpg, id=101, 1924.18875pt x 1079.03125pt>
+File: ./figs/Bacillus_alignment_mauve.jpg Graphic file (type jpg)
+<use ./figs/Bacillus_alignment_mauve.jpg>
+Package pdftex.def Info: ./figs/Bacillus_alignment_mauve.jpg  used on input lin
+e 296.
+(pdftex.def)             Requested size: 505.89pt x 283.68626pt.
+[3] [4 <./figs/6_strep_strains_mauve_aln_pic.jpg>]
+Overfull \hbox (9.73409pt too wide) in paragraph at lines 305--309
 \T1/cmr/m/n/10 for-mat of this seg-ment of the align-ment can be found on \T1/c
 mtt/m/n/10 GitHub \T1/cmr/m/n/10 la-belled as file \T1/cmtt/m/n/10 ``poor_ecoli
 _alignment_example.fna''\T1/cmr/m/n/10 . 
  []
 
-
-Overfull \hbox (22.81396pt too wide) in paragraph at lines 305--317
- [] 
- []
-
-[3] [4] [5]
-
-LaTeX Warning: Reference `tab:leave_one_out1' on page 6 undefined on input line
- 436.
-
-
-LaTeX Warning: Reference `tab:leave_one_out2' on page 6 undefined on input line
- 436.
-
-[6]
-
-LaTeX Warning: Reference `tab:leave_one_out1' on page 7 undefined on input line
- 438.
-
-
-LaTeX Warning: Reference `tab:leave_one_out2' on page 7 undefined on input line
- 438.
-
-
-LaTeX Warning: Reference `tab:leave_one_out1' on page 7 undefined on input line
- 439.
-
-
-LaTeX Warning: Reference `tab:leave_one_out2' on page 7 undefined on input line
- 439.
-
-
-LaTeX Warning: Reference `tab:leave_one_out1' on page 7 undefined on input line
- 448.
-
-
-LaTeX Warning: Reference `tab:leave_one_out2' on page 7 undefined on input line
- 448.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 467.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\omega' on input line 467.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 467.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 472.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\omega' on input line 472.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 472.
-
-[7] [8]
-<./figs/6_strep_strains_mauve_aln_pic.jpg, id=202, 765.86125pt x 729.72626pt>
-File: ./figs/6_strep_strains_mauve_aln_pic.jpg Graphic file (type jpg)
-<use ./figs/6_strep_strains_mauve_aln_pic.jpg>
-Package pdftex.def Info: ./figs/6_strep_strains_mauve_aln_pic.jpg  used on inpu
-t line 493.
-(pdftex.def)             Requested size: 505.89pt x 482.02168pt.
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 506.
-<./figs/Bacillus_alignment_mauve.jpg, id=203, 1924.18875pt x 1079.03125pt>
-File: ./figs/Bacillus_alignment_mauve.jpg Graphic file (type jpg)
-<use ./figs/Bacillus_alignment_mauve.jpg>
-Package pdftex.def Info: ./figs/Bacillus_alignment_mauve.jpg  used on input lin
-e 509.
-(pdftex.def)             Requested size: 505.89pt x 283.68626pt.
- [9 <./figs/6_strep_strains_mauve_aln_pic.jpg>]
-<./figs/Ecoli_poor_alignment_example.png, id=208, 862.422pt x 437.83575pt>
+<./figs/Ecoli_poor_alignment_example.png, id=118, 862.422pt x 437.83575pt>
 File: ./figs/Ecoli_poor_alignment_example.png Graphic file (type png)
 <use ./figs/Ecoli_poor_alignment_example.png>
 Package pdftex.def Info: ./figs/Ecoli_poor_alignment_example.png  used on input
- line 517.
+ line 318.
 (pdftex.def)             Requested size: 455.2979pt x 231.14993pt.
- [10 <./figs/Bacillus_alignment_mauve.jpg>]
-<./figs/Ecoli_chrom_ref_tree_figtree_raw_29Aug20.pdf, id=219, 1293.83376pt x 67
+[5 <./figs/Bacillus_alignment_mauve.jpg>]
+<./figs/Ecoli_chrom_ref_tree_figtree_raw_29Aug20.pdf, id=132, 1293.83376pt x 67
 7.53125pt>
 File: ./figs/Ecoli_chrom_ref_tree_figtree_raw_29Aug20.pdf Graphic file (type pd
 f)
 <use ./figs/Ecoli_chrom_ref_tree_figtree_raw_29Aug20.pdf>
 Package pdftex.def Info: ./figs/Ecoli_chrom_ref_tree_figtree_raw_29Aug20.pdf  u
-sed on input line 543.
+sed on input line 345.
 (pdftex.def)             Requested size: 354.12144pt x 185.43774pt.
-<./figs/bass_chrom_ref_tree_figtree_raw_29Aug20.pdf, id=220, 1293.83376pt x 135
+<./figs/bass_chrom_ref_tree_figtree_raw_29Aug20.pdf, id=133, 1293.83376pt x 135
 5.0625pt>
 File: ./figs/bass_chrom_ref_tree_figtree_raw_29Aug20.pdf Graphic file (type pdf
 )
 <use ./figs/bass_chrom_ref_tree_figtree_raw_29Aug20.pdf>
 Package pdftex.def Info: ./figs/bass_chrom_ref_tree_figtree_raw_29Aug20.pdf  us
-ed on input line 549.
+ed on input line 351.
 (pdftex.def)             Requested size: 303.53708pt x 317.90215pt.
- [11 <./figs/Ecoli_poor_alignment_example.png>]
-<./figs/Strep_chrom_figtree_raw_11Sep20.pdf, id=226, 1293.83376pt x 758.835pt>
+ [6 <./figs/Ecoli_poor_alignment_example.png>]
+<./figs/Strep_chrom_figtree_raw_11Sep20.pdf, id=139, 1293.83376pt x 758.835pt>
 File: ./figs/Strep_chrom_figtree_raw_11Sep20.pdf Graphic file (type pdf)
 <use ./figs/Strep_chrom_figtree_raw_11Sep20.pdf>
 Package pdftex.def Info: ./figs/Strep_chrom_figtree_raw_11Sep20.pdf  used on in
-put line 557.
+put line 359.
 (pdftex.def)             Requested size: 354.12144pt x 207.69028pt.
-<./figs/SinoC_chrom_figtree_raw_11Sep20.pdf, id=227, 1293.83376pt x 877.2775pt>
+<./figs/SinoC_chrom_figtree_raw_11Sep20.pdf, id=140, 1293.83376pt x 877.2775pt>
 
 File: ./figs/SinoC_chrom_figtree_raw_11Sep20.pdf Graphic file (type pdf)
 <use ./figs/SinoC_chrom_figtree_raw_11Sep20.pdf>
 Package pdftex.def Info: ./figs/SinoC_chrom_figtree_raw_11Sep20.pdf  used on in
-put line 562.
+put line 364.
 (pdftex.def)             Requested size: 354.12144pt x 240.10754pt.
- [12 <./figs/Ecoli_chrom_ref_tree_figtree_raw_29Aug20.pdf> <./figs/bass_chrom_r
-ef_tree_figtree_raw_29Aug20.pdf>]
-<./figs/pSymA_chrom_figtree_raw_29Aug20.pdf, id=246, 1293.83376pt x 722.7pt>
+ [7 <./figs/Ecoli_chrom_ref_tree_figtree_raw_29Aug20.pdf> <./figs/bass_chrom_re
+f_tree_figtree_raw_29Aug20.pdf>]
+<./figs/pSymA_chrom_figtree_raw_29Aug20.pdf, id=161, 1293.83376pt x 722.7pt>
 File: ./figs/pSymA_chrom_figtree_raw_29Aug20.pdf Graphic file (type pdf)
 <use ./figs/pSymA_chrom_figtree_raw_29Aug20.pdf>
 Package pdftex.def Info: ./figs/pSymA_chrom_figtree_raw_29Aug20.pdf  used on in
-put line 569.
+put line 371.
 (pdftex.def)             Requested size: 354.12144pt x 197.80026pt.
-<./figs/pSymB_chrom_figtree_raw_29Aug20.pdf, id=247, 1293.83376pt x 677.53125pt
+<./figs/pSymB_chrom_figtree_raw_29Aug20.pdf, id=162, 1293.83376pt x 677.53125pt
 >
 File: ./figs/pSymB_chrom_figtree_raw_29Aug20.pdf Graphic file (type pdf)
 <use ./figs/pSymB_chrom_figtree_raw_29Aug20.pdf>
 Package pdftex.def Info: ./figs/pSymB_chrom_figtree_raw_29Aug20.pdf  used on in
-put line 575.
+put line 377.
 (pdftex.def)             Requested size: 354.12144pt x 185.43774pt.
- [13 <./figs/Strep_chrom_figtree_raw_11Sep20.pdf> <./figs/SinoC_chrom_figtree_r
-aw_11Sep20.pdf>] [14 <./figs/pSymA_chrom_figtree_raw_29Aug20.pdf> <./figs/pSymB
-_chrom_figtree_raw_29Aug20.pdf>]
+ [8 <./figs/Strep_chrom_figtree_raw_11Sep20.pdf> <./figs/SinoC_chrom_figtree_ra
+w_11Sep20.pdf>] [9 <./figs/pSymA_chrom_figtree_raw_29Aug20.pdf> <./figs/pSymB_c
+hrom_figtree_raw_29Aug20.pdf>]
+Overfull \hbox (22.81396pt too wide) in paragraph at lines 395--407
+ [] 
+ []
+
+[10]
 \IBox=\box74
-<./figs/genomic_position_clustering_example_fig.pdf, id=287, 364.19562pt x 273.
+<./figs/genomic_position_clustering_example_fig.pdf, id=219, 364.19562pt x 273.
 14648pt>
 File: ./figs/genomic_position_clustering_example_fig.pdf Graphic file (type pdf
 )
 <use ./figs/genomic_position_clustering_example_fig.pdf>
 Package pdftex.def Info: ./figs/genomic_position_clustering_example_fig.pdf  us
-ed on input line 643.
+ed on input line 487.
 (pdftex.def)             Requested size: 182.09737pt x 136.5729pt.
 \xL=\skip100
 \yL=\skip101
@@ -1460,123 +1400,109 @@ File: ./figs/genomic_position_clustering_example_fig.pdf Graphic file (type pdf
 )
 <use ./figs/genomic_position_clustering_example_fig.pdf>
 Package pdftex.def Info: ./figs/genomic_position_clustering_example_fig.pdf  us
-ed on input line 655.
+ed on input line 499.
 (pdftex.def)             Requested size: 364.19383pt x 142.03665pt.
- [15] [16 <./figs/genomic_position_clustering_example_fig.pdf>] [17]
-<./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf, id=3
-19, 597.23125pt x 845.1575pt>
+ [11 <./figs/genomic_position_clustering_example_fig.pdf>] [12]
+<./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf, id=2
+59, 597.23125pt x 845.1575pt>
 File: ./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf 
 Graphic file (type pdf)
 <use ./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf>
 Package pdftex.def Info: ./figs/Bacillus_high_substitutions_gene_example_nucleo
-tide_alignment.pdf  used on input line 731.
+tide_alignment.pdf  used on input line 589.
 (pdftex.def)             Requested size: 455.2979pt x 644.31238pt.
 
 Overfull \vbox (6.94739pt too high) has occurred while \output is active []
 
 
-[18 <./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf>]
-<./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf, id=329,
+[13 <./figs/Bacillus_high_substitutions_gene_example_nucleotide_alignment.pdf>]
+<./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf, id=270,
  597.23125pt x 845.1575pt>
 File: ./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf Gra
 phic file (type pdf)
 <use ./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf>
 Package pdftex.def Info: ./figs/Bacillus_high_substitutions_gene_example_protei
-n_alignment.pdf  used on input line 740.
+n_alignment.pdf  used on input line 598.
 (pdftex.def)             Requested size: 455.2979pt x 644.31238pt.
 
 Overfull \vbox (6.94739pt too high) has occurred while \output is active []
 
 
-[19 <./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf>]
-Underfull \vbox (badness 10000) detected at line 767
+[14 <./figs/Bacillus_high_substitutions_gene_example_protein_alignment.pdf>]
+Underfull \vbox (badness 10000) detected at line 627
  []
 
+[15]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf, id=340, 505.89pt x 505.89p
+[16] [17]
+<./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf, id=315, 505.89pt x 505.89p
 t>
 File: ./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf>
 Package pdftex.def Info: ./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf  us
-ed on input line 892.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf, id=341, 505.89pt x 505.89pt
+ed on input line 804.
+(pdftex.def)             Requested size: 222.59283pt x 222.59227pt.
+<./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf, id=316, 505.89pt x 505.89pt
 >
 File: ./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf)
 
 <use ./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf>
 Package pdftex.def Info: ./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf  use
-d on input line 899.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs/strep_10KB_weighted_subs_nonpar_14Nov20.pdf, id=342, 505.89pt x 505.89p
+d on input line 811.
+(pdftex.def)             Requested size: 222.59283pt x 222.59227pt.
+<./figs/strep_10KB_weighted_subs_nonpar_14Nov20.pdf, id=317, 505.89pt x 505.89p
 t>
 File: ./figs/strep_10KB_weighted_subs_nonpar_14Nov20.pdf Graphic file (type pdf
 )
 <use ./figs/strep_10KB_weighted_subs_nonpar_14Nov20.pdf>
 Package pdftex.def Info: ./figs/strep_10KB_weighted_subs_nonpar_14Nov20.pdf  us
-ed on input line 906.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf, id=343, 505.89pt x 505.89p
+ed on input line 818.
+(pdftex.def)             Requested size: 222.59283pt x 222.59227pt.
+ [18 <./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf> <./figs/bass_10KB_wei
+ghted_subs_nonpar_22Sep20.pdf>]
+<./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf, id=345, 505.89pt x 505.89p
 t>
 File: ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf>
 Package pdftex.def Info: ./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf  us
-ed on input line 914.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf, id=344, 505.89pt x 505.89p
+ed on input line 826.
+(pdftex.def)             Requested size: 222.59283pt x 222.59227pt.
+<./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf, id=346, 505.89pt x 505.89p
 t>
 File: ./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf>
 Package pdftex.def Info: ./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf  us
-ed on input line 921.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf, id=345, 505.89pt x 505.89p
+ed on input line 833.
+(pdftex.def)             Requested size: 222.59283pt x 222.59227pt.
+ [19 <./figs/strep_10KB_weighted_subs_nonpar_14Nov20.pdf> <./figs/sinoC_10KB_we
+ighted_subs_nonpar_22Sep20.pdf>]
+<./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf, id=376, 505.89pt x 505.89p
 t>
 File: ./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf>
 Package pdftex.def Info: ./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf  us
-ed on input line 928.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+ed on input line 840.
+(pdftex.def)             Requested size: 222.59283pt x 222.59227pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[20]
-Overfull \vbox (39.5718pt too high) has occurred while \output is active []
-
-
-[21]
+[20 <./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf> <./figs/pSymB_10KB_wei
+ghted_subs_nonpar_22Sep20.pdf>] [21] [22]
 
 pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=356, 614.295pt x 794.97pt>
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=428, 614.295pt x 794.97pt>
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf  used on in
-put line 1046.
+put line 1032.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
@@ -1585,7 +1511,7 @@ pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf  used on in
-put line 1046.
+put line 1032.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
@@ -1595,144 +1521,153 @@ pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
 
 pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=359, page=1, 614.295pt x 794.97
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=431, page=1, 614.295pt x 794.97
 pt>
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 1>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page1 use
-d on input line 1046.
+d on input line 1032.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 1>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page1 use
-d on input line 1046.
+d on input line 1032.
 (pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
-[22]
+[23]
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 1>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page1 use
-d on input line 1046.
-(pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
-File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
-<use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 1>
-Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page1 use
-d on input line 1046.
+d on input line 1032.
 (pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 1>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page1 use
-d on input line 1046.
+d on input line 1032.
 (pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
- [23 <./figs/Bacillus_high_ds_gene_alignment.pdf>]
+File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
+<use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 1>
+Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page1 use
+d on input line 1032.
+(pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
+ [24 <./figs/Bacillus_high_ds_gene_alignment.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=377, page=2, 614.295pt x 794.97
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=451, page=2, 614.295pt x 794.97
 pt>
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 2>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page2 use
-d on input line 1046.
+d on input line 1032.
 (pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 2>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page2 use
-d on input line 1046.
+d on input line 1032.
 (pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 2>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page2 use
-d on input line 1046.
-(pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
-[24 <./figs/Bacillus_high_ds_gene_alignment.pdf>]
-
-pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
- PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=382, page=3, 614.295pt x 794.97
-pt>
-File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
-<use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 3>
-Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page3 use
-d on input line 1046.
-(pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
-File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
-<use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 3>
-Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page3 use
-d on input line 1046.
-(pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
-File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
-<use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 3>
-Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page3 use
-d on input line 1046.
+d on input line 1032.
 (pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
 [25 <./figs/Bacillus_high_ds_gene_alignment.pdf>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf, id=388, 505.89pt x 505.89p
+pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=457, page=3, 614.295pt x 794.97
+pt>
+File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
+<use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 3>
+Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page3 use
+d on input line 1032.
+(pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
+File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
+<use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 3>
+Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page3 use
+d on input line 1032.
+(pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
+File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
+<use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 3>
+Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf , page3 use
+d on input line 1032.
+(pdftex.def)             Requested size: 602.00499pt x 779.06529pt.
+[26 <./figs/Bacillus_high_ds_gene_alignment.pdf>]
+<./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf, id=462, 505.89pt x 505.89p
 t>
 File: ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf Graphic file (type pdf
 )
 <use ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf>
 Package pdftex.def Info: ./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf  us
-ed on input line 1151.
-(pdftex.def)             Requested size: 505.89pt x 505.89645pt.
+ed on input line 1037.
+(pdftex.def)             Requested size: 354.12144pt x 354.1283pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1067.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\omega' on input line 1067.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1067.
+
+[27 <./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1073.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\omega' on input line 1073.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1073.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[26] [27 <./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf>] [28 <./figs/bass
-_10KB_weighted_subs_nonpar_22Sep20.pdf>] [29 <./figs/strep_10KB_weighted_subs_n
-onpar_14Nov20.pdf>] [30 <./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf>]
-[31 <./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf>] [32 <./figs/pSymB_10K
-B_weighted_subs_nonpar_22Sep20.pdf>] [33] [34 <./figs/ALL_BAC_dN_dS_omega_violi
-nplots_22Sep20.pdf>] [35]
+[28] [29]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
 (biblatex)                Using 'family-given' now.
 
-[36
+[30
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1212.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1212.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1232.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1232.
  (Revisions2_Supplementary_file_Lato_Golding_Location_of_Substitutions.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1212.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1212.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1232.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1232.
 
 Package rerunfilecheck Info: File `Revisions2_Supplementary_file_Lato_Golding_L
 ocation_of_Substitutions.out' has not changed.
-(rerunfilecheck)             Checksum: B09409EB1839A2CD873CBD3A851EF066;1422.
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 486960D1E87BE2D8F2BC54F9C2AA5EDA;1422.
 Package logreq Info: Writing requests to 'Revisions2_Supplementary_file_Lato_Go
 lding_Location_of_Substitutions.run.xml'.
 \openout1 = `Revisions2_Supplementary_file_Lato_Golding_Location_of_Substitutio
 ns.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1212.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1232.
  ) 
 Here is how much of TeX's memory you used:
- 28651 strings out of 481511
- 556500 string characters out of 2911892
- 1044553 words of memory out of 3000000
- 43282 multiletter control sequences out of 15000+200000
+ 28642 strings out of 481511
+ 556394 string characters out of 2911892
+ 1035543 words of memory out of 3000000
+ 43279 multiletter control sequences out of 15000+200000
  553601 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,19n,84p,1434b,1799s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,19n,84p,1434b,1805s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 ecbi1095.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ectt1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts
+ec/dpi600\ecbi1200.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\synch\AppData\Local\MiKTeX\2.9\fonts
 /pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\synch\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\synch\AppData\Lo
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\synch\AppData\Lo
 cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\synch\
 AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Us
 ers\synch\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.
@@ -1754,9 +1689,9 @@ ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/synch/AppData
 ynch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Use
 rs/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb>
 Output written on Revisions2_Supplementary_file_Lato_Golding_Location_of_Substi
-tutions.pdf (36 pages, 4376424 bytes).
+tutions.pdf (30 pages, 4371782 bytes).
 PDF statistics:
- 1074 PDF objects out of 1200 (max. 8388607)
- 95 named destinations out of 1000 (max. 500000)
+ 1052 PDF objects out of 1200 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
  288 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -268,11 +268,10 @@ This can be seen in an example of six \strep genomes resulting in the genome bei
 Consequently, we had to reduce the number of genomes used for this analysis and after many iterations of genome combinations, we settled on the genomes listed in Table \ref{tab:seqdata}.
 This allowed for the correct comparison of homologous sequences, while also accounting for recombination.
 
-
 The computational time required to run \p was an additional constraint that needed to be considered.
 \p can align multiple whole genomes an identify regions that have been rearranged within the taxa provided.
 This process happens in relatively quick computational time, however, like most other programs, the addition of more data increased the amount of time required to complete the process.
-We ran multiple instances of \p with varying numbers of \ecol genomes (Supplementary Figure \ref{fig:mauvetimeplot}).
+We ran multiple instances of \p with varying numbers of \ecol genomes.
 These data points were connected using a locally estimated scatter plot smoothing method and confidence intervals.
 From this data, we determined that increasing the number of genomes exponentially increases the run time of \p.
 It becomes impractical to align more than 27 genomes with \p, as anything over that would take more than 24h to run.
@@ -281,6 +280,25 @@ The total computational time additionally depends on the divergence of the seque
 26 divergent \strep genomes took just under a month to complete the \p alignment.
 This information combined with \p's inability to pair homologous sequences in LCBs of distantly related taxa, has limited the total number of genomes we can use per taxa to a maximum of 7.
 This provides the most accurate data and the most reasonable analysis duration.
+
+
+\begin{figure}[!h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{./figs/6_strep_strains_mauve_aln_pic}
+		\caption{\label{fig:strep6mauvealn} Visualization of the \p alignment of 6 \strep genomes (from top to bottom): \scoe AL645882, \sliv NZ\_CM001889, \sliv NZ\_GG657756, \sven NC\_018750, \sven NZ\_CP013129, and \sven NC\_CP018074. Each coloured block represents a different locally co-linear block (LCB). Coloured lines connect LCBs that are similar between taxa. The black lines underneath each LCB represent the whole genome sequence of each of the \strep taxa. Each LCB can be treated as a rearrangement, there have therefore been 521 rearrangements between these \strep genomes.}
+	\end{center}
+\end{figure}
+
+
+\subsection{\p Alignment}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{./figs/Bacillus_alignment_mauve.jpg}
+		\caption{\label{fig:mauvealn} Visualization of the \p alignment of the \bass genomes. Each coloured block represents a different locally colinear block (LCB). Coloured lines connect LCBs that are similar between taxa. The black lines underneath each LCB represent the whole genome sequence of each of the \bass taxa. From top to bottom the taxa are: \bass PY79, \bass QB928, \bass 168, \bass BSn5, \bass BS38, \bass RONN1, \bass W23.  Each LCB can be treated as a rearrangement, there have therefore been 12 rearrangements between these \bass genomes.}
+	\end{center}
+\end{figure}
+
+
 
 
 \subsection{Poor Sequence Alignment}
@@ -293,223 +311,6 @@ This segment of \texttt{MAFFT} alignment (Figure \ref{fig:ecoli_poor_aln}) appea
 When we look at the genes that these regions of DNA are found within (Table \ref{tab:poor_aln_genes}), we see that the second sequence (\ecol O157H7) does not have the same protein sequence as the other bacteria genes.
 Poor sequence alignments like this, as well as other non-homologous alignment regions were removed from the analysis.
 Please see the main paper for more detailed methods.
-
-	\subsection{Origin and Terminus Locations}
-
-Each of the bacterial strains used in this analysis vary in total genomic length, in some cases this difference is up to 856Kbp like in \ecol (Table \ref{tab:oriloc}). 
-This will cause the farthest point from the origin of replication to appear larger because of the increased genome size of some strains.
-
-
-	\begin{table}[H]
-		\begin{center}
-			\begin{tabular}{lccc}
-				\toprule
-				Bacteria & Origin of Replication & Terminus of Replication & Length of Longest Genome (bp)\\
-				\midrule
-				\ecol & 3925744 & 1588773 & 5498450 \\
-				\bass & 1 & 1942542 & 4215606\\
-				\strep & 3419363 & 1 \& 8667664 & 8667664\\
-				\smel Chromosome & 1 & 1735626 & 3908022\\
-				\smel pSymA & 1350001 & 672888 & 1633319\\
-				\smel pSymB & 55090 & 896756 & 1690594\\
-				\bottomrule
-			\end{tabular}
-			\caption{\label{tab:oriloc} Origin of replication and terminus of replication positions in replicons of \ecol, \bass, \strep, and \smel. The origin and terminus of replication are values from the representative strain of each bacteria, which can be found in Supplementary Table \ref{tab:seqdata}. The linear nature of \strep chromosome gives it two termini, one at each end of the chromosome. The length of the longest genome is the longest genome length from all strains/species of each bacteria. This is not necessarily the same as the genome length of the representative strain.}
-		\end{center}
-	\end{table}
-	
-
-\section*{Genomic Position Clustering}
-A custom \texttt{R} script was used to cluster genomic positions together based on a user specified genetic distance using single-link clustering.
-An illustration of the clustering method used in this supplemental test can be found in Figure \ref{fig:genomic_pos_clustering_ex}.
-This clustering was done for genomic distances beginning at 1bp and increasing by one order of magnitude until 1,000,000bp difference exists between the taxa genomic positions.
-These newly clustered genomic positions were then put into the same substitution analysis as mentioned previously to determine the impact of this position clustering on the spatial substitution trends through a linear regression.
-A complete table of the statistical results from the clustering assessment are found in Table \ref{tab:clustering}.
-The results from this analysis indicate that genomic positions up to 1,000,000bp apart can be considered a singular genomic position without altering the overall spatial substitution analysis.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{High Substitutions Gene Example}
-Throughout this analysis there are a few genes/gene segments in all the bacterial replicons that have relatively high numbers of substitutions when compared to other genes or gene segments.
-These high numbers of substitutions are indeed real changes seen in homologous genes.
-To illustrate this, we have chosen a segment of alignment from \bass.
-Information about the genes involved in this segment can be found in Table \ref{tab:high_subs_gene_info}.
-A protein alignment for these genes can be found on \texttt{GitHub} (\url{www.github.com/dlato/Location_of_Substitutions_and_Bacterial_Arrangements}) under the file name ``\texttt{Bacillus\_high\_substitutions\_gene\_example.txt}''.
-
-
-Despite this high sequence identity and almost identical protein alignment (Figures \ref{fig:nucaln} and \ref{fig:protaln}), there are a total of 205 substitutions (across all nodes of the phylogenetic tree, Figure \ref{fig:basstree}) within this short stretch of sequence.
-It is segments like these that are resulting in the appearance of extremely high numbers of substitutions in sections of all the bacterial replicon genomes.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Weighted, Non-weighted, and 20Kbp Near and Far From the Origin Substitution Linear Regression Analysis}
-
-Multiple linear regressions were performed to determine if there was any correlation between number of substitutions and distance from the origin of replication.
-A linear regression to determine how the weighted and non-weighted total number of substitutions in various sections of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) changes with genomic position was performed  (Tables \ref{tab:lin_reg_windows_subs_weighted} and \ref{tab:lin_reg_windows_subs_nonweighted}).
-All additional linear regression results (Tables \ref{tab:lin_reg_windows_subs_weighted} and \ref{tab:lin_reg_windows_subs_nonweighted}) mirror the results from the logistic regression on presence or absence of substitutions and changes in genomic position (see the Main Paper results section for more information).
-The results from these supplemental tests are consistent with the results from the linear regression found in the Main Paper, most bacterial replicons have a decreasing number of substitutions when moving away from the origin of replication.
-
-To calculate the non-weighted values of the total number of substitutions per 10Kbp region of the genome, the total number of substitutions was summed up over each region of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp), while accounting for bidirectional replication (see Main Paper for details).
-A linear regression on these total number of substitutions in each section of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) was performed to see how the number of substitutions changes with distance from the origin of replication (Table \ref{tab:lin_reg_windows_subs_nonweighted}).
-The weighted values of the total number of substitutions per various region of the genome, the total number of substitutions was summed up over each region of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) while accounting for bidirectional replication (see Main Paper for details).
-These summed values were then divided by the total number of protein coding sites in each region to obtain the weighted value.
-A linear regression on these weighted total number of substitutions in each section of the genome was performed to see how the number of substitutions changes with distance from the origin of replication (Table \ref{tab:lin_reg_windows_subs_weighted}).
-
-The non-significant (NS) linear regression results from Tables \ref{tab:lin_reg_windows_subs_nonweighted} and \ref{tab:lin_reg_windows_subs_weighted} are likely due to a decrease in the number of data points due to the nature of the methods for this supplemental analysis.
-In the windowed analysis (Tables \ref{tab:lin_reg_windows_subs_nonweighted} and \ref{tab:lin_reg_windows_subs_weighted}) the total number of substitutions per various window size (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) were summed.
-This reduces the total number of data points used in the linear regressions, resulting in non-significant (NS) coefficient estimates.
-For example, the replicon of \pa in \smel only has a total length of 1.63Mbp and roughly 16.3 million data points  including all ancestral and extant substitutions/genomic positions.
-When the total number of substitutions is summed over each region of the genome, these data points are collapsed to summarize what is happening in each local window.
-Lets take the 400Kbp window for example, when the total number of substitutions is summed over each 400Kbp region of the genome, the number of data points is drastically reduced to about 40.
-It is therefore unlikely that 40 data points provide enough information to detect a significant trend between the number of substitutions and distance from the origin of replication.
-This same logic can be applied to the other bacteria and window sizes.
-We therefore conclude that the lack of detection of a significant trend (NS) in Tables  \ref{tab:lin_reg_windows_subs_nonweighted} and \ref{tab:lin_reg_windows_subs_weighted} is due to the decreased number of data points.
-
-
-We took a closer look at 20Kbp regions of the replicons close and far from the origin of replication.
-We performed a logistic regression on the presence or absence of a substitution with distance from the origin of replication.
-Data points from the 20Kbp regions closest to the origin of replication and data points from the 20Kbp regions closest to the terminus of replication were used for this portion of the analysis.
-Outliers were removed from this analysis.
-The number of substitutions per site was also calculated in each of these 20Kbp regions for each bacterial replicon.
-We were unable to determine a consistent spatial substitution trend when considering only the 20Kbp near and far from the origin of replication in all bacterial replicons.
-Some bacterial replicons had a positive correlation coefficient, indicating that the number of substitutions increases with increasing distance from the origin of replication (Table \ref{tab:20kb_near_far_ori}).
-Other replicons had a negative correlation coefficient, suggesting that the number of substitutions decreases with increasing distance from the origin of replication (Table \ref{tab:20kb_near_far_ori}).
-Additionally, it was unclear if the number of substitutions per site locally were higher near the origin of replication or near the terminus.
-Some bacteria had higher number of substitutions per site near the origin (\strep, \smel chromosome and \pb), while other replicons has the opposite trend (\ecol, \bass, and \smel \pa) (Table \ref{tab:20kb_near_far_ori}).
-These results suggest that on a small local scale, there are varying patterns of substitutions with respect to distance from the origin of replication.
-This varies between bacteria, and in some cases even within the same bacteria (\smel \pb).
-This variation locally does not allow us to make any overarching statements about the local distribution of substitutions in bacterial genomes.
-It is therefore more useful to consider the global (genome wide) pattern of substitutions when making overarching statements about genomic substitution arrangements.
-
-
-
-
-\subsection{Non-linear Analysis of Number of Substitutions and Distance From the Origin of Replication}
-
-Using a simple smoothed conditional means method (\texttt{geom\_smooth()} function in \texttt{R}), a non-linear trend analysis was performed on all bacterial replicons.
-The previous mentioned weighted data (see the previous subsection), was used in this analysis.
-The weighted data represents the total number of substitutions divided by the total number of protein-coding sites in 10Kbp segments of the genomes.
-Outliers were removed.
-The results from this non-linear analysis can be seen in Figures \ref{fig:ecoli_nonpar} - \ref{fig:pSymB_nonpar}.
-The visual results from this analysis mirror the findings from the main paper, the total number of substitutions varies with distance from the origin of replication, but the direction of this trend is unclear and inconsistent between bacterial replicons.
- 
-
-
-\subsection{Total Number of Sites Linear Regression}
-
-We performed a linear regression on the total number of protein coding sites and distance from the origin of replication (Table \ref{tab:lr_gene_num}).
-We found that the total number protein coding sites decreases with distance from the origin of replication in majority of the bacterial replicons in this analysis.
-We were unable to detect a significant relationship between the number of protein coding sites and distance from the origin of replication in \bass,  the chromosome, and \pb of \smel.
-
-
-\begin{table}[h]
-	\centering
-	\resizebox{0.75\textwidth}{!}{%
-		\begin{tabular}{lcc}
-			\toprule
-			Bacteria and Replicon & Coefficient Estimate & $R^2$\\
-			\midrule
-			\ecol Chromosome & -2.33\e{-2}*** & 0.423\\
-			\bass Chromosome & NS & 0.001\\
-			\strep Chromosome & -4.09\e{-3}*** & 0.095\\
-			\smel Chromosome & NS & 0.013\\
-			\smel pSymA & NS  & 0.002\\
-			\smel pSymB & 2.69\e{-2}** & 0.081\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:lr_gene_num} Linear regression analysis of the total number of protein coding sites per 10kb along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Robust ``Leave One Out'' Analysis on Substitution Data}
-Due to the computational and data availability limitations in the quantity of genomes chosen for each bacteria, we have performed an additional test to determine the robustness of our results.
-We have systematically removed/left out each taxa from the original substitutions analysis (as described in the Main Paper) this is a ``\textbf{L}eave \textbf{O}ne \textbf{O}ut'' (\textbf{LOO}) analysis.
-The goal of this analysis is to see if the overall results, that the number of substitutions significantly varies with distance from the origin of replication but the sign of this correlation is inconsistent, changes when any one taxa is removed.
-We want to ensure that our particular data sets are not influencing our conclusions.
-The original whole genome alignments specified by \p and re-aligned with \texttt{MAFFT} following our various alignment quality criteria (see Methods) was used for this LOO analysis.
-The sequences from each taxa were systematically removed/left out from these alignment blocks.
-The original phylogenetic trees and corresponding branch lengths (Figures \ref{fig:ecolitree} - \ref{fig:sinoPBtree}) were altered so that the same taxa that was remove from the alignment blocks was also removed from the phylogenetic tree, while maintaining correct branch lengths. 
-These LOO alignment blocks and trees were then subject to the same methods for the substitution analysis (see Methods in Main Paper) where the ancestral nucleotide and genomic position was determined for each protein-coding site in the alignment blocks.
-A logistic regression was performed to determine the relationship between the number of substitutions and distance from the origin of replication (see Methods).
-A summary of these logistic regression results with each taxa removed can be found in Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}.
-
-The results from the chromosomes of \ecol and \smel (Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}) indicate that removing any of the taxa from these analysis, results in the same overall conclusion, that the number of substitutions decreases with increasing distance from the origin of replication.
-For the remaining replicons (\bass, \strep, \pa and \pb of \smel), majority of the LOO results mirror what was found in the main paper when all taxa were present in the analysis (Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}).
-However, there are some specific taxa that cause a reversal in the sign of the coefficient estimate.
-In the case of \strep and \pa in \smel, the taxa which causes a reversal in sign when removed (\sliv 1362 CM001889 and \smel BL225C NC\_017324 respectively) alter the location of the ``outgroup'' on the phylogenetic trees (Figures \ref{fig:streptree} and \ref{fig:sinoPAtree} respectively).
-When \sliv 1362 CM001889 is removed, the new outgroup for the phylogenetic tree (Figure \ref{fig:streptree}) becomes \sliv TK24.
-When \pa from \smel BL225C is removed, the clade containing \smel 2011 and 1021 is now in the outgroup position.
-This shift in the outgroup is the cause for the coefficient estimate changing sign when these particular taxa (\sliv 1362 CM001889 and \smel BL225C NC\_017324) are removed from the analysis.
-For \bass and \pb of \smel, the taxa which caused a reversal in sign when removed (\bass BSn5 NC\_014976 and \smel RMO17 CP009146) are located more in the inner parts of the phylogentic trees (Figures \ref{fig:basstree} and \ref{fig:sinoPBtree}).
-These particular taxa heavily influence the ancestral genomic positions present throughout the phylogenetic tree.
-When these particular taxa are removed, this changes the ancestral genomic positions and alters ancestrally where the substitutions are located.
-This then influences the distribution of substitutions along the replicons enough to cause a change in the sign of the coefficient estimate (Tables \ref{tab:leave_one_out1} and \ref{tab:leave_one_out2}).
-
-Since most of the results from the LOO analysis are the same as what was found in the main paper for each respective replicon, we maintain that our findings are robust even with the systematic removal of each taxa.
-The number of substitutions significantly varies with distance from the origin of replication, but the sign of this correlation is inconsistent.
-
-
-%\newpage
-\subsection{High \ds Values}
-Throughout this analysis there are a few genes/gene segments in all the bacterial replicons that have relatively high \ds values.
-This is particularly evident in \bass near 0.5Mbp from the origin of replication.
-Although we have rigorous and conservative methods for our sequence alignment and trimming, there appear to be some genes that are well aligned and similar for portions of the gene, but are quite divergent for other regions of the same gene.
-To illustrate this, we have chosen a gene alignment from this high \ds region in \bass located around 0.5Mbp from the origin of replication.
-The genes in this alignment can be found in Table \ref{tab:high_ds_gene_info}.
-A simple \texttt{Clustal Omega} protein alignment of these genes can be found below.
-In this example it is evident that some portions of the gene have almost 100\% sequence identity, while others are drastically divergent.
-These divergent regions are typically have a length close to our minimum 100bp trimming length, and are retained in our analysis in some cases.
-These divergent regions are what is driving the high \ds values in our analysis.
-
-
-\subsection{Average \dn, \ds, and $\omega$ per Gene Values}
-The average \dn, \ds, and $\omega$ values per gene were calculated.
-For genes that were split into multiple parts (due to the presence of gaps or poor homology in the alignment), the \dn, \ds, and $\omega$ values for each gene part were averaged to obtain a single average value per gene.
-\sloppy A complete list of these values can be found on \texttt{GitHub} (\url{www.github.com/dlato/Location_of_Substitutions_and_Bacterial_Arrangements}) under the file name ``\texttt{Supplementary\_table\_per\_gene\_dN\_dS\_omega.pdf}''.
-
-\subsection{Window Analysis for \dn, \ds, and $\omega$}
-Multiple linear regressions were performed to determine if there was any correlation between the average \dn, \ds, and $\omega$ values and distance from the origin of replication.
-A linear regression to determine how the average \dn, \ds, and $\omega$ values in various sections of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) changes with genomic position was performed % (Table \ref{tab:lin_reg_windows_selection}).
-%All additional linear regression results (Table \ref{tab:lin_reg_windows_selection}) mirror the results from the linear regression on all \dn, \ds, and $\omega$ values and changes in genomic position (see the Main Paper results section for more information).
-The results from these supplemental tests are consistent with the results from the linear regression found in the Main Paper, most bacterial replicons do not have a significant correlation between \dn, \ds, and $\omega$ values and distance from the origin of replication.
-Linear regressions that were significant, were inconsistent in sign.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{20Kbp Near and Far From Origin Selection Linear Regression Analysis}
-\label{20Kbp_near_far}
-We additionally took a closer look at 20 genes close and far from the origin of replication.
-We performed a linear regression on the change in selection values (\dn, \ds, and $\omega$) with distance from the origin of replication in these genes (Table \ref{tab:dN_dS_20genes}).
-For majority of the bacterial replicons we failed to find a trend, which is not surprising since there was no evidence of an overall genomic trend when looking at these values (see Main Paper for results).
-Again, we are unable to conclude that there is a consistent overall trend for any of the selection values, \dn, \ds, and $\omega$.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-	\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/6_strep_strains_mauve_aln_pic}
-		\caption{\label{fig:strep6mauvealn} Visualization of the \p alignment of 6 \strep genomes (from top to bottom): \scoe AL645882, \sliv NZ\_CM001889, \sliv NZ\_GG657756, \sven NC\_018750, \sven NZ\_CP013129, and \sven NC\_CP018074. Each coloured block represents a different locally co-linear block (LCB). Coloured lines connect LCBs that are similar between taxa. The black lines underneath each LCB represent the whole genome sequence of each of the \strep taxa. Each LCB can be treated as a rearrangement, there have therefore been 521 rearrangements between these \strep genomes.}
-	\end{center}
-\end{figure}
-
-%\begin{figure}[H]
-%	\begin{center}
-%		\includegraphics[width=0.51\textwidth]{./figs/mauve_time_plot}
-%		\caption{\label{fig:mauvetimeplot} This graph shows the time to complete a \p alignment with varying numbers of \ecol genomes. The total number of genomes or taxa is along the x-axis and the total time in hours is along the right axis. Each black point represents data from one \p alignment. All data points are connected by calculating locally estimated scatter plot smoothing (black line) with confidence intervals (grey band).}
-%	\end{center}
-%\end{figure}
-
-
-\subsection{\p Alignment}
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/Bacillus_alignment_mauve.jpg}
-		\caption{\label{fig:mauvealn} Visualization of the \p alignment of the \bass genomes. Each coloured block represents a different locally colinear block (LCB). Coloured lines connect LCBs that are similar between taxa. The black lines underneath each LCB represent the whole genome sequence of each of the \bass taxa. From top to bottom the taxa are: \bass PY79, \bass QB928, \bass 168, \bass BSn5, \bass BS38, \bass RONN1, \bass W23.  Each LCB can be treated as a rearrangement, there have therefore been 12 rearrangements between these \bass genomes.}
-	\end{center}
-\end{figure}
 
 
 \begin{figure}[H]
@@ -536,6 +337,7 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 	}%resize box
 	\caption{\label{tab:poor_aln_genes} \ecol strain, NCBI accession number, and Gene Id for the genes in the poor alignment example (Figure \ref{fig:ecoli_poor_aln}).}
 \end{table}
+
 
 \subsection{Phylogenetic Trees}
 \begin{figure}[H]
@@ -576,9 +378,39 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 		\caption{\label{fig:sinoPBtree} Phylogenetic tree using only pSymB of \smel. \rleg trifolii WSM1689 plasmid pRLG201 was used as an outgroup to root the tree. Branch lengths are to scale. The numbers at each node indicate the bootstrap value as a percentage. The number of bootstrapped trees was 1000.}
 	\end{center}
 \end{figure}
+\newpage
 
 
-		\begin{table}[H]
+
+
+
+	\subsection{Origin and Terminus Locations}
+
+Each of the bacterial strains used in this analysis vary in total genomic length, in some cases this difference is up to 856Kbp like in \ecol (Table \ref{tab:oriloc}). 
+This will cause the farthest point from the origin of replication to appear larger because of the increased genome size of some strains.
+
+
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabular}{lccc}
+				\toprule
+				Bacteria & Origin of Replication & Terminus of Replication & Length of Longest Genome (bp)\\
+				\midrule
+				\ecol & 3925744 & 1588773 & 5498450 \\
+				\bass & 1 & 1942542 & 4215606\\
+				\strep & 3419363 & 1 \& 8667664 & 8667664\\
+				\smel Chromosome & 1 & 1735626 & 3908022\\
+				\smel pSymA & 1350001 & 672888 & 1633319\\
+				\smel pSymB & 55090 & 896756 & 1690594\\
+				\bottomrule
+			\end{tabular}
+			\caption{\label{tab:oriloc} Origin of replication and terminus of replication positions in replicons of \ecol, \bass, \strep, and \smel. The origin and terminus of replication are values from the representative strain of each bacteria, which can be found in Supplementary Table \ref{tab:seqdata}. The linear nature of \strep chromosome gives it two termini, one at each end of the chromosome. The length of the longest genome is the longest genome length from all strains/species of each bacteria. This is not necessarily the same as the genome length of the representative strain.}
+		\end{center}
+	\end{table}
+	
+
+
+\begin{table}[H]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lcccccc}
@@ -632,7 +464,19 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 	\end{minipage}}
 \end{table}	
 
-	\begin{figure}[H]
+
+
+
+\section*{Genomic Position Clustering}
+A custom \texttt{R} script was used to cluster genomic positions together based on a user specified genetic distance using single-link clustering.
+An illustration of the clustering method used in this supplemental test can be found in Figure \ref{fig:genomic_pos_clustering_ex}.
+This clustering was done for genomic distances beginning at 1bp and increasing by one order of magnitude until 1,000,000bp difference exists between the taxa genomic positions.
+These newly clustered genomic positions were then put into the same substitution analysis as mentioned previously to determine the impact of this position clustering on the spatial substitution trends through a linear regression.
+A complete table of the statistical results from the clustering assessment are found in Table \ref{tab:clustering}.
+The results from this analysis indicate that genomic positions up to 1,000,000bp apart can be considered a singular genomic position without altering the overall spatial substitution analysis.
+
+
+\begin{figure}[H]
 	\begin{center}
 		
 		\def\FirstScale{0.5}% scale for loading
@@ -657,6 +501,7 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 		\caption{\label{fig:genomic_pos_clustering_ex} Visualization of the genomic position clustering method. In this example, the user specified the genetic distance to be 2, all genomic positions within 2 base pairs would be clustered together. In this example we are looking at 6 taxa with genomic positions 10, 14, 12, 25, 22, and 20. Based on the clustering algorithm, positions 10, 14 and 12 would be grouped into a cluster (outlined in green), position 25 would be its own cluster (outlined in pink), and positions 22 and 20 would be grouped into another cluster (outlined in blue). Once the clusters are determined, a new genomic position for each of the clusters is calculated using the average of all positions within that cluster. In this example, the green cluster would have a new genomic position of 12 (the average between those three positions), the pink cluster would have the sane genomic position of 25, and the blue cluster would have a new genomic position of 21. The new list of genomic positions for the 4 taxa would be: 12, 12, 12, 25, 21 and 21.}
 	\end{center}
 \end{figure}
+
 
 
 \begin{table}[H]
@@ -701,9 +546,22 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 \end{table}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{High Substitutions Gene Example}
+Throughout this analysis there are a few genes/gene segments in all the bacterial replicons that have relatively high numbers of substitutions when compared to other genes or gene segments.
+These high numbers of substitutions are indeed real changes seen in homologous genes.
+To illustrate this, we have chosen a segment of alignment from \bass.
+Information about the genes involved in this segment can be found in Table \ref{tab:high_subs_gene_info}.
+A protein alignment for these genes can be found on \texttt{GitHub} (\url{www.github.com/dlato/Location_of_Substitutions_and_Bacterial_Arrangements}) under the file name ``\texttt{Bacillus\_high\_substitutions\_gene\_example.txt}''.
+
+
+Despite this high sequence identity and almost identical protein alignment (Figures \ref{fig:nucaln} and \ref{fig:protaln}), there are a total of 205 substitutions (across all nodes of the phylogenetic tree, Figure \ref{fig:basstree}) within this short stretch of sequence.
+It is segments like these that are resulting in the appearance of extremely high numbers of substitutions in sections of all the bacterial replicon genomes.
+
+
 \begin{table}[H]
 	\centering
-	\resizebox{\textwidth}{!}{%
+	\resizebox{0.62\textwidth}{!}{%
 		\begin{tabular}{lcc}
 			\toprule
 			Species & NCBI Accession Number  & Gene Id \\
@@ -742,6 +600,8 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 	\end{center}
 \end{figure}
 
+
+
 \subsection{High Substitution Distribution}
 \begin{longtable}{lcl}
 	\hline
@@ -771,6 +631,47 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 	%	& 800000 - 810000 & Small molecule metabolism\\
 	\caption{\label{tab:high_sub_bars} Table of high number of substitutions per 10Kbp genomic regions for each bacterial replicon and examples of the associated proteins/gene functions found in that region. The genomic position begins at the origin of replication and continues in both directions until the terminus of replication (bidirectional replication).}
 \end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Weighted, Non-weighted, and 20Kbp Near and Far From the Origin Substitution Linear Regression Analysis}
+
+Multiple linear regressions were performed to determine if there was any correlation between number of substitutions and distance from the origin of replication.
+A linear regression to determine how the weighted and non-weighted total number of substitutions in various sections of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) changes with genomic position was performed  (Tables \ref{tab:lin_reg_windows_subs_weighted} and \ref{tab:lin_reg_windows_subs_nonweighted}).
+All additional linear regression results (Tables \ref{tab:lin_reg_windows_subs_weighted} and \ref{tab:lin_reg_windows_subs_nonweighted}) mirror the results from the logistic regression on presence or absence of substitutions and changes in genomic position (see the Main Paper results section for more information).
+The results from these supplemental tests are consistent with the results from the linear regression found in the Main Paper, most bacterial replicons have a decreasing number of substitutions when moving away from the origin of replication.
+
+To calculate the non-weighted values of the total number of substitutions per 10Kbp region of the genome, the total number of substitutions was summed up over each region of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp), while accounting for bidirectional replication (see Main Paper for details).
+A linear regression on these total number of substitutions in each section of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) was performed to see how the number of substitutions changes with distance from the origin of replication (Table \ref{tab:lin_reg_windows_subs_nonweighted}).
+The weighted values of the total number of substitutions per various region of the genome, the total number of substitutions was summed up over each region of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) while accounting for bidirectional replication (see Main Paper for details).
+These summed values were then divided by the total number of protein coding sites in each region to obtain the weighted value.
+A linear regression on these weighted total number of substitutions in each section of the genome was performed to see how the number of substitutions changes with distance from the origin of replication (Table \ref{tab:lin_reg_windows_subs_weighted}).
+
+The non-significant (NS) linear regression results from Tables \ref{tab:lin_reg_windows_subs_nonweighted} and \ref{tab:lin_reg_windows_subs_weighted} are likely due to a decrease in the number of data points due to the nature of the methods for this supplemental analysis.
+In the windowed analysis (Tables \ref{tab:lin_reg_windows_subs_nonweighted} and \ref{tab:lin_reg_windows_subs_weighted}) the total number of substitutions per various window size (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) were summed.
+This reduces the total number of data points used in the linear regressions, resulting in non-significant (NS) coefficient estimates.
+For example, the replicon of \pa in \smel only has a total length of 1.63Mbp and roughly 16.3 million data points  including all ancestral and extant substitutions/genomic positions.
+When the total number of substitutions is summed over each region of the genome, these data points are collapsed to summarize what is happening in each local window.
+Lets take the 400Kbp window for example, when the total number of substitutions is summed over each 400Kbp region of the genome, the number of data points is drastically reduced to about 40.
+It is therefore unlikely that 40 data points provide enough information to detect a significant trend between the number of substitutions and distance from the origin of replication.
+This same logic can be applied to the other bacteria and window sizes.
+We therefore conclude that the lack of detection of a significant trend (NS) in Tables  \ref{tab:lin_reg_windows_subs_nonweighted} and \ref{tab:lin_reg_windows_subs_weighted} is due to the decreased number of data points.
+
+
+We took a closer look at 20Kbp regions of the replicons close and far from the origin of replication.
+We performed a logistic regression on the presence or absence of a substitution with distance from the origin of replication.
+Data points from the 20Kbp regions closest to the origin of replication and data points from the 20Kbp regions closest to the terminus of replication were used for this portion of the analysis.
+Outliers were removed from this analysis.
+The number of substitutions per site was also calculated in each of these 20Kbp regions for each bacterial replicon.
+We were unable to determine a consistent spatial substitution trend when considering only the 20Kbp near and far from the origin of replication in all bacterial replicons.
+Some bacterial replicons had a positive correlation coefficient, indicating that the number of substitutions increases with increasing distance from the origin of replication (Table \ref{tab:20kb_near_far_ori}).
+Other replicons had a negative correlation coefficient, suggesting that the number of substitutions decreases with increasing distance from the origin of replication (Table \ref{tab:20kb_near_far_ori}).
+Additionally, it was unclear if the number of substitutions per site locally were higher near the origin of replication or near the terminus.
+Some bacteria had higher number of substitutions per site near the origin (\strep, \smel chromosome and \pb), while other replicons has the opposite trend (\ecol, \bass, and \smel \pa) (Table \ref{tab:20kb_near_far_ori}).
+These results suggest that on a small local scale, there are varying patterns of substitutions with respect to distance from the origin of replication.
+This varies between bacteria, and in some cases even within the same bacteria (\smel \pb).
+This variation locally does not allow us to make any overarching statements about the local distribution of substitutions in bacterial genomes.
+It is therefore more useful to consider the global (genome wide) pattern of substitutions when making overarching statements about genomic substitution arrangements.
+
 
 \begin{table}[h]
 	\centering
@@ -856,7 +757,8 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 
 
 
-\begin{table}[h]
+
+\begin{table}[!h]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lcc|cc}
@@ -884,144 +786,228 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 	}%resizebox
 	\caption{\label{tab:20kb_near_far_ori} Logistic regression on 20kb closest and farthest from the origin of replication after accounting for bidirectional replication and outliers. Number of substitutions was calculated by taking the total number of substitutions in each of the 20Kbp regions and dividing by the total number of sites in those regions. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
 \end{table}
+ \newpage
+
+\subsection{Non-linear Analysis of Number of Substitutions and Distance From the Origin of Replication}
+
+Using a simple smoothed conditional means method (\texttt{geom\_smooth()} function in \texttt{R}), a non-linear trend analysis was performed on all bacterial replicons.
+The previous mentioned weighted data (see the previous subsection), was used in this analysis.
+The weighted data represents the total number of substitutions divided by the total number of protein-coding sites in 10Kbp segments of the genomes.
+Outliers were removed.
+The results from this non-linear analysis can be seen in Figures \ref{fig:ecoli_nonpar} - \ref{fig:pSymB_nonpar}.
+The visual results from this analysis mirror the findings from the main paper, the total number of substitutions varies with distance from the origin of replication, but the direction of this trend is unclear and inconsistent between bacterial replicons.
+ 
 
 
-
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf}
+		\includegraphics[width=0.44\textwidth]{./figs/ecoli_10KB_weighted_subs_nonpar_23Sep20.pdf}
 		\caption{\label{fig:ecoli_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the \ecol genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf}
+		\includegraphics[width=0.44\textwidth]{./figs/bass_10KB_weighted_subs_nonpar_22Sep20.pdf}
 		\caption{\label{fig:bass_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the \bass genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/strep_10KB_weighted_subs_nonpar_14Nov20.pdf}
+		\includegraphics[width=0.44\textwidth]{./figs/strep_10KB_weighted_subs_nonpar_14Nov20.pdf}
 		\caption{\label{fig:strep_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the \strep genome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf}
+		\includegraphics[width=0.44\textwidth]{./figs/sinoC_10KB_weighted_subs_nonpar_22Sep20.pdf}
 		\caption{\label{fig:sinoC_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the \smel Chromosome. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf}
+		\includegraphics[width=0.44\textwidth]{./figs/pSymA_10KB_weighted_subs_nonpar_22Sep20.pdf}
 		\caption{\label{fig:pSymA_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the \smel \pa replicon. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=\textwidth]{./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf}
+		\includegraphics[width=0.44\textwidth]{./figs/pSymB_10KB_weighted_subs_nonpar_22Sep20.pdf}
 		\caption{\label{fig:pSymB_nonpar}The graph shows the total number of substitutions weighted by the total number of protein-coding sites per 10Kbp segments of the \smel \pb replicon. Each of these individual values are represented by beige coloured circles. A non-linear trend line (using the \texttt{geom\_smooth()} function in \texttt{R}), was fit to these average values and the associated 95\% confidence intervals for this line is represented by the grey ribbon around the blue trend line. Outliers were removed from this graph.}
 	\end{center}
 \end{figure}
 
 
 
-\begin{table}[H]
 
-	\begin{minipage}{.5\linewidth}
+
+
+\subsection{Total Number of Sites Linear Regression}
+
+We performed a linear regression on the total number of protein coding sites and distance from the origin of replication (Table \ref{tab:lr_gene_num}).
+We found that the total number protein coding sites decreases with distance from the origin of replication in majority of the bacterial replicons in this analysis.
+We were unable to detect a significant relationship between the number of protein coding sites and distance from the origin of replication in \bass,  the chromosome, and \pb of \smel.
+
+
+\begin{table}[h]
+	\centering
+	\resizebox{0.75\textwidth}{!}{%
+		\begin{tabular}{lcc}
+			\toprule
+			Bacteria and Replicon & Coefficient Estimate & $R^2$\\
+			\midrule
+			\ecol Chromosome & -2.33\e{-2}*** & 0.423\\
+			\bass Chromosome & NS & 0.001\\
+			\strep Chromosome & -4.09\e{-3}*** & 0.095\\
+			\smel Chromosome & NS & 0.013\\
+			\smel pSymA & NS  & 0.002\\
+			\smel pSymB & 2.69\e{-2}** & 0.081\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:lr_gene_num} Linear regression analysis of the total number of protein coding sites per 10kb along the genome of the respective bacteria replicons. Linear regression was calculated after the origin of replication was moved to the beginning of the genome and all subsequent positions were scaled around the origin accounting for bidirectional replication. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Robust ``Leave One Out'' Analysis on Substitution Data}
+Due to the computational and data availability limitations in the quantity of genomes chosen for each bacteria, we have performed an additional test to determine the robustness of our results.
+We have systematically removed/left out each taxa from the original substitutions analysis (as described in the Main Paper) this is a ``\textbf{L}eave \textbf{O}ne \textbf{O}ut'' (\textbf{LOO}) analysis.
+The goal of this analysis is to see if the overall results, that the number of substitutions significantly varies with distance from the origin of replication but the sign of this correlation is inconsistent, changes when any one taxa is removed.
+We want to ensure that our particular data sets are not influencing our conclusions.
+The original whole genome alignments specified by \p and re-aligned with \texttt{MAFFT} following our various alignment quality criteria (see Methods) was used for this LOO analysis.
+The sequences from each taxa were systematically removed/left out from these alignment blocks.
+The original phylogenetic trees and corresponding branch lengths (Figures \ref{fig:ecolitree} - \ref{fig:sinoPBtree}) were altered so that the same taxa that was remove from the alignment blocks was also removed from the phylogenetic tree, while maintaining correct branch lengths. 
+These LOO alignment blocks and trees were then subject to the same methods for the substitution analysis (see Methods in Main Paper) where the ancestral nucleotide and genomic position was determined for each protein-coding site in the alignment blocks.
+A logistic regression was performed to determine the relationship between the number of substitutions and distance from the origin of replication (see Methods).
+A summary of these logistic regression results with each taxa removed can be found in Table \ref{tab:leave_one_out}.
+
+The results from the chromosomes of \ecol and \smel (Table \ref{tab:leave_one_out}) indicate that removing any of the taxa from these analysis, results in the same overall conclusion, that the number of substitutions decreases with increasing distance from the origin of replication.
+For the remaining replicons (\bass, \strep, \pa and \pb of \smel), majority of the LOO results mirror what was found in the main paper when all taxa were present in the analysis (Table \ref{tab:leave_one_out}).
+However, there are some specific taxa that cause a reversal in the sign of the coefficient estimate.
+In the case of \strep and \pa in \smel, the taxa which causes a reversal in sign when removed (\sliv 1362 CM001889 and \smel BL225C NC\_017324 respectively) alter the location of the ``outgroup'' on the phylogenetic trees (Figures \ref{fig:streptree} and \ref{fig:sinoPAtree} respectively).
+When \sliv 1362 CM001889 is removed, the new outgroup for the phylogenetic tree (Figure \ref{fig:streptree}) becomes \sliv TK24.
+When \pa from \smel BL225C is removed, the clade containing \smel 2011 and 1021 is now in the outgroup position.
+This shift in the outgroup is the cause for the coefficient estimate changing sign when these particular taxa (\sliv 1362 CM001889 and \smel BL225C NC\_017324) are removed from the analysis.
+For \bass and \pb of \smel, the taxa which caused a reversal in sign when removed (\bass BSn5 NC\_014976 and \smel RMO17 CP009146) are located more in the inner parts of the phylogentic trees (Figures \ref{fig:basstree} and \ref{fig:sinoPBtree}).
+These particular taxa heavily influence the ancestral genomic positions present throughout the phylogenetic tree.
+When these particular taxa are removed, this changes the ancestral genomic positions and alters ancestrally where the substitutions are located.
+This then influences the distribution of substitutions along the replicons enough to cause a change in the sign of the coefficient estimate (Table \ref{tab:leave_one_out}).
+
+Since most of the results from the LOO analysis are the same as what was found in the main paper for each respective replicon, we maintain that our findings are robust even with the systematic removal of each taxa.
+The number of substitutions significantly varies with distance from the origin of replication, but the sign of this correlation is inconsistent.
+
+
+\begin{table}[H]
 	
+	\begin{minipage}{.5\linewidth}
+		
 		\centering
-				\begin{tabular}{lc}
-					\toprule
-					%			\cmidrule{8-10}
-					%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-					%			\cmidrule{2-3}
-					%			\cmidrule{4-7}
-					Taxa Removed & Coefficient Estimate \\
-					\midrule
-					\multicolumn{2}{c}{\ecol} \\
-					None & -2.66\e{-8}*** \\
-					U00096 & -3.12\e{-8}***\\
-					CP0032890 & -3.07\e{-8}*** \\
-					CU9281640 & -2.95\e{-8}*** \\
-					CP0018550 & -1.50\e{-8}*** \\
-					BA0000070 & -2.63\e{-8}*** \\
-					CU9281630 & -2.49\e{-8}***\\
-					
-					\midrule
-					\multicolumn{2}{c}{\bass} \\
-					None & 2.76\e{-8}***\\
-					NC\_000964 & 2.96\e{-8}***\\
-					NC\_018520 & 3.57\e{-8}***\\
-					NC\_017195 & 1.00\e{-7}***\\
-					NC\_022898 & 5.17\e{-8}*** \\
-					NC\_014976 & -4.02\e{-8}*** \\
-					CP01731 & 5.43\e{-8}*** \\
-					NC\_014479 & NS\\
-					
-					\midrule
-					\multicolumn{2}{c}{\strep} \\
-					None & 7.21\e{-8}***\\
-					CP050522 & 8.37\e{-8}*** \\
-					GG657756 & 3.62\e{-8}*** \\
-					CP042324 & 7.72\e{-8}*** \\
-					AL645882 & 7.65\e{-8}*** \\
-					CM001889 & -2.46\e{-7}***\\
-					
-					\bottomrule
-				\end{tabular}
+		\begin{tabular}{lc}
+			\toprule
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Taxa Removed & Coefficient Estimate \\
+			\midrule
+			\multicolumn{2}{c}{\ecol} \\
+			None & -2.66\e{-8}*** \\
+			U00096 & -3.12\e{-8}***\\
+			CP0032890 & -3.07\e{-8}*** \\
+			CU9281640 & -2.95\e{-8}*** \\
+			CP0018550 & -1.50\e{-8}*** \\
+			BA0000070 & -2.63\e{-8}*** \\
+			CU9281630 & -2.49\e{-8}***\\
 			
+			\midrule
+			\multicolumn{2}{c}{\bass} \\
+			None & 2.76\e{-8}***\\
+			NC\_000964 & 2.96\e{-8}***\\
+			NC\_018520 & 3.57\e{-8}***\\
+			NC\_017195 & 1.00\e{-7}***\\
+			NC\_022898 & 5.17\e{-8}*** \\
+			NC\_014976 & -4.02\e{-8}*** \\
+			CP01731 & 5.43\e{-8}*** \\
+			NC\_014479 & NS\\
+			
+			\midrule
+			\multicolumn{2}{c}{\strep} \\
+			None & 7.21\e{-8}***\\
+			CP050522 & 8.37\e{-8}*** \\
+			GG657756 & 3.62\e{-8}*** \\
+			CP042324 & 7.72\e{-8}*** \\
+			AL645882 & 7.65\e{-8}*** \\
+			CM001889 & -2.46\e{-7}***\\
+			
+			\bottomrule
+		\end{tabular}
+		
 	\end{minipage}%
 	\begin{minipage}{.5\linewidth}
 		\centering
 		\begin{tabular}{lc}
-		\toprule
-		%			\cmidrule{8-10}
-		%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
-		%			\cmidrule{2-3}
-		%			\cmidrule{4-7}
-		Taxa Removed & Coefficient Estimate \\
-		\midrule
-		\multicolumn{2}{c}{\smel Chromosome} \\
-		None & -6.57\e{-7}***\\
-		NC\_015590& -3.18\e{-7}***\\
-		NC\_003047 & -6.01\e{-7}*** \\
-		CP004140 & -6.00\e{-7}*** \\
-		CP009144 & -6.67\e{-7}*** \\
-		NC\_017322 & -7.19\e{-7}***\\
-		NC\_017325 & -5.01\e{-7}***\\
-		\midrule
-		\multicolumn{2}{c}{\smel \pa} \\
-		None & 2.74\e{-7}***\\
-		NC\_017327 & 6.98\e{-7}***\\
-		CP009145 & 1.78\e{-7}***\\
-		NC\_003037 & 2.09\e{-7}***\\
-		CP004138 & 2.08\e{-7}***\\
-		NC\_015591 & NS \\
-		NC\_017324 & -1.52\e{-6}*** \\
-		\midrule
-		\multicolumn{2}{c}{\smel \pb} \\
-		None & 1.10\e{-7}***\\
-		NC\_015596 & 6.78\e{-7}***\\
-		NC\_017326 & 1.67\e{-7}***\\
-		NC\_017323 & NS\\
-		CP009146 & -2.57\e{-7}***\\
-		CP004139 & 1.04\e{-7}***\\
-		NC\_003078 & 1.04\e{-7}*** \\
-		\bottomrule
-	\end{tabular}
+			\toprule
+			%			\cmidrule{8-10}
+			%			& \multicolumn{3}{c}{Weighted} & \multicolumn{3}{c}{Non-weighted} & \multicolumn{3}{c}{Weighted} \\
+			%			\cmidrule{2-3}
+			%			\cmidrule{4-7}
+			Taxa Removed & Coefficient Estimate \\
+			\midrule
+			\multicolumn{2}{c}{\smel Chromosome} \\
+			None & -6.57\e{-7}***\\
+			NC\_015590& -3.18\e{-7}***\\
+			NC\_003047 & -6.01\e{-7}*** \\
+			CP004140 & -6.00\e{-7}*** \\
+			CP009144 & -6.67\e{-7}*** \\
+			NC\_017322 & -7.19\e{-7}***\\
+			NC\_017325 & -5.01\e{-7}***\\
+			\midrule
+			\multicolumn{2}{c}{\smel \pa} \\
+			None & 2.74\e{-7}***\\
+			NC\_017327 & 6.98\e{-7}***\\
+			CP009145 & 1.78\e{-7}***\\
+			NC\_003037 & 2.09\e{-7}***\\
+			CP004138 & 2.08\e{-7}***\\
+			NC\_015591 & NS \\
+			NC\_017324 & -1.52\e{-6}*** \\
+			\midrule
+			\multicolumn{2}{c}{\smel \pb} \\
+			None & 1.10\e{-7}***\\
+			NC\_015596 & 6.78\e{-7}***\\
+			NC\_017326 & 1.67\e{-7}***\\
+			NC\_017323 & NS\\
+			CP009146 & -2.57\e{-7}***\\
+			CP004139 & 1.04\e{-7}***\\
+			NC\_003078 & 1.04\e{-7}*** \\
+			\bottomrule
+		\end{tabular}
 	\end{minipage} 
-	\caption{\label{tab:leave_one_out1test} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. }
+	\caption{\label{tab:leave_one_out} Logistic regression on the presence or absence of a substitution and distance from the origin of replication. Each strain was systematically removed and the entire analysis was repeated. All results are marked with significance codes as followed: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'. }
 \end{table}
 
 
-\begin{table}[h]
+
+
+%\newpage
+\subsection{High \ds Values}
+Throughout this analysis there are a few genes/gene segments in all the bacterial replicons that have relatively high \ds values.
+This is particularly evident in \bass near 0.5Mbp from the origin of replication.
+Although we have rigorous and conservative methods for our sequence alignment and trimming, there appear to be some genes that are well aligned and similar for portions of the gene, but are quite divergent for other regions of the same gene.
+To illustrate this, we have chosen a gene alignment from this high \ds region in \bass located around 0.5Mbp from the origin of replication.
+The genes in this alignment can be found in Table \ref{tab:high_ds_gene_info}.
+A simple \texttt{Clustal Omega} protein alignment of these genes can be found below.
+In this example it is evident that some portions of the gene have almost 100\% sequence identity, while others are drastically divergent.
+These divergent regions are typically have a length close to our minimum 100bp trimming length, and are retained in our analysis in some cases.
+These divergent regions are what is driving the high \ds values in our analysis.
+
+\begin{table}[H]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lcc}
@@ -1044,6 +1030,52 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 \end{table}
 
 \includepdf[pages={1-3},scale=0.98,pagecommand={}]{./figs/Bacillus_high_ds_gene_alignment.pdf}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf}
+	\caption{\label{fig:box_plots} Distribution of all \dn, \ds, and $\omega$ values on a log base 10 scale for each replicon. Individual points are shown as a strip chart (which has been jittered in the x-direction in \texttt{R} \citep{Wickham2019}), and the density of these selection values is shown in the overlaid violin plot. All points are included in this graphic including outliers. For more information on how outliers were calculated, please see the main paper. Any \dn, \ds, or $\omega$ values that had a value of zero is pushed to the bottom of the x-axis. Since these values will not appear on a log base 10 scale, they are not included in the violin portions of this graphic. For a complete list of zero values in each of the selection categories please refer to Table \ref{tab:selection_outliers}. In these graphs there is a horizontal line of values at 0.0001 for most of the selection coefficients in most of the bacterial replicons. This is due to rounding practices when \texttt{codeml} \citep{Yang97} calculates \dn, \ds, and $\omega$ values.}
+\end{figure}
+
+
+
+\begin{table}[H]
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+		\begin{tabular}{lcccc}
+			\toprule
+			Bacteria and Replicon & Outliers (\%)   &  \multicolumn{3}{c}{Zero Value (\%)}  \\
+			&  &\dn & \ds & $\omega$ \\
+			\midrule
+			\ecol Chromosome & 7.49 & 13.82 & 1.05 & 13.82 \\
+			\bass Chromosome & 5.41 & 4.40 & 0.16 & 4.40 \\
+			\strep Chromosome & 4.74 & 25.70 & 14.48 & 25.70 \\
+			\smel Chromosome & 17.05 & 61.21 & 59.26 & 61.21\\
+			\smel pSymA & 6.69 & 11.28 & 9.75 & 11.28 \\
+			\smel pSymB & 6.13 & 13.20 & 5.20 & 13.20\\
+			\bottomrule
+		\end{tabular}
+		
+	}%resizebox
+	\caption{\label{tab:selection_outliers} Percent of data that was calculated to be an outlier or had a selection variable (\dn, \ds, and $\omega$) value of zero.}
+\end{table}
+
+
+
+
+\subsection{Average \dn, \ds, and $\omega$ per Gene Values}
+The average \dn, \ds, and $\omega$ values per gene were calculated.
+For genes that were split into multiple parts (due to the presence of gaps or poor homology in the alignment), the \dn, \ds, and $\omega$ values for each gene part were averaged to obtain a single average value per gene.
+\sloppy A complete list of these values can be found on \texttt{GitHub} (\url{www.github.com/dlato/Location_of_Substitutions_and_Bacterial_Arrangements}) under the file name ``\texttt{Supplementary\_table\_per\_gene\_dN\_dS\_omega.pdf}''.
+
+
+\subsection{Window Analysis for \dn, \ds, and $\omega$}
+Multiple linear regressions were performed to determine if there was any correlation between the average \dn, \ds, and $\omega$ values and distance from the origin of replication.
+A linear regression to determine how the average \dn, \ds, and $\omega$ values in various sections of the genome (10Kbp, 25Kbp, 50Kbp, 100Kbp, 200Kbp, and 400Kbp) changes with genomic position was performed  (Table \ref{tab:lin_reg_windows_selection}).
+%All additional linear regression results (Table \ref{tab:lin_reg_windows_selection}) mirror the results from the linear regression on all \dn, \ds, and $\omega$ values and changes in genomic position (see the Main Paper results section for more information).
+The results from these supplemental tests are consistent with the results from the linear regression found in the Main Paper, most bacterial replicons do not have a significant correlation between \dn, \ds, and $\omega$ values and distance from the origin of replication.
+Linear regressions that were significant, were inconsistent in sign.
 
 
 
@@ -1146,38 +1178,15 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 
 
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{./figs/ALL_BAC_dN_dS_omega_violinplots_22Sep20.pdf}
-	\caption{\label{fig:box_plots} Distribution of all \dn, \ds, and $\omega$ values on a log base 10 scale for each replicon. Individual points are shown as a strip chart (which has been jittered in the x-direction in \texttt{R} \citep{Wickham2019}), and the density of these selection values is shown in the overlaid violin plot. All points are included in this graphic including outliers. For more information on how outliers were calculated, please see the main paper. Any \dn, \ds, or $\omega$ values that had a value of zero is pushed to the bottom of the x-axis. Since these values will not appear on a log base 10 scale, they are not included in the violin portions of this graphic. For a complete list of zero values in each of the selection categories please refer to Table \ref{tab:selection_outliers}. In these graphs there is a horizontal line of values at 0.0001 for most of the selection coefficients in most of the bacterial replicons. This is due to rounding practices when \texttt{codeml} \citep{Yang97} calculates \dn, \ds, and $\omega$ values.}
-\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{20Kbp Near and Far From Origin Selection Linear Regression Analysis}
+\label{20Kbp_near_far}
+We additionally took a closer look at 20 genes close and far from the origin of replication.
+We performed a linear regression on the change in selection values (\dn, \ds, and $\omega$) with distance from the origin of replication in these genes (Table \ref{tab:dN_dS_20genes}).
+For majority of the bacterial replicons we failed to find a trend, which is not surprising since there was no evidence of an overall genomic trend when looking at these values (see Main Paper for results).
+Again, we are unable to conclude that there is a consistent overall trend for any of the selection values, \dn, \ds, and $\omega$.
 
-
-
-\begin{table}[h]
-	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcccc}
-			\toprule
-			Bacteria and Replicon & Outliers (\%)   &  \multicolumn{3}{c}{Zero Value (\%)}  \\
-			&  &\dn & \ds & $\omega$ \\
-			\midrule
-			\ecol Chromosome & 7.49 & 13.82 & 1.05 & 13.82 \\
-			\bass Chromosome & 5.41 & 4.40 & 0.16 & 4.40 \\
-			\strep Chromosome & 4.74 & 25.70 & 14.48 & 25.70 \\
-			\smel Chromosome & 17.05 & 61.21 & 59.26 & 61.21\\
-			\smel pSymA & 6.69 & 11.28 & 9.75 & 11.28 \\
-			\smel pSymB & 6.13 & 13.20 & 5.20 & 13.20\\
-			\bottomrule
-		\end{tabular}
-		
-	}%resizebox
-	\caption{\label{tab:selection_outliers} Percent of data that was calculated to be an outlier or had a selection variable (\dn, \ds, and $\omega$) value of zero.}
-\end{table}
-
-
-
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lccc|ccc}
@@ -1204,6 +1213,17 @@ Again, we are unable to conclude that there is a consistent overall trend for an
 	}%resizebox
 	\caption{\label{tab:dN_dS_20genes} Linear regression for \dn, \ds, and $\omega$ calculated for each bacterial replicon for the 20 genes closest and 20 genes farthest from the origin of replication. All results are marked with significance codes as followed: p: $<$ 0.001 = `***', 0.001 $<$ 0.01 = `**', 0.01 $<$ 0.05 = `*', $>$ 0.05 = `NS'.  The $R^2$ values for each estimate are in brackets.}
 \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{figure}[H]
+%	\begin{center}
+%		\includegraphics[width=0.51\textwidth]{./figs/mauve_time_plot}
+%		\caption{\label{fig:mauvetimeplot} This graph shows the time to complete a \p alignment with varying numbers of \ecol genomes. The total number of genomes or taxa is along the x-axis and the total time in hours is along the right axis. Each black point represents data from one \p alignment. All data points are connected by calculating locally estimated scatter plot smoothing (black line) with confidence intervals (grey band).}
+%	\end{center}
+%\end{figure}
+
 
 \newpage
 \clearpage
