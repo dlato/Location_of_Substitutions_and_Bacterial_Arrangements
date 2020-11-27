@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  23 NOV 2020 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.24)  27 NOV 2020 18:07
 entering extended mode
 **./track_changes_Revisions2_Supplementary_file_Lato_Golding_Location_of_Substi
 tutions.tex
@@ -1512,7 +1512,7 @@ ghted_subs_nonpar_22Sep20.pdf>] [21] [22]
 
 pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=429, 614.295pt x 794.97pt>
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=430, 614.295pt x 794.97pt>
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf>
 Package pdftex.def Info: ./figs/Bacillus_high_ds_gene_alignment.pdf  used on in
@@ -1535,7 +1535,7 @@ pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
 
 pdfTeX warning: pdflatex.exe (file ./figs/Bacillus_high_ds_gene_alignment.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figs/Bacillus_high_ds_gene_alignment.pdf, id=432, page=1, 614.295pt x 794.97
+<./figs/Bacillus_high_ds_gene_alignment.pdf, id=433, page=1, 614.295pt x 794.97
 pt>
 File: ./figs/Bacillus_high_ds_gene_alignment.pdf Graphic file (type pdf)
 <use ./figs/Bacillus_high_ds_gene_alignment.pdf, page 1>
@@ -1711,7 +1711,7 @@ y6.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
 lmss10.pfb><C:/Users/synch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /lm/lmss17.pfb>
 Output written on track_changes_Revisions2_Supplementary_file_Lato_Golding_Loca
-tion_of_Substitutions.pdf (30 pages, 4387254 bytes).
+tion_of_Substitutions.pdf (30 pages, 4387287 bytes).
 PDF statistics:
  1057 PDF objects out of 1200 (max. 8388607)
  89 named destinations out of 1000 (max. 500000)
